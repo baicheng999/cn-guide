@@ -196,7 +196,15 @@
       "status.missing": "Please complete the required fields.",
       "status.sending": "Sending…",
       "status.fail": "Something went wrong — please try again, or email yiyong77@qq.com directly.",
-      "status.ok": "Thank you — your request has been received. Our team will reply via WhatsApp / email shortly."
+      "status.ok": "Thank you — your request has been received. Our team will reply via WhatsApp / email shortly.",
+
+      "nav.business": "Business Tours",
+      "biz.kicker": "Business & Inspection Tours",
+      "biz.h2": "See China's manufacturing up close.",
+      "biz.lead": "We open doors to real factories across the Greater Bay Area — Dongguan, Foshan, Guangzhou and Shenzhen — for buyers, founders and trade delegations. Factory visits, supply-chain meetings, professional translation and full logistics, arranged end to end.",
+      "biz.cta": "See business itineraries →",
+      "biz.note": "Factory visits are arranged only with the supplier's prior confirmation. We assist with appointments, translation and logistics — we do not represent or guarantee any supplier.",
+      "rev.sample": "Sample reviews shown — real guest reviews are being collected."
     },
     zh: {
       "nav.explore": "探索中国", "nav.guides": "导游团队",
@@ -302,6 +310,13 @@
       "footer.note": "一个品牌，一个平台 · 15 座城市，200+ 位核心导游。旅游服务由上海凯旋观光旅行社有限公司依法提供。",
       "nav.culture": "文化",
       "nav.wellness": "康养医疗",
+      "nav.business": "商务考察",
+      "biz.kicker": "商务考察",
+      "biz.h2": "走近中国制造的第一现场。",
+      "biz.lead": "我们为采购商、创业者和商务团打开大湾区真实工厂的大门——东莞、佛山、广州、深圳。工厂参访、供应链对接、专业翻译与全程后勤，一站安排。",
+      "biz.cta": "查看商务考察行程 →",
+      "biz.note": "工厂参访仅在供应商事先确认后安排。我们协助预约、翻译与后勤，不代表也不担保任何供应商。",
+      "rev.sample": "以下为示例评价，真实客人评价正在持续收集中。",
       "how.h2": "四步开启您的中国之旅",
       "how.s1.t": "告诉我们您的需求",
       "how.s1.d": "通过表单或 WhatsApp 告诉我们您的兴趣、日期、团队规模与意向城市，无需任何承诺。",
@@ -501,6 +516,26 @@
         return '<a href="#cul-g' + (gi + 1) + '">' + esc(g.t[L] || g.t[0]) + "</a>";
       }).join("");
     }
+  }
+
+  function renderBusiness() {
+    var grid = document.getElementById("bizGrid");
+    if (!grid || !window.CLA_BUSINESS) return;
+    var L = langIndex();
+    grid.innerHTML = window.CLA_BUSINESS.map(function (b, i) {
+      var no = i + 1 < 10 ? "0" + (i + 1) : String(i + 1);
+      var hl = (b.hl || []).map(function (h) {
+        return "<li>" + esc(h[L] || h[0]) + "</li>";
+      }).join("");
+      return '<article class="biz-card">' +
+        '<span class="biz-no">' + no + "</span>" +
+        '<h3 class="biz-city">' + esc(b.city[L] || b.city[0]) + "</h3>" +
+        '<p class="biz-name">' + esc(b.name[L] || b.name[0]) + "</p>" +
+        '<p class="biz-tag">' + esc(b.tag[L] || b.tag[0]) + "</p>" +
+        '<ul class="biz-hl">' + hl + "</ul>" +
+        '<p class="biz-days">' + esc(b.days[L] || b.days[0]) + "</p>" +
+        "</article>";
+    }).join("");
   }
 
   /* ---------- Quick-find index (cities + travel styles) ---------- */
@@ -956,6 +991,7 @@
     renderJobCities();
     renderCulture();
     renderQuickFind();
+    renderBusiness();
     renderReviews();
     renderDestination();
   }
