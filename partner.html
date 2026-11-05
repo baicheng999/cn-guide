@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Join Our Network · 加入中国本地向导</title>
+  <meta name="description" content="Join the China Local Guides network — for licensed local guides, private-car drivers, city partners and licensed travel agencies. Apply via this referral page." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="China Local Guides home">
+        <span class="brand-seal" aria-hidden="true">游</span>
+        <span class="brand-text">
+          <strong>China Local Guides</strong>
+          <em data-i18n="brand.zh">中国本地向导</em>
+        </span>
+      </a>
+      <div class="header-right">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <select class="lang-select" id="langSelect" aria-label="Select language">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+            <option value="zh-Hant">繁體中文</option>
+            <option value="ja">日本語</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="de">Deutsch</option>
+            <option value="vi">Tiếng Việt</option>
+          </select>
+        </div>
+        <a href="index.html" class="btn btn-sm btn-ghost back-home" data-i18n="back.site">← Back to site</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <svg class="hero-mountains" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path d="M0,224 L160,160 L320,224 L480,128 L640,224 L800,176 L960,96 L1120,208 L1280,144 L1440,224 L1440,320 L0,320 Z" fill="rgba(255,255,255,0.06)"/>
+        <path d="M0,272 L200,208 L400,272 L600,176 L820,272 L1040,208 L1240,272 L1440,224 L1440,320 L0,320 Z" fill="rgba(168,50,44,0.12)"/>
+      </svg>
+      <div class="hero-sun" aria-hidden="true"></div>
+    </div>
+    <div class="container hero-inner">
+      <p class="eyebrow" data-i18n="p.eyebrow">FOR TRAVEL PROFESSIONALS</p>
+      <h1 data-i18n="p.h1">Join the China Local Guides Network</h1>
+      <p class="hero-sub" data-i18n="p.sub">A nationwide network connecting local China experts with travelers from around the world. We help you win clients first — then we grow together.</p>
+      <div class="hero-cta">
+        <a href="#apply" class="btn btn-primary" data-i18n="p.cta">Apply now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THREE WAYS TO JOIN ============ -->
+  <section class="section" id="types">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker" data-i18n="partner.kicker">For Travel Professionals</p>
+        <h2 data-i18n="partner.h2">Three ways to join the network.</h2>
+        <p class="lead" data-i18n="partner.lead">We do not charge guides high joining fees up front. The platform must help you win clients first — then we earn together.</p>
+      </div>
+
+      <div class="partner-grid">
+        <div class="partner-card">
+          <h3 data-i18n="p1.title">Join as a Guide or Driver</h3>
+          <p class="partner-cn" data-i18n="p1.cn">导游与司机加入</p>
+          <p data-i18n="p1.desc">English-speaking guides, drivers and customer-service staff — all fifteen cities, full-time or long-term.</p>
+          <a href="#apply" class="link-arrow" data-type="Guide" data-i18n="p1.link">Apply as guide or driver →</a>
+        </div>
+        <div class="partner-card">
+          <h3 data-i18n="p2.title">City Partner</h3>
+          <p class="partner-cn" data-i18n="p2.cn">城市负责人</p>
+          <p data-i18n="p2.desc">One core partner per city to recruit guides, package local products and coordinate on-the-ground delivery.</p>
+          <a href="#apply" class="link-arrow" data-type="City Partner" data-i18n="p2.link">Apply as city partner →</a>
+        </div>
+        <div class="partner-card">
+          <h3 data-i18n="p3.title">Agency &amp; Ground Partner</h3>
+          <p class="partner-cn" data-i18n="p3.cn">旅行社及地接合作</p>
+          <p data-i18n="p3.desc">Licensed travel agencies and ground-service suppliers partner for lawful contracting and local fulfillment.</p>
+          <a href="#apply" class="link-arrow" data-type="Agency" data-i18n="p3.link">Partner with us →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ APPLICATION FORM ============ -->
+  <section class="section section-alt" id="apply">
+    <div class="container">
+      <form class="apply-form" id="partnerForm" novalidate>
+        <input type="checkbox" name="botcheck" style="display: none" tabindex="-1">
+        <h3 data-i18n="form.h3">Partner application</h3>
+        <div class="form-row">
+          <label data-i18n="f.name">Name
+            <input type="text" name="name" required placeholder="Your name" />
+          </label>
+          <label data-i18n="f.email">Email
+            <input type="email" name="email" required placeholder="you@example.com" />
+          </label>
+        </div>
+        <div class="form-row">
+          <label data-i18n="f.whatsapp">WhatsApp
+            <input type="text" name="whatsapp" placeholder="+60..." />
+          </label>
+          <label data-i18n="f.city">City
+            <input type="text" name="city" placeholder="Guangzhou" />
+          </label>
+        </div>
+        <div class="form-row">
+          <label data-i18n="f.type">Partnership type
+            <select name="type" id="partnerType" data-i18n="f.type.opt">
+              <option value="Guide">Join as a Guide or Driver</option>
+              <option value="Driver">Private-Car Driver</option>
+              <option value="City Partner">City Partner</option>
+              <option value="Agency">Agency &amp; Ground Partner</option>
+            </select>
+          </label>
+        </div>
+        <label data-i18n="f.message">Message
+          <textarea name="message" rows="4" placeholder="Tell us about your experience and goals..."></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary" data-i18n="f.submit">Submit application</button>
+        <p class="form-status" id="partnerStatus" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ REFERRAL / QR ============ -->
+  <section class="section" id="referral">
+    <div class="container">
+      <div class="referral-box">
+        <div class="qr-placeholder">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Referral QR placeholder">
+            <rect width="100" height="100" fill="#fff"/>
+            <g fill="#171410">
+              <rect x="6" y="6" width="28" height="28"/><rect x="10" y="10" width="20" height="20" fill="#fff"/><rect x="14" y="14" width="12" height="12" fill="#171410"/>
+              <rect x="66" y="6" width="28" height="28"/><rect x="70" y="10" width="20" height="20" fill="#fff"/><rect x="74" y="14" width="12" height="12" fill="#171410"/>
+              <rect x="6" y="66" width="28" height="28"/><rect x="10" y="70" width="20" height="20" fill="#fff"/><rect x="14" y="74" width="12" height="12" fill="#171410"/>
+              <rect x="42" y="8" width="6" height="6"/><rect x="52" y="8" width="6" height="6"/><rect x="42" y="18" width="6" height="6"/><rect x="60" y="20" width="6" height="6"/>
+              <rect x="44" y="30" width="6" height="6"/><rect x="54" y="36" width="6" height="6"/><rect x="8" y="44" width="6" height="6"/><rect x="20" y="44" width="6" height="6"/>
+              <rect x="32" y="48" width="6" height="6"/><rect x="44" y="44" width="6" height="6"/><rect x="56" y="46" width="6" height="6"/><rect x="68" y="44" width="6" height="6"/>
+              <rect x="80" y="46" width="6" height="6"/><rect x="44" y="58" width="6" height="6"/><rect x="58" y="58" width="6" height="6"/><rect x="70" y="60" width="6" height="6"/>
+              <rect x="82" y="62" width="6" height="6"/><rect x="44" y="70" width="6" height="6"/><rect x="56" y="72" width="6" height="6"/><rect x="68" y="76" width="6" height="6"/>
+              <rect x="80" y="78" width="6" height="6"/><rect x="44" y="82" width="6" height="6"/><rect x="58" y="84" width="6" height="6"/><rect x="70" y="88" width="6" height="6"/>
+            </g>
+          </svg>
+        </div>
+        <div class="referral-copy">
+          <h3 data-i18n="qr.h">Share this referral link</h3>
+          <p data-i18n="qr.p">Scan the code or share the link below with guides and agencies you trust. Applications are reviewed by our partnership team.</p>
+          <div class="referral-link">https://www.cn-guide.com/partner.html</div>
+          <p class="referral-note" data-i18n="qr.note">Placeholder QR — replace with your own generated code pointing to this page.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div class="footer-brand">
+        <span class="brand-seal" aria-hidden="true">游</span>
+        <div>
+          <strong>China Local Guides</strong>
+          <em data-i18n="brand.zh">中国本地向导</em>
+        </div>
+      </div>
+      <p class="footer-note" data-i18n="footer.note">One brand, one platform · 15 cities, 200+ core guides. Travel services provided by Shanghai Kaixuan Sightseeing Travel Service Co., Ltd..</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/zh-hant.js"></script>
+  <script src="assets/js/i18n-extra.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

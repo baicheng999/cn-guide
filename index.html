@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>China Local Guides · 中国本地向导</title>  <meta name="description" content="One brand, one platform for private, tailor-made trips across 15 destinations with vetted local guides. Small groups, your own pace, never a bus tour." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="China Local Guides home">
+        <span class="brand-seal" aria-hidden="true">游</span>
+        <span class="brand-text">
+          <strong>China Local Guides</strong>
+          <em data-i18n="brand.zh">中国本地向导</em>
+        </span>
+      </a>
+      <div class="header-right">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <select class="lang-select" id="langSelect" aria-label="Select language">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+            <option value="zh-Hant">繁體中文</option>
+            <option value="ja">日本語</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="de">Deutsch</option>
+            <option value="vi">Tiếng Việt</option>
+          </select>
+        </div>
+        <nav class="nav" id="nav">
+          <a href="#find" data-i18n="nav.find">Find a Trip</a>
+          <a href="#explore" data-i18n="nav.explore">Explore China</a>
+          <a href="#guides" data-i18n="nav.guides">Our Guides</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#culture" data-i18n="nav.culture">Culture</a>
+          <a href="#wellness" data-i18n="nav.wellness">Wellness</a>
+          <a href="#contact" class="btn btn-sm btn-ghost" data-i18n="nav.plan">Plan a Trip</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <svg class="hero-mountains" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path d="M0,224 L160,160 L320,224 L480,128 L640,224 L800,176 L960,96 L1120,208 L1280,144 L1440,224 L1440,320 L0,320 Z" fill="rgba(255,255,255,0.06)"/>
+        <path d="M0,272 L200,208 L400,272 L600,176 L820,272 L1040,208 L1240,272 L1440,224 L1440,320 L0,320 Z" fill="rgba(168,50,44,0.12)"/>
+      </svg>
+      <div class="hero-sun" aria-hidden="true"></div>
+    </div>
+    <div class="container hero-inner">
+      <p class="eyebrow" data-i18n="hero.eyebrow">A NATIONWIDE NETWORK OF LOCAL CHINA EXPERTS</p>
+      <h1 data-i18n="hero.h1">Discover China<br/><span class="accent">Through Local Guides</span></h1>
+      <p class="hero-tagline" data-i18n="hero.sub">Real local guides. Authentic China. Every journey built around you.</p>
+      <div class="hero-cta">
+        <a href="#explore" class="btn btn-primary" data-i18n="hero.cta1">Explore Destinations</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="hero.cta2">Plan Your Trip</a>
+      </div>
+      <p class="hero-note" data-i18n="hero.note">Private, tailor-made trips — small groups, your own pace. Never a bus tour.</p>
+      <ul class="hero-stats">
+        <li><strong>15</strong><span data-i18n="stat.cities">Key Cities</span></li>
+        <li><strong>200+</strong><span data-i18n="stat.guides">Core Guides</span></li>
+        <li><strong>7</strong><span data-i18n="stat.exp">Travel Styles</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ QUICK FIND (city + style index) ============ -->
+  <section class="section section-find" id="find">
+    <div class="container">
+      <div class="section-head">
+        <p class="lead" data-i18n="idx.lead">Pick a city, a travel style.</p>
+      </div>
+
+      <div class="find-box" id="findIndex">
+        <div class="find-search-row">
+          <input type="search" id="findSearch" class="find-search" placeholder="Type a city…" autocomplete="off" aria-label="Search destinations" />
+        </div>
+        <div class="find-group">
+          <h3 class="find-label" id="findLabelCities" data-i18n="idx.cities">By destination</h3>
+          <div class="find-chips" id="findCities"></div>
+          <p class="find-empty" id="findEmpty" data-i18n="idx.empty">No matching destination</p>
+        </div>
+        <div class="find-group">
+          <h3 class="find-label" id="findLabelTypes" data-i18n="idx.types">By travel style</h3>
+          <div class="find-chips" id="findTypes"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPLORE CHINA ============ -->
+  <section class="section" id="explore">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="explore.h2">Fifteen cities. One standard of trust.</h2>
+      </div>
+
+      <div class="city-grid" id="cityGrid">
+        <article class="city-card tag-entry">
+          <span class="city-no">01</span>
+          <div class="city-body">
+            <h3 data-i18n="city.name1">Guangzhou <span>广州</span></h3>
+            <p class="city-tag" data-i18n="city.tag1">International Gateway</p>
+            <p data-i18n="city.desc1">Trade, culture and cuisine. The natural entry point for overseas visitors to South China.</p>
+          </div>
+        </article>
+        <article class="city-card tag-tech">
+          <span class="city-no">02</span>
+          <div class="city-body">
+            <h3 data-i18n="city.name2">Shenzhen <span>深圳</span></h3>
+            <p class="city-tag" data-i18n="city.tag2">Technology &amp; Innovation</p>
+            <p data-i18n="city.desc2">Tech, innovation and electronics. The innovation engine of the Greater Bay Area.</p>
+          </div>
+        </article>
+        <article class="city-card tag-tech">
+          <span class="city-no">03</span>
+          <div class="city-body">
+            <h3 data-i18n="city.name3">Dongguan <span>东莞</span></h3>
+            <p class="city-tag" data-i18n="city.tag3">Manufacturing Edge</p>
+            <p data-i18n="city.desc3">Factory tours and manufacturing. Our deepest local resource advantage.</p>
+          </div>
+        </article>
+        <article class="city-card tag-entry">
+          <span class="city-no">04</span>
+          <div class="city-body">
+            <h3 data-i18n="city.name4">Shanghai <span>上海</span></h3>
+            <p class="city-tag" data-i18n="city.tag4">Global Metropolis</p>
+            <p data-i18n="city.desc4">Metropolis, business and culture. China's most international destination.</p>
+          </div>
+        </article>
+        <article class="city-card tag-entry">
+          <span class="city-no">05</span>
+          <div class="city-body">
+            <h3 data-i18n="city.name5">Beijing <span>北京</span></h3>
+            <p class="city-tag" data-i18n="city.tag5">Classic Destination</p>
+            <p data-i18n="city.desc5">History, culture and the Great Wall. The timeless icon for first-time visitors.</p>
+          </div>
+        </article>
+        <article class="city-card tag-culture">
+          <span class="city-no">06</span>
+          <div class="city-body">
+            <h3 data-i18n="city.name6">Chengdu <span>成都</span></h3>
+            <p class="city-tag" data-i18n="city.tag6">Leisure &amp; Culture</p>
+            <p data-i18n="city.desc6">Pandas, food and laid-back culture. A signature slow-travel experience.</p>
+          </div>
+        </article>
+        <article class="city-card tag-culture">
+          <span class="city-no">07</span>
+          <div class="city-body">
+            <h3 data-i18n="city.name7">Chongqing <span>重庆</span></h3>
+            <p class="city-tag" data-i18n="city.tag7">Mountain City</p>
+            <p data-i18n="city.desc7">Mountain skyline, night views and hotpot. A differentiated, energetic experience.</p>
+          </div>
+        </article>
+        <article class="city-card tag-culture">
+          <span class="city-no">08</span>
+          <div class="city-body">
+            <h3 data-i18n="city.name8">Xi'an <span>西安</span></h3>
+            <p class="city-tag" data-i18n="city.tag8">Cultural Depth</p>
+            <p data-i18n="city.desc8">History and the Terracotta Army. The heart of China's ancient civilization.</p>
+          </div>
+        </article>
+        <article class="city-card tag-culture">
+          <span class="city-no">09</span>
+          <div class="city-body">
+            <h3 data-i18n="city.name9">Guilin <span>桂林</span></h3>
+            <p class="city-tag" data-i18n="city.tag9">Natural Beauty</p>
+            <p data-i18n="city.desc9">Karst mountains and rivers. China's most celebrated natural landscape.</p>
+          </div>
+        </article>
+        <article class="city-card tag-culture">
+          <span class="city-no">10</span>
+          <div class="city-body">
+            <h3 data-i18n="city.name10">Kunming <span>昆明</span></h3>
+            <p class="city-tag" data-i18n="city.tag10">Yunnan Gateway</p>
+            <p data-i18n="city.desc10">Yunnan and ethnic culture. The gateway to China's southwest diversity.</p>
+          </div>
+        </article>
+            <article class="city-card tag-culture">
+              <span class="city-no">11</span>
+              <div class="city-body">
+                <h3 data-i18n="city.name11">Tibet · Lhasa <span>西藏·拉萨</span></h3>
+                <p class="city-tag" data-i18n="city.tag11">Highland &amp; Faith</p>
+                <p data-i18n="city.desc11">The roof of the world — Potala Palace, monasteries and sacred highland landscapes.</p>
+              </div>
+            </article>
+            <article class="city-card tag-culture">
+              <span class="city-no">12</span>
+              <div class="city-body">
+                <h3 data-i18n="city.name12">Xinjiang · Urumqi <span>新疆·乌鲁木齐</span></h3>
+                <p class="city-tag" data-i18n="city.tag12">Frontier &amp; Culture</p>
+                <p data-i18n="city.desc12">Vast deserts, Silk Road heritage and vibrant ethnic cultures across China's west.</p>
+              </div>
+            </article>
+            <article class="city-card tag-entry">
+              <span class="city-no">13</span>
+              <div class="city-body">
+                <h3 data-i18n="city.name13">Harbin <span>哈尔滨</span></h3>
+                <p class="city-tag" data-i18n="city.tag13">Ice &amp; Snow Capital</p>
+                <p data-i18n="city.desc13">China's winter wonderland — the Ice and Snow Festival and Russian heritage.</p>
+              </div>
+            </article>
+            <article class="city-card tag-culture">
+              <span class="city-no">14</span>
+              <div class="city-body">
+                <h3 data-i18n="city.name14">Zhangjiajie <span>张家界</span></h3>
+                <p class="city-tag" data-i18n="city.tag14">Natural Wonder</p>
+                <p data-i18n="city.desc14">Sandstone peaks and pristine forests — the real-life inspiration behind the floating mountains of Avatar.</p>
+              </div>
+            </article>
+            <article class="city-card tag-entry">
+              <span class="city-no">15</span>
+              <div class="city-body">
+                <h3 data-i18n="city.name15">Sanya <span>三亚</span></h3>
+                <p class="city-tag" data-i18n="city.tag15">Tropical Resort</p>
+                <p data-i18n="city.desc15">Crystal beaches and tropical islands — China's premier winter escape by the South China Sea.</p>
+              </div>
+            </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WELLNESS & MEDICAL ============ -->
+  <section class="section section-wellness" id="wellness">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker" data-i18n="wel.kicker">Wellness &amp; Medical</p>
+        <h2 data-i18n="wel.h2">A journey that cares for the body, too.</h2>
+        <p class="lead" data-i18n="wel.lead">TCM care, hot springs, health checks and recovery stays — treatment comes from licensed clinics and hospitals, while we handle the appointments, translation, route and company.</p>
+      </div>
+      <div class="wel-grid">
+        <article class="wel-card">
+          <span class="wel-no">01</span>
+          <h3 data-i18n="wel.t1">TCM care</h3>
+          <p data-i18n="wel.p1">Acupuncture, tuina, moxibustion and herbal consultation at a licensed TCM clinic. We book the session, translate the terms and sit in with you.</p>
+        </article>
+        <article class="wel-card">
+          <span class="wel-no">02</span>
+          <h3 data-i18n="wel.t2">Hot springs &amp; forest air</h3>
+          <p data-i18n="wel.p2">Conghua, Sanya, Kunming, Guilin — soak, walk, breathe. Three slow meals a day and nothing on the calendar before ten.</p>
+        </article>
+        <article class="wel-card">
+          <span class="wel-no">03</span>
+          <h3 data-i18n="wel.t3">Health checks &amp; specialists</h3>
+          <p data-i18n="wel.p3">Executive check-up packages at the international departments of top hospitals, reports explained line by line, and an escort to every specialist visit.</p>
+        </article>
+        <article class="wel-card">
+          <span class="wel-no">04</span>
+          <h3 data-i18n="wel.t4">Recovery stays</h3>
+          <p data-i18n="wel.p4">Quiet hotels, menus set by a nutritionist, step-free routes, clinic transfers — recovery at a pace that is actually restful.</p>
+        </article>
+        <article class="wel-card">
+          <span class="wel-no">05</span>
+          <h3 data-i18n="wel.t5">Slow-stay, two to four weeks</h3>
+          <p data-i18n="wel.p5">Kunming and Sanya long stays: serviced apartments, a weekly TCM session, weekend day trips and a guide on call.</p>
+        </article>
+        <article class="wel-card">
+          <span class="wel-no">06</span>
+          <h3 data-i18n="wel.t6">Family &amp; companions</h3>
+          <p data-i18n="wel.p6">A room next to yours, a guide who takes the family out while you are in treatment, child seats and wheelchair routes — nobody waits in a lobby.</p>
+        </article>
+      </div>
+      <div class="wel-actions">
+        <a class="btn btn-outline-dark" href="destination.html?type=wellness" data-i18n="wel.cta">See wellness itineraries →</a>
+      </div>
+      <p class="wel-note" data-i18n="wel.note">We are not a medical institution: no diagnosis, no prescriptions, no medicine sales. Treatment and billing are handled by licensed hospitals and clinics, and your records stay confidential.</p>
+    </div>
+  </section>
+
+  <!-- ============ MEET OUR GUIDES ============ -->
+  <section class="section section-alt" id="guides">
+    <div class="container">
+      <div class="guide-feature">
+        <div class="feature-head">
+          <h3 data-i18n="featured.h2">Real local guides you can trust.</h3>
+          <p class="lead" data-i18n="featured.lead">A preview of the verified guides in our network — each with a standard profile, language ability and a specialty you can plan a trip around.</p>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-card">
+            <div class="guide-avatar" aria-hidden="true">LW</div>
+            <div class="guide-body">
+              <h4 class="guide-name">Li Wei</h4>
+              <p class="guide-city" data-i18n="g1.city">Guangzhou</p>
+              <p class="guide-langs"><span>ZH</span><span>YUE</span><span>EN</span></p>
+              <p class="guide-spec" data-i18n="g1.spec">Food &amp; Culture</p>
+              <p class="guide-intro" data-i18n="g1.intro">Cantonese food lover who turns every meal into a story of the city.</p>
+            </div>
+          </article>
+          <article class="guide-card">
+            <div class="guide-avatar" aria-hidden="true">CM</div>
+            <div class="guide-body">
+              <h4 class="guide-name">Chen Mei</h4>
+              <p class="guide-city" data-i18n="g2.city">Shenzhen</p>
+              <p class="guide-langs"><span>ZH</span><span>EN</span></p>
+              <p class="guide-spec" data-i18n="g2.spec">Tech &amp; Innovation</p>
+              <p class="guide-intro" data-i18n="g2.intro">Former product manager who opens doors to Shenzhen's maker world.</p>
+            </div>
+          </article>
+          <article class="guide-card">
+            <div class="guide-avatar" aria-hidden="true">WG</div>
+            <div class="guide-body">
+              <h4 class="guide-name">Wang Gang</h4>
+              <p class="guide-city" data-i18n="g3.city">Xi'an</p>
+              <p class="guide-langs"><span>ZH</span><span>EN</span></p>
+              <p class="guide-spec" data-i18n="g3.spec">History &amp; Heritage</p>
+              <p class="guide-intro" data-i18n="g3.intro">Terracotta-era storyteller who brings ancient China to life.</p>
+            </div>
+          </article>
+          <article class="guide-card">
+            <div class="guide-avatar" aria-hidden="true">SZ</div>
+            <div class="guide-body">
+              <h4 class="guide-name">Sarah Zhang</h4>
+              <p class="guide-city" data-i18n="g4.city">Shanghai</p>
+              <p class="guide-langs"><span>ZH</span><span>EN</span><span>FR</span></p>
+              <p class="guide-spec" data-i18n="g4.spec">City &amp; Business</p>
+              <p class="guide-intro" data-i18n="g4.intro">Bilingual host for executives and first-time China visitors.</p>
+            </div>
+          </article>
+          <article class="guide-card">
+            <div class="guide-avatar" aria-hidden="true">T</div>
+            <div class="guide-body">
+              <h4 class="guide-name">Tenzin</h4>
+              <p class="guide-city" data-i18n="g5.city">Lhasa</p>
+              <p class="guide-langs"><span>ZH</span><span>BO</span><span>EN</span></p>
+              <p class="guide-spec" data-i18n="g5.spec">Highland &amp; Faith</p>
+              <p class="guide-intro" data-i18n="g5.intro">Tibetan guide born on the plateau, fluent in its silence and prayer.</p>
+            </div>
+          </article>
+          <article class="guide-card">
+            <div class="guide-avatar" aria-hidden="true">A</div>
+            <div class="guide-body">
+              <h4 class="guide-name">Aisha</h4>
+              <p class="guide-city" data-i18n="g6.city">Urumqi</p>
+              <p class="guide-langs"><span>ZH</span><span>UG</span><span>EN</span></p>
+              <p class="guide-spec" data-i18n="g6.spec">Frontier Culture</p>
+              <p class="guide-intro" data-i18n="g6.intro">Uyghur culture bearer who shares the Silk Road's living heritage.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="guides-trust">
+        <p data-i18n="guides.trust">Every guide is license-verified, language-screened and reviewed after each trip — so your private tour is led by someone who truly knows the place.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section section-alt" id="how">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="how.h2">Your China journey in four simple steps.</h2>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <span class="step-no">1</span>
+          <h3 data-i18n="how.s1.t">Tell us your trip</h3>
+          <p data-i18n="how.s1.d">Share your interests, dates, group size and preferred cities through the form or WhatsApp. No commitment required.</p>
+        </article>
+        <article class="step">
+          <span class="step-no">2</span>
+          <h3 data-i18n="how.s2.t">Receive a tailored plan</h3>
+          <p data-i18n="how.s2.d">Our team designs an itinerary with verified local guides, clear inclusions and transparent pricing — built around you.</p>
+        </article>
+        <article class="step">
+          <span class="step-no">3</span>
+          <h3 data-i18n="how.s3.t">Confirm &amp; travel with confidence</h3>
+          <p data-i18n="how.s3.d">Shanghai Kaixuan Sightseeing Travel Service Co., Ltd. contracts and handles the trip. Your local guide meets you on the ground, fully briefed.</p>
+        </article>
+        <article class="step">
+          <span class="step-no">4</span>
+          <h3 data-i18n="how.s4.t">Enjoy &amp; share</h3>
+          <p data-i18n="how.s4.d">Travel at your own pace with a private guide. We follow up on your experience and keep improving our network.</p>
+        </article>
+      </div>
+
+      <div class="price-promise">
+        <div class="pp-icon" aria-hidden="true">近</div>
+        <div class="pp-body">
+          <h3 data-i18n="pp.h3">Closer to the people who live there.</h3>
+          <p data-i18n="pp.p">We work directly with vetted local guides and ground teams, so your days are shaped by the people who actually welcome you — not handed down through layers of resellers. Small groups, real places, unhurried time. Every plan comes with clear, itemized inclusions from a licensed inbound travel agency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GUEST REVIEWS ============ -->
+  <section class="section" id="voices">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="voices.h2">Reviews from travelers around the world</h2>
+      </div>
+
+      <div class="review-live">
+        <div class="review-live-main">
+          <span class="live-dot" aria-hidden="true"></span>
+          <strong id="revCount">—</strong>
+          <span class="review-live-label" data-i18n="rev.live">reviews</span>
+        </div>
+        <ul class="review-stats">
+          <li><strong id="revMonth">—</strong><span data-i18n="rev.month">new this month</span></li>
+          <li><strong>4.9<span class="of5">/5</span></strong><span data-i18n="rev.rating">average rating</span></li>
+          <li><strong id="revLangs">—</strong><span data-i18n="rev.langs">languages</span></li>
+        </ul>
+        <button type="button" class="btn btn-primary btn-review" id="openReview" aria-expanded="false" aria-controls="reviewForm" data-i18n="rev.write">Write a review</button>
+      </div>
+
+      <form class="review-form" id="reviewForm" novalidate hidden>
+        <div class="review-form-head">
+          <h3 data-i18n="rev.f.title">Tell us about your trip</h3>
+          <p data-i18n="rev.f.note">Posted as-is, in your own words. Reviews are linked to a completed trip.</p>
+        </div>
+        <div class="form-row">
+          <label data-i18n="rev.f.name">Name or nickname
+            <input type="text" name="rname" required maxlength="40" data-i18n-ph="rev.f.name.ph" placeholder="e.g. Kenji S." />
+          </label>
+          <label data-i18n="rev.f.country">Where are you from?
+            <select name="rcountry" id="revCountry"></select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label data-i18n="rev.f.city">Which trip?
+            <select name="rcity" id="revCity"></select>
+          </label>
+          <div class="review-rate-wrap">
+            <span class="review-rate-label" data-i18n="rev.f.rating">Your rating</span>
+            <div class="review-rate" id="revRate" role="radiogroup" aria-label="Rating">
+              <button type="button" class="rate-star" data-v="1" role="radio" aria-checked="false" aria-label="1">★</button>
+              <button type="button" class="rate-star" data-v="2" role="radio" aria-checked="false" aria-label="2">★</button>
+              <button type="button" class="rate-star" data-v="3" role="radio" aria-checked="false" aria-label="3">★</button>
+              <button type="button" class="rate-star" data-v="4" role="radio" aria-checked="false" aria-label="4">★</button>
+              <button type="button" class="rate-star" data-v="5" role="radio" aria-checked="false" aria-label="5">★</button>
+            </div>
+          </div>
+        </div>
+        <label data-i18n="rev.f.text">Your review
+          <textarea name="rtext" rows="4" required maxlength="600" data-i18n-ph="rev.f.text.ph" placeholder="What stayed with you? The guide, a meal, a road nobody else takes…"></textarea>
+        </label>
+        <div class="review-form-actions">
+          <button type="submit" class="btn btn-primary" data-i18n="rev.f.submit">Publish review</button>
+          <button type="button" class="btn btn-outline-dark" id="cancelReview" data-i18n="rev.f.cancel">Cancel</button>
+        </div>
+      </form>
+      <p class="review-toast" id="reviewToast" role="status"></p>
+
+      <div class="review-grid" id="reviewGrid"></div>
+      <div class="review-actions">
+        <button type="button" class="btn btn-outline-dark" id="reviewMore" data-i18n="rev.more">Show more reviews</button>
+        <button type="button" class="btn btn-outline-dark" id="openReview2" data-i18n="rev.write">Write a review</button>
+        <span class="review-progress" id="reviewProgress"></span>
+        <span class="review-all" id="reviewAll" data-i18n="rev.all">That's every review so far</span>
+      </div>
+      <!-- DEV NOTE: the wall is still seeded with sample texts — replace them with real, authorized guest reviews before launch. -->
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker" data-i18n="about.kicker">About China Local Guides</p>
+        <h2 data-i18n="about.h2">One brand. One platform.</h2>
+        <p class="lead" data-i18n="about.lead">China Local Guides is the single brand and platform behind your whole journey — from the first inquiry and itinerary design to the vetted local experts who welcome you in each city. One team, one standard, no hand-offs between brands.</p>
+      </div>
+
+      <div class="brand-diagram">
+        <div class="brand-box brand-single">
+          <h3>China Local Guides</h3>
+          <p class="brand-sub" data-i18n="one.sub">Everything under one name</p>
+          <ul>
+            <li data-i18n="one.1">Overseas inquiries &amp; trip design</li>
+            <li data-i18n="one.2">Vetted local guides in 15 cities</li>
+            <li data-i18n="one.3">One service standard, end to end</li>
+            <li data-i18n="one.4">Licensed agency delivery &amp; compliance</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about-cols">
+        <div class="about-col">
+          <h4 data-i18n="about2.h4">Our mission</h4>
+          <p data-i18n="about2.p">Connect outstanding local guides across China so travelers worldwide can more easily find trustworthy local travel services — starting with fifteen cities and growing, city by city, toward one hundred.</p>
+        </div>
+      </div>
+
+      <div class="founder">
+        <div class="founder-avatar"><img src="assets/img/founder.jpg" alt="Yiyong Liu"></div>
+        <div class="founder-body">
+          <p class="kicker" data-i18n="founder.k">From the founder</p>
+          <h4 data-i18n="founder.h">Beyond the postcard, meet the real China.</h4>
+          <p data-i18n="founder.p1">My childhood followed the water. I was born beside Poyang Lake in Jiangxi and did my primary and middle school in Quanzhou, Fujian — the Minnan dialect still sits on my tongue. Later I returned to Poyang and studied tourism management at Hainan College of Economics and Business. In 2010 I earned my national guide license. I had no idea then how far that piece of paper would take me.</p>
+          <p data-i18n="founder.p2">For the sixteen years that followed, I was almost always on the road. I started as a ground guide in Hainan, Tibet and Nha Trang, Vietnam. I spent six years in the Philippines, building a small hotel brick by brick on Panglao Island — and later sold it, for a new road. The last two years were in Japan, walking travelers from around the world through day trips beyond Tokyo. Today I live in Guangzhou. I am a certified national guide and have hosted guests from more than sixty countries and regions.</p>
+          <p data-i18n="founder.p3">What I do now is simple: take the roads I have walked in China, Japan and Southeast Asia, write them into journeys that belong to you, and hand them to guides who truly know that land — to walk it with you, step by step.</p>
+          <div class="founder-notes">
+            <div class="founder-note">
+              <h5 data-i18n="founder.n1.h">Plan slowly, with someone who has walked there.</h5>
+              <p data-i18n="founder.n1.p">Sixteen years across China, Japan and Southeast Asia. Tell me when you are coming and what you dream of seeing — I will write it into a route first; then, on the ground, a local guide will walk every inch of it with you.</p>
+            </div>
+            <div class="founder-note">
+              <h5 data-i18n="founder.n2.h">My promise is a simple one.</h5>
+              <p data-i18n="founder.n2.p">The same care I gave guests in Tokyo, Panglao and Lhasa goes into your journey in China, exactly as it did then.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOIN & CAREERS ============ -->
+  <section class="section section-join" id="join">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker" data-i18n="join.kicker">Join Us</p>
+        <h2 data-i18n="join.h2">We are hiring in all fifteen cities.</h2>
+        <p class="lead" data-i18n="join.lead">English-speaking guides, drivers and customer service staff — full-time or long-term. If you know your city and can host guests in English, we would like to meet you.</p>
+      </div>
+
+      <div class="jobs-grid">
+        <article class="job-card">
+          <div class="job-top">
+            <h3 data-i18n="job.guide.t">English-Speaking Guide</h3>
+            <span class="job-badge" data-i18n="job.badge">15 cities</span>
+          </div>
+          <p class="job-meta" data-i18n="job.guide.m">Licensed · Private day tours</p>
+          <p data-i18n="job.guide.d">Lead small private groups through your own city. National guide license required and English at working fluency — tell us your city and what you love to show.</p>
+        </article>
+        <article class="job-card">
+          <div class="job-top">
+            <h3 data-i18n="job.driver.t">English-Speaking Driver</h3>
+            <span class="job-badge" data-i18n="job.badge">15 cities</span>
+          </div>
+          <p class="job-meta" data-i18n="job.driver.m">C1 or above · Clean record</p>
+          <p data-i18n="job.driver.d">Airport pickups and daily routes for small groups. C1 licence or above, a clean driving record, and enough English for the road and the small talk.</p>
+        </article>
+        <article class="job-card">
+          <div class="job-top">
+            <h3 data-i18n="job.cs.t">English Customer Service</h3>
+            <span class="job-badge" data-i18n="job.badge">15 cities</span>
+          </div>
+          <p class="job-meta" data-i18n="job.cs.m">Email &amp; WhatsApp · Remote or local</p>
+          <p data-i18n="job.cs.d">Answer overseas inquiries, shape itineraries with our planners and follow each trip through. Excellent written English; Chinese helps but is not required.</p>
+        </article>
+      </div>
+
+      <div class="join-foot">
+        <div class="job-cities-wrap">
+          <p class="job-cities-label" data-i18n="join.cities">Now hiring in</p>
+          <div class="job-cities" id="jobCities"></div>
+        </div>
+        <div class="join-actions">
+          <a href="partner.html#apply" class="btn btn-primary" data-i18n="join.cta">Apply now →</a>
+          <a href="partner.html#types" class="link-arrow" data-i18n="join.partner">City partners &amp; agencies →</a>
+        </div>
+      </div>
+
+      <p class="fineprint center" data-i18n="join.note">Guides, drivers and staff work on trips contracted by Shanghai Kaixuan Sightseeing Travel Service Co., Ltd. No joining fee is charged at any stage.</p>
+    </div>
+  </section>
+
+  <!-- ============ CULTURE & LOCAL LIFE ============ -->
+  <section class="section section-alt" id="culture">
+    <div class="container">
+      <div class="section-head cul-head">
+        <h2 data-i18n="cul.h2">Know a little China before you go</h2>
+        <p class="lead" data-i18n="cul.lead">Table etiquette, the time of tea, dialects and market life — the parts of China no menu can show you. We weave them into every day of your trip.</p>
+      </div>
+      <nav class="cul-nav" id="culNav" aria-label="Culture topics"></nav>
+      <div class="cul-body" id="culBody"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section-contact" id="contact">
+    <div class="container contact-wrap">
+      <div class="contact-intro">
+        <p class="kicker" data-i18n="contact.kicker">Plan Your Trip</p>
+        <h2 data-i18n="contact.h2">Let's design your China journey.</h2>
+        <p class="lead" data-i18n="contact.lead">Tell us your interests and dates. Our team replies on WhatsApp Business and email — real people, not a bot.</p>
+        <ul class="contact-links">
+          <li><a href="https://wa.me/8613113119919" target="_blank" rel="noopener">WhatsApp Business ↗</a></li>
+          <li><a href="mailto:yiyong77@qq.com">yiyong77@qq.com</a></li>
+        </ul>
+        <div class="fc-grid fc-contact">
+          <div class="fc-item">
+            <a class="fc-qr fc-qr-wa" href="https://wa.me/8613113119919" target="_blank" rel="noopener"><img src="assets/img/whatsapp-qr.jpg" alt="WhatsApp QR"></a>
+            <p class="fc-name">WhatsApp</p>
+            <p class="fc-sub" data-i18n="founder.c.wa.p">Scan to chat on WhatsApp</p>
+          </div>
+          <div class="fc-item">
+            <div class="fc-qr fc-qr-wx"><img src="assets/img/wechat-qr.jpg" alt="WeChat QR"></div>
+            <p class="fc-name" data-i18n="founder.c.wx">WeChat</p>
+            <p class="fc-sub" data-i18n="founder.c.wx.p">Scan to add me on WeChat</p>
+          </div>
+        </div>
+      </div>
+
+      <form class="inquiry-form" id="inquiryForm" novalidate>
+        <input type="checkbox" name="botcheck" style="display: none" tabindex="-1">
+        <div class="form-row">
+          <label data-i18n="inq.name">Name
+            <input type="text" name="name" required data-i18n-ph="inq.name.ph" placeholder="Your name" />
+          </label>
+          <label data-i18n="inq.email">Email
+            <input type="email" name="email" required data-i18n-ph="inq.email.ph" placeholder="you@example.com" />
+          </label>
+        </div>
+        <div class="form-row">
+          <label data-i18n="inq.whatsapp">WhatsApp
+            <input type="text" name="whatsapp" data-i18n-ph="inq.whatsapp.ph" placeholder="+60..." />
+          </label>
+          <label data-i18n="inq.pax">Travelers
+            <input type="number" name="pax" min="1" data-i18n-ph="inq.pax.ph" placeholder="2" />
+          </label>
+        </div>
+        <div class="form-row">
+          <label data-i18n="inq.country">Home country
+            <input type="text" name="country" data-i18n-ph="inq.country.ph" placeholder="Malaysia" />
+          </label>
+          <label data-i18n="inq.cities">Preferred cities
+            <input type="text" name="cities" data-i18n-ph="inq.cities.ph" placeholder="Guangzhou, Xi'an" />
+          </label>
+        </div>
+        <div class="form-row">
+          <label data-i18n="inq.type">Trip type
+            <select name="type" id="inqType" data-i18n="inq.type.opt"></select>
+          </label>
+          <label data-i18n="inq.budget">Budget / person (optional)
+            <input type="text" name="budget" data-i18n-ph="inq.budget.ph" placeholder="e.g. ¥8,000" />
+          </label>
+        </div>
+        <label data-i18n="inq.msg">What would you like to experience?
+          <textarea name="message" rows="4" data-i18n-ph="inq.msg.ph" placeholder="e.g. 7-day Greater Bay Area tech &amp; food private tour..."></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary" data-i18n="inq.submit">Send inquiry</button>
+        <p class="form-status" id="inquiryStatus" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div class="footer-brand">
+        <span class="brand-seal" aria-hidden="true">游</span>
+        <div>
+          <strong>China Local Guides</strong>
+          <em data-i18n="brand.zh">中国本地向导</em>
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="#find" data-i18n="nav.find">Find a Trip</a>
+        <a href="#explore" data-i18n="nav.explore">Explore</a>
+        <a href="#guides" data-i18n="nav.guides">Guides</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#culture" data-i18n="nav.culture">Culture</a>
+        <a href="#wellness" data-i18n="nav.wellness">Wellness</a>
+        <a href="#contact" data-i18n="nav.plan">Contact</a>
+        <a href="partner.html" data-i18n="footer.join">For Guides &amp; Drivers</a>
+      </nav>
+      <p class="footer-note" data-i18n="footer.note">One brand, one platform · 15 cities, 200+ core guides. Travel services provided by Shanghai Kaixuan Sightseeing Travel Service Co., Ltd..</p>
+    </div>
+  </footer>
+
+  <!-- Mobile bottom conversion bar (phone only) -->
+  <div class="mobile-cta" id="mobileCta">
+    <a href="#contact" class="mobile-cta-main" data-i18n="hero.cta2">Plan Your Trip</a>
+    <a href="#find" class="mobile-cta-sub" data-i18n="nav.find">Find a Trip</a>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/culture.js"></script>
+  <script src="assets/js/zh-hant.js"></script>
+  <script src="assets/js/i18n-extra.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
