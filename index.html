@@ -17,6 +17,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Google Analytics 4: 把下面 G-XXXXXXXXXXX 换成你的 Measurement ID 即可生效 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXXX');
+  </script>
 </head>
 <body>
 
@@ -50,6 +58,7 @@
           <a href="#about" data-i18n="nav.about">About</a>
           <a href="#culture" data-i18n="nav.culture">Culture</a>
           <a href="#wellness" data-i18n="nav.wellness">Wellness</a>
+          <a href="#business" data-i18n="nav.business">Business Tours</a>
           <a href="#contact" class="btn btn-sm btn-ghost" data-i18n="nav.plan">Plan a Trip</a>
         </nav>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
@@ -288,6 +297,22 @@
     </div>
   </section>
 
+  <!-- ============ BUSINESS & INSPECTION TOURS ============ -->
+  <section class="section section-business" id="business">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker" data-i18n="biz.kicker">Business &amp; Inspection Tours</p>
+        <h2 data-i18n="biz.h2">See China's manufacturing up close.</h2>
+        <p class="lead" data-i18n="biz.lead">We open doors to real factories across the Greater Bay Area — Dongguan, Foshan, Guangzhou and Shenzhen — for buyers, founders and trade delegations. Factory visits, supply-chain meetings, professional translation and full logistics, arranged end to end.</p>
+      </div>
+      <div class="biz-grid" id="bizGrid"></div>
+      <div class="biz-actions">
+        <a class="btn btn-outline-dark" href="destination.html?type=business" data-i18n="biz.cta">See business itineraries →</a>
+      </div>
+      <p class="biz-note" data-i18n="biz.note">Factory visits are arranged only with the supplier's prior confirmation. We assist with appointments, translation and logistics — we do not represent or guarantee any supplier.</p>
+    </div>
+  </section>
+
   <!-- ============ MEET OUR GUIDES ============ -->
   <section class="section section-alt" id="guides">
     <div class="container">
@@ -410,6 +435,7 @@
     <div class="container">
       <div class="section-head">
         <h2 data-i18n="voices.h2">Reviews from travelers around the world</h2>
+        <p class="review-sample-note" data-i18n="rev.sample">Sample reviews shown — real guest reviews are being collected.</p>
       </div>
 
       <div class="review-live">
@@ -675,6 +701,7 @@
         <a href="#about" data-i18n="nav.about">About</a>
         <a href="#culture" data-i18n="nav.culture">Culture</a>
         <a href="#wellness" data-i18n="nav.wellness">Wellness</a>
+        <a href="#business" data-i18n="nav.business">Business Tours</a>
         <a href="#contact" data-i18n="nav.plan">Contact</a>
         <a href="partner.html" data-i18n="footer.join">For Guides &amp; Drivers</a>
       </nav>
