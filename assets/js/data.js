@@ -78,6 +78,59 @@
   };
   window.CLA_TYPE_ORDER = ["tech", "culture", "private", "business", "city", "nature", "wellness"];
 
+  /* ---------- Business & Inspection tours (Greater Bay manufacturing) ----------
+     Each entry: 7-language arrays [en, zh, ja, fr, ko, de, vi] */
+  window.CLA_BUSINESS = [
+    {
+      slug: "dongguan",
+      city: ["Dongguan", "东莞", "東莞", "Dongguan", "둥관", "Dongguan", "Đông Quan"],
+      name: ["Electronics & Hardware", "电子与硬件制造", "電子・ハードウェア製造", "Électronique & matériel", "전자·하드웨어", "Elektronik & Hardware", "Điện tử & phần cứng"],
+      tag:  ["From workshop to supply chain", "从车间到供应链", "工場からサプライチェーン", "De l'atelier à la chaîne", "현장부터 공급망", "Vom Werk zum Supply Chain", "Từ xưởng đến chuỗi cung ứng"],
+      days: ["1–2 days", "1–2 天", "1〜2日", "1 à 2 jours", "1~2일", "1–2 Tage", "1–2 ngày"],
+      hl: [
+        ["See real automation lines", "看真实自动化产线", "実際の自動化ラインを見学", "Visitez de vraies lignes d'automatisation", "실제 자동화 라인 견학", "Echte Automatisierungslinien sehen", "Tham quan dây chuyền tự động thực tế"],
+        ["Meet component suppliers", "对接零部件供应商", "部品サプライヤーと面談", "Rencontrez les fournisseurs de composants", "부품 공급업체 미팅", "Komponenten-Lieferanten treffen", "Gặp nhà cung cấp linh kiện"],
+        ["Private translator & logistics", "私人翻译与后勤", "専任通訳と手配", "Traducteur privé et logistique", "전담 통역·물류", "Privater Dolmetscher & Logistik", "Thông dịch viên & hậu cần riêng"]
+      ]
+    },
+    {
+      slug: "foshan",
+      city: ["Foshan", "佛山", "仏山", "Foshan", "포산", "Foshan", "Phật Sơn"],
+      name: ["Home, Ceramics & Appliances", "家居·陶瓷·家电", "家具・陶磁器・家電", "Maison, céramique & électroménager", "가구·도자기·가전", "Haushalt, Keramik & Elektro", "Nội thất, gốm sứ & gia dụng"],
+      tag:  ["The workshop of everyday goods", "日用制造的车间", "日用品の工房", "L'atelier des objets du quotidien", "일용품 제조의 작업장", "Die Werkstatt des Alltags", "Xưởng hàng tiêu dùng"],
+      days: ["1–2 days", "1–2 天", "1〜2日", "1 à 2 jours", "1~2일", "1–2 Tage", "1–2 ngày"],
+      hl: [
+        ["Furniture & ceramics clusters", "家具与陶瓷产业集群", "家具・陶磁器の集積地", "Clusters de meubles et céramique", "가구·도자기 클러스터", "Möbel- & Keramikcluster", "Cụm nội thất & gốm sứ"],
+        ["Kitchen & lighting factories", "厨电与照明工厂", "キッチン家電・照明工場", "Usines d'électroménager et d'éclairage", "주방가전·조명 공장", "Küchen- & Beleuchtungswerke", "Nhà máy gia dụng & chiếu sáng"],
+        ["Bulk & OEM sourcing", "大宗与代工采购", "卸売・OEM調達", "Sourcing en gros et OEM", "도매·OEM 소싱", "Groß- & OEM-Beschaffung", "Thu mua sỉ & OEM"]
+      ]
+    },
+    {
+      slug: "guangzhou",
+      city: ["Guangzhou", "广州", "広州", "Canton", "광저우", "Guangzhou", "Quảng Châu"],
+      name: ["Trade, Auto & Markets", "外贸·汽车·专业市场", "貿易・自動車・専門市場", "Commerce, automobile & marchés", "무역·자동차·전문시장", "Handel, Auto & Märkte", "Thương mại, ô tô & chợ chuyên doanh"],
+      tag:  ["China's trade gateway", "中国外贸门户", "中国貿易の玄関", "La porte du commerce chinois", "중국 무역 관문", "Chinas HandelsTor", "Cửa ngõ thương mại Trung Quốc"],
+      days: ["1–3 days", "1–3 天", "1〜3日", "1 à 3 jours", "1~3일", "1–3 Tage", "1–3 ngày"],
+      hl: [
+        ["Canton Fair & trade hubs", "广交会与贸易枢纽", "広州交易会と貿易拠点", "Foire de Canton et pôles commerciaux", "캔톤페어·무역 거점", "Canton Fair & Handelshubs", "Hội chợ Canton & đầu mối thương mại"],
+        ["Auto & EV supply chain", "汽车与新能源产业链", "自動車・EVサプライチェーン", "Chaîne auto & VE", "자동차·EV 공급망", "Auto- & E-Auto-Kette", "Chuỗi ô tô & xe điện"],
+        ["Professional wholesale markets", "专业批发市场", "専門卸売市場", "Marchés de gros spécialisés", "전문 도매시장", "Fachgroßmärkte", "Chợ bán sỉ chuyên doanh"]
+      ]
+    },
+    {
+      slug: "shenzhen",
+      city: ["Shenzhen", "深圳", "深圳", "Shenzhen", "선전", "Shenzhen", "Thâm Quyến"],
+      name: ["Hard Tech & Innovation", "硬科技与创新创业", "ハードテックとイノベーション", "Deep tech & innovation", "하드테크·혁신", "Deep Tech & Innovation", "Công nghệ lõi & đổi mới"],
+      tag:  ["The innovation engine", "创新引擎", "イノベーションのエンジン", "Le moteur de l'innovation", "혁신 엔진", "Der Innovationsmotor", "Động cơ đổi mới"],
+      days: ["1–2 days", "1–2 天", "1〜2日", "1 à 2 jours", "1~2일", "1–2 Tage", "1–2 ngày"],
+      hl: [
+        ["Tech parks & maker spaces", "科技园与创客空间", "科技園・メイカースペース", "Parcs technologiques et espaces maker", "테크파크·메이커스페이스", "Tech-Parks & Maker-Spaces", "Công viên công nghệ & không gian maker"],
+        ["Hardware & supply-chain tours", "硬件与供应链考察", "ハードウェア・サプライチェーン視察", "Visites hardware & chaîne", "하드웨어·공급망 투어", "Hardware- & Supply-Chain-Touren", "Tham quan phần cứng & chuỗi cung ứng"],
+        ["Investor & founder meetups", "投资人与创业者对接", "投資家・起業家交流会", "Rencontres investisseurs", "투자자·창업가 미팅", "Investor- & Founder-Treffen", "Gặp gỡ nhà đầu tư & founder"]
+      ]
+    }
+  ];
+
   /* ---------- Itineraries: 3 classic ways per city ----------
      Each: { d: days, t: theme key, title: [7], intro: [7], spots: [7] }
      Spots are kept short so they read well in every language.            */
