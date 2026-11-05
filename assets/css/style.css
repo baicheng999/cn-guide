@@ -725,3 +725,56 @@ a.fc-qr:hover { border-color: var(--gold-soft); }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .btn:hover, .city-card:hover, .step:hover, .guide-card:hover, .review-card:hover, .itin-card:hover, .find-chip:hover { transform: none; }
 }
+
+/* ============ Business & Inspection Tours ============ */
+.section-business { background: var(--paper, #f6f1e7); }
+.biz-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 8px;
+}
+.biz-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(35, 32, 27, 0.1);
+  border-radius: 16px;
+  padding: 26px 26px 22px;
+  box-shadow: 0 6px 22px rgba(35, 32, 27, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.biz-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(35, 32, 27, 0.1); }
+.biz-no {
+  position: absolute; top: 18px; right: 22px;
+  font: 600 13px/1 "Inter", sans-serif; color: var(--bronze, #b0894f);
+  letter-spacing: 0.04em;
+}
+.biz-city { margin: 0 0 4px; font-size: 19px; color: var(--ink, #23201b); }
+.biz-name { margin: 0 0 6px; font-size: 16px; color: var(--red, #a8322c); font-weight: 600; }
+.biz-tag { margin: 0 0 12px; font-size: 13.5px; color: #6b6357; }
+.biz-hl { list-style: none; margin: 0 0 12px; padding: 0; }
+.biz-hl li {
+  position: relative; padding-left: 18px; margin: 5px 0;
+  font-size: 14px; color: #3a352d; line-height: 1.5;
+}
+.biz-hl li::before {
+  content: "›"; position: absolute; left: 2px; top: 0;
+  color: var(--bronze, #b0894f); font-weight: 700;
+}
+.biz-days {
+  display: inline-block; margin: 0; padding: 4px 12px;
+  font-size: 12.5px; color: var(--ink, #23201b);
+  background: rgba(176, 137, 79, 0.12); border-radius: 999px;
+}
+.biz-actions { margin-top: 26px; }
+.biz-note {
+  margin-top: 18px; font-size: 12.5px; line-height: 1.6;
+  color: #7a7264; border-top: 1px solid rgba(35, 32, 27, 0.08);
+  padding-top: 14px;
+}
+.review-sample-note {
+  margin: 6px 0 0; font-size: 13px; color: #7a7264; font-style: italic;
+}
+@media (max-width: 1024px) {
+  .biz-grid { grid-template-columns: 1fr; }
+}
