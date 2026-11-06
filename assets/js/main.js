@@ -472,7 +472,22 @@
       "bya.c6.p3": "Allow time between meeting locations for travel and follow-up discussions.",
       "bya.cta.h2": "Need Help Planning Your Visit to China?",
       "bya.cta.lead": "From your first arrival to your last day in China, China Guide can help coordinate the services you need.",
-      "bya.cta.btn": "Plan Your China Journey"
+      "bya.cta.btn": "Plan Your China Journey",
+
+      /* Local Expertise / Nationwide Coordination (#network) */
+      "hnet.kicker": "Nationwide Coordination",
+      "hnet.h2": "Local Expertise. Nationwide Connections.",
+      "hnet.lead": "From local expertise to nationwide possibilities. We connect you with the right people, services and experiences across China.",
+      "hnet.map.note": "Illustrative outline of China — not a service coverage map",
+      "hnet.c1.t": "Local Expertise",
+      "hnet.c1.d": "Understand local destinations, services and practical arrangements.",
+      "hnet.c2.t": "Nationwide Connections",
+      "hnet.c2.d": "Connect clients with suitable local tourism, healthcare and business resources across China, subject to availability and verification.",
+      "hnet.c3.t": "Personalized Coordination",
+      "hnet.c3.d": "Coordinate travel arrangements, medical visit support and business visits based on individual requirements.",
+      "hnet.cta.h": "Looking for a specific destination or service in China?",
+      "hnet.cta.p": "Tell us what you need. Our team will explore suitable local options and coordinate the next steps with you.",
+      "hnet.cta.btn": "Tell Us What You Need"
     },
     zh: {
       "nav.explore": "探索中国", "nav.guides": "导游团队",
@@ -937,7 +952,22 @@
       "bya.c6.p3": "在不同会面地点之间，为路程与后续交流留出时间。",
       "bya.cta.h2": "需要帮你规划中国之行吗？",
       "bya.cta.lead": "从落地第一天到离开中国的最后一天，China Guide 都可以协助协调你需要的服务。",
-      "bya.cta.btn": "规划你的中国之旅"
+      "bya.cta.btn": "规划你的中国之旅",
+
+      /* 本地专业 / 全国协调（#network） */
+      "hnet.kicker": "全国资源协调",
+      "hnet.h2": "本地专业，连接全中国",
+      "hnet.lead": "从本地专业出发，连接全国的可能性。我们为你对接中国各地合适的人、服务与体验。",
+      "hnet.map.note": "中国轮廓示意图 — 非服务覆盖范围图",
+      "hnet.c1.t": "本地专业",
+      "hnet.c1.d": "理解各地目的地、本地服务与实际安排细节。",
+      "hnet.c2.t": "全国联结",
+      "hnet.c2.d": "视资源可约情况与核验结果，为客户对接中国各地合适的本地旅游、医疗与商务资源。",
+      "hnet.c3.t": "个性化协调",
+      "hnet.c3.d": "根据每位客户的具体需求，协调行程安排、就医陪同支持与商务参访。",
+      "hnet.cta.h": "在寻找中国某个特定目的地或服务？",
+      "hnet.cta.p": "告诉我们你的需求。我们的团队会探索合适的本地资源，并与你协调后续安排。",
+      "hnet.cta.btn": "告诉我们你的需求"
     }
   };
 

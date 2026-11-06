@@ -1091,3 +1091,72 @@ a.fc-qr:hover { border-color: var(--gold-soft); }
   .bya-cta .btn { width: 100%; }
 }
 .sea-list span { display: inline-flex; align-items: center; padding: 9px 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); font-size: 14px; font-weight: 600; color: var(--ink); }
+
+/* ============================================================
+   LOCAL EXPERTISE / NATIONWIDE COORDINATION  (#network)
+   The China outline is decorative only — no coverage markers,
+   no city dots, no invented network data.
+   ============================================================ */
+.hnet-section { position: relative; }
+.hnet-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  gap: 46px;
+  align-items: center;
+  margin-bottom: 46px;
+}
+.hnet-head-copy .kicker {
+  color: var(--gold-soft); font-size: 11.5px; letter-spacing: .16em;
+  text-transform: uppercase; margin-bottom: 14px;
+}
+.hnet-head-copy h2 { font-size: clamp(28px, 3.6vw, 44px); line-height: 1.2; color: var(--bone); }
+.hnet-head-copy .lead { margin-top: 18px; font-size: 16px; line-height: 1.78; color: var(--muted); }
+
+.hnet-map { margin: 0; text-align: center; }
+.hnet-map img {
+  display: block; width: 100%; max-width: 340px; height: auto;
+  margin: 0 auto; filter: drop-shadow(0 10px 30px rgba(0, 0, 0, .28));
+}
+.hnet-map figcaption {
+  margin-top: 10px; font-size: 11px; letter-spacing: .03em;
+  line-height: 1.5; color: var(--bone-faint);
+}
+
+.hnet-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.hnet-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: 16px;
+  padding: 28px 26px 26px;
+  transition: border-color .22s ease, box-shadow .22s ease, transform .22s ease;
+}
+.hnet-card:hover { border-color: rgba(94, 139, 126, .62); box-shadow: var(--shadow); transform: translateY(-3px); }
+.hnet-no {
+  display: block; font-family: var(--font-mono); font-size: 11px;
+  letter-spacing: .18em; color: var(--gold-soft); margin-bottom: 16px;
+}
+.hnet-card h3 { font-size: 19px; line-height: 1.35; color: var(--ink); margin-bottom: 12px; }
+.hnet-card p { font-size: 14.5px; line-height: 1.75; color: var(--muted); }
+
+.hnet-cta {
+  margin-top: 46px; padding: 44px 32px; text-align: center;
+  border: 1px solid rgba(94, 139, 126, .3); border-radius: 20px;
+  background: linear-gradient(135deg, #1E343A 0%, #12262A 55%, #0F1B1E 100%);
+  box-shadow: var(--shadow-sm);
+}
+.hnet-cta h3 { font-size: clamp(22px, 2.6vw, 30px); color: var(--bone); margin-bottom: 12px; }
+.hnet-cta p { max-width: 660px; margin: 0 auto 24px; font-size: 15.5px; line-height: 1.75; color: var(--muted); }
+.hnet-cta .btn { min-width: 220px; }
+
+@media (max-width: 900px) {
+  .hnet-head { grid-template-columns: 1fr; gap: 26px; margin-bottom: 34px; }
+  .hnet-map { order: 2; }
+  .hnet-map img { max-width: 280px; }
+  .hnet-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .hnet-cta { margin-top: 36px; padding: 34px 22px; }
+}
+@media (max-width: 600px) {
+  .hnet-grid { grid-template-columns: 1fr; gap: 14px; }
+  .hnet-card { padding: 22px 20px; }
+  .hnet-map img { max-width: 240px; }
+  .hnet-cta { padding: 30px 18px; }
+  .hnet-cta .btn { width: 100%; }
+}
