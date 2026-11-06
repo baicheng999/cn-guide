@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>China Guide · 中国向导 — 夜行图志设计稿</title>
+<meta name="description" content="Private local guides, tailor-made routes and Greater Bay Area factory tours across China — planned by people who live there." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0F1B1E; --ink-2:#16282C; --ink-3:#1E343A;
+    --bone:#EFE7D8; --bone-soft:#C9BFB0; --bone-faint:#8C857A;
+    --lantern:#F2613F; --jade:#5E8B7E; --seal:#C8453A;
+    --line:rgba(239,231,216,.14); --line-strong:rgba(239,231,216,.28);
+    --font-display:"Fraunces","Noto Serif SC",Georgia,serif;
+    --font-body:"Inter","Noto Sans SC",system-ui,sans-serif;
+    --font-mono:"Space Mono",ui-monospace,monospace;
+    --maxw:1180px; --gut:24px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--ink); color:var(--bone);
+    font-family:var(--font-body); font-size:17px; line-height:1.65;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  ::selection{background:var(--lantern); color:var(--ink);}
+  :focus-visible{outline:2px solid var(--lantern); outline-offset:3px; border-radius:3px;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 var(--gut);}
+  .mono{font-family:var(--font-mono); letter-spacing:.04em;}
+  .eyebrow{font-family:var(--font-mono); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--lantern);}
+
+  /* ---------- header ---------- */
+  .site-head{position:sticky; top:0; z-index:40; background:rgba(15,27,30,.82); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .site-head .wrap{display:flex; align-items:center; justify-content:space-between; height:68px; gap:20px;}
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand .seal{width:38px; height:38px; border-radius:9px; background:var(--seal); color:var(--bone); display:grid; place-items:center; font-family:var(--font-display); font-weight:700; font-size:20px; box-shadow:0 0 0 1px rgba(239,231,216,.15);}
+  .brand b{font-family:var(--font-display); font-weight:600; font-size:18px; letter-spacing:.01em;}
+  .brand em{display:block; font-style:normal; font-size:11px; color:var(--bone-soft); letter-spacing:.18em;}
+  .nav{display:flex; align-items:center; gap:28px;}
+  .nav a{font-size:15px; color:var(--bone-soft); transition:color .2s;}
+  .nav a:hover{color:var(--bone);}
+  .btn{display:inline-flex; align-items:center; gap:8px; font-family:var(--font-body); font-weight:600; font-size:15px; padding:11px 20px; border-radius:999px; cursor:pointer; border:1px solid transparent; transition:transform .15s, background .2s, color .2s; white-space:nowrap;}
+  .btn-seal{background:var(--seal); color:var(--bone);}
+  .btn-seal:hover{transform:translateY(-1px); background:#d65147;}
+  .btn-ghost{border-color:var(--line-strong); color:var(--bone);}
+  .btn-ghost:hover{border-color:var(--lantern); color:var(--lantern);}
+  .nav-toggle{display:none; background:none; border:1px solid var(--line-strong); border-radius:8px; width:42px; height:38px; cursor:pointer;}
+  .nav-toggle span{display:block; width:18px; height:2px; background:var(--bone); margin:3px auto;}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative; overflow:hidden; padding:96px 0 88px;}
+  .hero .grid-bg{position:absolute; inset:0; opacity:.5; pointer-events:none;}
+  .hero .wrap{position:relative; z-index:2;}
+  .hero h1{font-family:var(--font-display); font-weight:600; font-size:clamp(40px,7vw,82px); line-height:1.04; margin:18px 0 10px; letter-spacing:-.01em;}
+  .hero h1 .en{display:block; font-size:clamp(20px,2.6vw,32px); font-style:italic; color:var(--bone-soft); font-weight:400; margin-top:14px; letter-spacing:0;}
+  .hero p.lead{max-width:56ch; color:var(--bone-soft); font-size:18px; margin:18px 0 30px;}
+  .hero .cta-row{display:flex; flex-wrap:wrap; gap:14px; align-items:center;}
+  .route{margin-top:42px; font-size:13px; color:var(--bone-faint); display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
+  .route .dot{width:7px; height:7px; border-radius:50%; background:var(--lantern); box-shadow:0 0 0 4px rgba(242,97,63,.18);}
+  .route .arr{color:var(--lantern);}
+
+  /* ---------- section frame ---------- */
+  .band{padding:78px 0; border-top:1px solid var(--line);}
+  .band.alt{background:linear-gradient(180deg,var(--ink) 0%, var(--ink-2) 100%);}
+  .sec-head{margin-bottom:34px;}
+  .sec-head h2{font-family:var(--font-display); font-weight:600; font-size:clamp(28px,4vw,42px); line-height:1.1; margin:10px 0 0; letter-spacing:-.01em;}
+  .sec-head p{color:var(--bone-soft); max-width:60ch; margin:12px 0 0;}
+
+  /* ---------- destination chips ---------- */
+  .chips{display:flex; flex-wrap:wrap; gap:12px;}
+  .chip{padding:12px 20px; border:1px solid var(--line-strong); border-radius:999px; font-size:15px; color:var(--bone); transition:border-color .2s, color .2s, background .2s; cursor:pointer;}
+  .chip:hover{border-color:var(--lantern); color:var(--lantern); background:rgba(242,97,63,.06);}
+  .chip small{font-family:var(--font-mono); color:var(--bone-faint); margin-left:8px; font-size:11px;}
+
+  /* ---------- steps ---------- */
+  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:0; border:1px solid var(--line); border-radius:14px; overflow:hidden;}
+  .step{padding:34px 30px; border-right:1px solid var(--line);}
+  .step:last-child{border-right:none;}
+  .step .n{font-family:var(--font-mono); font-size:13px; color:var(--lantern); margin-bottom:14px;}
+  .step h3{font-family:var(--font-display); font-weight:600; font-size:23px; margin:0 0 8px;}
+  .step p{color:var(--bone-soft); font-size:15px; margin:0;}
+
+  /* ---------- business band ---------- */
+  .biz{position:relative; border:1px solid var(--line-strong); border-left:4px solid var(--lantern); border-radius:14px; padding:40px; display:grid; grid-template-columns:1.4fr auto; gap:30px; align-items:center; background:var(--ink-2);}
+  .biz h3{font-family:var(--font-display); font-weight:600; font-size:clamp(24px,3vw,34px); margin:8px 0 10px;}
+  .biz p{color:var(--bone-soft); margin:0; max-width:54ch;}
+  .biz .tag{font-family:var(--font-mono); font-size:12px; letter-spacing:.18em; color:var(--lantern); text-transform:uppercase;}
+
+  /* ---------- guide stamps ---------- */
+  .stamps{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .stamp{border:1px solid var(--line); border-radius:14px; padding:26px; background:var(--ink-2); position:relative; transition:border-color .2s, transform .2s;}
+  .stamp:hover{border-color:var(--jade); transform:translateY(-3px);}
+  .stamp .ring{width:54px; height:54px; border-radius:50%; border:2px solid var(--jade); display:grid; place-items:center; font-family:var(--font-display); font-weight:700; font-size:22px; color:var(--jade); margin-bottom:18px;}
+  .stamp h4{font-family:var(--font-display); font-weight:600; font-size:21px; margin:0 0 4px;}
+  .stamp .city{font-family:var(--font-mono); font-size:12px; color:var(--lantern); letter-spacing:.06em; margin-bottom:12px;}
+  .stamp p{color:var(--bone-soft); font-size:14px; margin:0 0 14px;}
+  .stamp .lang{font-size:12px; color:var(--bone-faint); font-family:var(--font-mono);}
+
+  /* ---------- culture / wellness ---------- */
+  .duo{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .panel{border:1px solid var(--line); border-radius:14px; padding:30px; background:var(--ink-2);}
+  .panel h3{font-family:var(--font-display); font-weight:600; font-size:24px; margin:6px 0 10px;}
+  .panel p{color:var(--bone-soft); font-size:15px; margin:0;}
+  .panel .k{font-family:var(--font-mono); font-size:12px; letter-spacing:.16em; color:var(--jade); text-transform:uppercase;}
+
+  /* ---------- quote ---------- */
+  .quote{max-width:72ch; margin:0 auto; text-align:center;}
+  .quote q{font-family:var(--font-display); font-weight:400; font-style:italic; font-size:clamp(22px,3vw,32px); line-height:1.35; quotes:none;}
+  .quote .by{margin-top:18px; font-family:var(--font-mono); font-size:13px; color:var(--bone-faint);}
+
+  /* ---------- contact ---------- */
+  .contact{background:var(--ink-3); border-radius:18px; padding:48px; text-align:center; border:1px solid var(--line);}
+  .contact h2{font-family:var(--font-display); font-weight:600; font-size:clamp(28px,4vw,44px); margin:10px 0 12px;}
+  .contact p{color:var(--bone-soft); max-width:52ch; margin:0 auto 26px;}
+  .contact .links{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; align-items:center; margin-top:24px; font-family:var(--font-mono); font-size:14px; color:var(--bone-soft);}
+
+  /* ---------- footer ---------- */
+  .foot{border-top:1px solid var(--line); padding:40px 0; color:var(--bone-faint); font-size:14px;}
+  .foot .wrap{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;}
+  .foot a{color:var(--bone-soft);}
+  .foot a:hover{color:var(--bone);}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:860px){
+    .nav{position:fixed; inset:68px 0 auto 0; flex-direction:column; align-items:flex-start; gap:0; background:var(--ink-2); border-bottom:1px solid var(--line); padding:8px var(--gut) 16px; display:none;}
+    .nav.open{display:flex;}
+    .nav a{padding:14px 0; width:100%; border-bottom:1px solid var(--line);}
+    .nav-toggle{display:block;}
+    .head-cta{display:none;}
+    .steps{grid-template-columns:1fr;}
+    .step{border-right:none; border-bottom:1px solid var(--line);}
+    .step:last-child{border-bottom:none;}
+    .biz{grid-template-columns:1fr; padding:28px;}
+    .stamps{grid-template-columns:1fr;}
+    .duo{grid-template-columns:1fr;}
+    .contact{padding:32px 22px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto !important; transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="China Guide home">
+      <span class="seal" aria-hidden="true">游</span>
+      <span><b>China Guide</b><em>中国向导</em></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#explore">目的地</a>
+      <a href="#guides">本地向导</a>
+      <a href="#business">大湾区商旅</a>
+      <a href="#culture">文化</a>
+      <a href="#wellness">养生</a>
+      <a href="#contact" class="btn btn-seal head-cta">Plan a Trip</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="grid-bg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="rgba(239,231,216,0.10)" stroke-width="1">
+        <path d="M0,420 C240,360 420,500 720,430 C980,372 1180,470 1440,400"/>
+        <path d="M0,300 C260,250 440,380 720,320 C1000,260 1200,360 1440,300"/>
+        <path d="M0,520 C220,470 460,560 720,510 C1020,452 1220,540 1440,500"/>
+      </g>
+      <g fill="var(--lantern)">
+        <circle cx="240" cy="372" r="3"/><circle cx="720" cy="430" r="3"/><circle cx="1180" cy="452" r="3"/>
+      </g>
+    </svg>
+    <div class="wrap">
+      <p class="eyebrow">EST · LOCAL · 100+ CITIES · REAL GUIDES</p>
+      <h1>像本地人一样，<br/>看见中国。<span class="en">See China the way a local would show you.</span></h1>
+      <p class="lead">私人本地向导、为你定制的路线，以及大湾区工厂考察——都由真正住在当地的人来规划。没有模板行程，只有你想要的那种旅行。</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-seal">Plan your trip →</a>
+        <a href="#explore" class="btn btn-ghost">Browse routes</a>
+      </div>
+      <p class="route mono"><span class="dot"></span> BEIJING <span class="arr">→</span> GUILIN <span class="arr">→</span> CHENGDU <span class="arr">→</span> SHANGHAI <span class="dot"></span></p>
+    </div>
+  </section>
+
+  <!-- EXPLORE -->
+  <section class="band" id="explore">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">WHERE TO GO</p>
+        <h2>挑一个目的地，剩下的交给我们</h2>
+        <p>从古都到山水，从特区工厂到烟火老城——每个城市都有我们验过的向导和现成的玩法骨架。</p>
+      </div>
+      <div class="chips">
+        <span class="chip">北京 Beijing <small>BJS</small></span>
+        <span class="chip">上海 Shanghai <small>SHA</small></span>
+        <span class="chip">西安 Xi'an <small>SIA</small></span>
+        <span class="chip">成都 Chengdu <small>CTU</small></span>
+        <span class="chip">桂林 Guilin <small>KWL</small></span>
+        <span class="chip">杭州 Hangzhou <small>HGH</small></span>
+        <span class="chip">大湾区 Greater Bay <small>GBA</small></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="band alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">HOW IT WORKS</p>
+        <h2>三步，从想法到出发</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <p class="n">01</p>
+          <h3>找向导</h3>
+          <p>按城市和兴趣匹配——会讲你语言的本地人，不是转手中介。</p>
+        </div>
+        <div class="step">
+          <p class="n">02</p>
+          <h3>定路线</h3>
+          <p>告诉我们日期与偏好，向导把一天排好，你只管点头或改。</p>
+        </div>
+        <div class="step">
+          <p class="n">03</p>
+          <h3>出发</h3>
+          <p>落地有人接、途中能改、随时能找到人——全程在地面支持。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS -->
+  <section class="band" id="business">
+    <div class="wrap">
+      <div class="biz">
+        <div>
+          <p class="tag">Greater Bay Area · 商旅考察</p>
+          <h3>大湾区，工厂到门前</h3>
+          <p>想看供应链怎么跑？我们安排珠三角工厂参观、与厂长面谈、样品对接，配商务翻译与接送。适合采购、品牌方与考察团。</p>
+        </div>
+        <a href="#contact" class="btn btn-seal">看工厂游 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDES -->
+  <section class="band alt" id="guides">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">OUR GUIDES</p>
+        <h2>几位你可能会喜欢的向导</h2>
+      </div>
+      <div class="stamps">
+        <div class="stamp">
+          <div class="ring" aria-hidden="true">林</div>
+          <h4>Lin</h4>
+          <p class="city">CHENGDU · CTU</p>
+          <p>熊猫基地清晨场、巷子里的川菜、周边山水一日。慢旅行型。</p>
+          <p class="lang">EN · 中文 · 日本語</p>
+        </div>
+        <div class="stamp">
+          <div class="ring" aria-hidden="true">陈</div>
+          <h4>Chen</h4>
+          <p class="city">SHANGHAI · SHA</p>
+          <p>老弄堂、当代艺术、商务接待与工厂对接。节奏明快。</p>
+          <p class="lang">EN · 中文 · Français</p>
+        </div>
+        <div class="stamp">
+          <div class="ring" aria-hidden="true">阿</div>
+          <h4>Adi</h4>
+          <p class="city">GUILIN · KWL</p>
+          <p>漓江竹筏、瑶寨家访、摄影机位。自然与在地文化。</p>
+          <p class="lang">EN · 中文 · Deutsch</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CULTURE + WELLNESS -->
+  <section class="band" id="culture">
+    <div class="wrap">
+      <div class="duo">
+        <div class="panel" id="wellness">
+          <p class="k">Culture</p>
+          <h3>不只是景点清单</h3>
+          <p>茶怎么泡、节气吃什么、为什么一座桥要拐三个弯——我们把文化放进路线里，而不是放进解说词。</p>
+        </div>
+        <div class="panel">
+          <p class="k">Wellness</p>
+          <h3>把节奏慢下来</h3>
+          <p>温泉、太极晨练、山间呼吸——为长途飞行后或行程中段安排一段真正放松的日子。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="band alt">
+    <div class="wrap">
+      <div class="quote">
+        <q>我们原以为只是找个翻译，结果 Lin 带我们走进了成都普通人的一天。这趟值了。</q>
+        <p class="by">— Sarah &amp; Tom, 来自英国 · 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="band" id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <p class="eyebrow">PLAN A TRIP</p>
+        <h2>告诉我们你的日期和兴趣</h2>
+        <p>真人回复，不走机器人。我们会在 WhatsApp 或邮件里和你把路线聊清楚。</p>
+        <a href="#contact" class="btn btn-seal">开始规划 →</a>
+        <div class="links">
+          <span>✉ hello@auronixa.com</span>
+          <span>·</span>
+          <span>WhatsApp Business ↗</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 China Guide · 中国向导</span>
+    <span><a href="#explore">目的地</a> · <a href="#guides">向导</a> · <a href="#business">商旅</a> · <a href="#contact">联系</a></span>
+    <span class="mono">One brand · 15 cities · 200+ guides</span>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var t=document.getElementById('navToggle'), n=document.getElementById('nav');
+    if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});}
+  })();
+</script>
+</body>
+</html>

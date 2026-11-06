@@ -1,5 +1,5 @@
 /* ============================================================
-   China Local Guides — Interactions + i18n
+   China Guide — Interactions + i18n
    ============================================================ */
 (function () {
   "use strict";
@@ -7,10 +7,10 @@
   /* ---------------- i18n dictionary ---------------- */
   var I18N = {
     en: {
-      "nav.explore": "Explore China", "nav.guides": "Our Guides",
+      "nav.explore": "Explore China", "nav.guides": "Local Guides",
       "nav.partner": "For Guides", "nav.about": "About", "nav.plan": "Plan a Trip",
       "hero.eyebrow": "A NATIONWIDE NETWORK OF LOCAL CHINA EXPERTS",
-      "brand.zh": "中国本地向导",
+      "brand.zh": "中国向导",
       "hero.h1": 'Discover China<br><span class="accent">Through Local Guides</span>',
       "hero.sub": "Real local guides. Authentic China. Every journey built around you.",
       "hero.cta1": "Explore Destinations", "hero.cta2": "Plan Your Trip",
@@ -25,7 +25,7 @@
       "dest.notice": "Itineraries are indicative. Final travel contracts, payment and arrangements are handled by Shanghai Kaixuan Sightseeing Travel Service Co., Ltd..",
       "dest.spots": "Highlights",
       "hero.note": "Private, tailor-made trips — small groups, your own pace. Never a bus tour.",
-      "stat.cities": "Key Cities", "stat.guides": "Core Guides", "stat.exp": "Travel Styles",
+      "stat.cities": "Key Cities", "stat.guides": "Local Partners", "stat.exp": "Travel Styles",
       "explore.h2": "Fifteen cities. One standard of trust.",
       "city.name1": 'Guangzhou <span>广州</span>', "city.tag1": "International Gateway",
       "city.desc1": "Trade, culture and cuisine. The natural entry point for overseas visitors to South China.",
@@ -66,8 +66,9 @@
       "chip.7": "Group size capacity", "chip.8": "Client reviews", "chip.9": "Availability",
       "guides.fine": "Cooperation tiers are our own quality grades — not an official state guide-ranking system.",
       "guides.trust": "Every guide is license-verified, language-screened and reviewed after each trip — so your private tour is led by someone who truly knows the place.",
-      "featured.h2": "Real local guides you can trust.",
+      "featured.h2": "Real local guides, matched to you.",
       "featured.lead": "A preview of the verified guides in our network — each with a standard profile, language ability and a specialty you can plan a trip around.",
+      "featured.match": "These are examples of the locals in our network. After you book, we match you by city, language and interests — a network, not a fixed roster.",
       "g1.city": "Guangzhou", "g1.spec": "Food & Culture", "g1.intro": "Cantonese food lover who turns every meal into a story of the city.",
       "g2.city": "Shenzhen", "g2.spec": "Tech & Innovation", "g2.intro": "Former product manager who opens doors to Shenzhen's maker world.",
       "g3.city": "Xi'an", "g3.spec": "History & Heritage", "g3.intro": "Terracotta-era storyteller who brings ancient China to life.",
@@ -77,7 +78,7 @@
       "partner.kicker": "For Travel Professionals", "partner.h2": "Three ways to join the network.",
       "partner.note": "Travelers — tell us your interests and dates and our team will design your China journey for you. ", "partner.note.link": "Plan your trip →",
       "p.eyebrow": "FOR TRAVEL PROFESSIONALS",
-      "p.h1": "Join the China Local Guides Network",
+      "p.h1": "Join the China Guide Network",
       "p.sub": "A nationwide network connecting local China experts with travelers from around the world. We help you win clients first — then we grow together.",
       "p.cta": "Apply now",
       "back.site": "← Back to site",
@@ -92,11 +93,11 @@
       "p3.title": "Agency &amp; Ground Partner", "p3.cn": "旅行社及地接合作", "p3.desc": "Licensed travel agencies and ground-service suppliers partner for lawful contracting and local fulfillment.",
       "p3.link": "Partner with us →",
       "form.h3": "Partner application",
-      "f.name": "Name", "f.email": "Email", "f.whatsapp": "WhatsApp", "f.city": "City", "f.type": "Applying as",
+      "f.name": "Name", "f.email": "Email", "f.wechat": "WeChat", "f.city": "City", "f.type": "Applying as",
       "f.type.opt": '<option value="Guide">English-Speaking Guide</option><option value="Driver">English-Speaking Driver</option><option value="Customer Service">English Customer Service</option><option value="City Partner">City Partner</option><option value="Agency">Agency &amp; Ground Partner</option>',
       "f.message": "Message", "f.submit": "Submit application",
-      "about.kicker": "About China Local Guides", "about.h2": "One brand. One platform.",
-      "about.lead": "China Local Guides is the single brand and platform behind your whole journey — from the first inquiry and itinerary design to the vetted local experts who welcome you in each city. One team, one standard, no hand-offs between brands.",
+      "about.kicker": "About China Guide", "about.h2": "One brand. One platform.",
+      "about.lead": "China Guide is the single brand and platform behind your whole journey — from the first inquiry and itinerary design to the vetted local experts who welcome you in each city. One team, one standard, no hand-offs between brands.",
       "one.sub": "Everything under one name", "one.1": "Overseas inquiries &amp; trip design", "one.2": "Vetted local guides in 15 cities", "one.3": "One service standard, end to end", "one.4": "Licensed agency delivery &amp; compliance",
       "about2.h4": "Our mission",
       "about2.p": "Connect outstanding local guides across China so travelers worldwide can more easily find trustworthy local travel services — starting with fifteen cities and growing, city by city, toward one hundred.",
@@ -107,7 +108,7 @@
       "inq.name.ph": "Your name", "inq.email.ph": "you@example.com", "inq.whatsapp.ph": "+60 …", "inq.pax.ph": "2",
       "inq.country.ph": "e.g. Malaysia", "inq.cities.ph": "e.g. Guangzhou, Xi'an", "inq.budget.ph": "e.g. ¥8,000 / person",
       "inq.msg.ph": "e.g. 7-day Greater Bay Area tech &amp; food private tour…",
-      "footer.note": "One brand, one platform · 15 cities, 200+ core guides. Travel services provided by Shanghai Kaixuan Sightseeing Travel Service Co., Ltd..",
+      "footer.note": "One brand, one platform · 15 cities, 200+ local partners. Travel services provided by Shanghai Kaixuan Sightseeing Travel Service Co., Ltd..",
       "nav.culture": "Culture",
       "nav.wellness": "Wellness",
       "how.h2": "Your China journey in four simple steps.",
@@ -195,7 +196,7 @@
       "footer.join": "Join Us · Careers",
       "status.missing": "Please complete the required fields.",
       "status.sending": "Sending…",
-      "status.fail": "Something went wrong — please try again, or email yiyong77@qq.com directly.",
+      "status.fail": "Something went wrong — please try again, or email hello@auronixa.com directly.",
       "status.ok": "Thank you — your request has been received. Our team will reply via WhatsApp / email shortly.",
 
       "nav.business": "Business Tours",
@@ -204,13 +205,33 @@
       "biz.lead": "We open doors to real factories across the Greater Bay Area — Dongguan, Foshan, Guangzhou and Shenzhen — for buyers, founders and trade delegations. Factory visits, supply-chain meetings, professional translation and full logistics, arranged end to end.",
       "biz.cta": "See business itineraries →",
       "biz.note": "Factory visits are arranged only with the supplier's prior confirmation. We assist with appointments, translation and logistics — we do not represent or guarantee any supplier.",
-      "rev.sample": "Sample reviews shown — real guest reviews are being collected."
+      "rev.sample": "Sample reviews shown — real guest reviews are being collected.",
+
+      "stat.countries": "Countries Served",
+
+      "faq.h2": "Questions, answered",
+      "faq.lead": "The things overseas travelers ask us most before they book.",
+      "faq.q1": "Do you help with Chinese visas?",
+      "faq.a1": "We send you a tailored itinerary and hotel list you can use for your visa application. If your nationality requires an invitation letter, tell us your dates and cities and we'll advise what's needed — final issuance is always decided by the embassy.",
+      "faq.q2": "How do I pay?",
+      "faq.a2": "Trips are contracted and invoiced by our licensed agency, Shanghai Kaixuan Sightseeing Travel Service Co., Ltd. We confirm available methods such as bank transfer, major cards and common international options in your written plan before any payment — no money is taken up front without a signed plan.",
+      "faq.q3": "Will my guide speak English?",
+      "faq.a3": "Yes. Every private guide in our network is English-screened, and many also speak a second language. Tell us your language needs and we match accordingly.",
+      "faq.q4": "Can I combine cities or change the plan?",
+      "faq.a4": "Always. Every trip is tailor-made. Mix cities, add rest days, swap activities — your plan is built around your interests, dates and pace, not a fixed package.",
+      "faq.q5": "Is it a private tour or a group tour?",
+      "faq.a5": "Private, by default. You travel with your own guide at your own pace — small groups of family or friends, never a mixed bus tour.",
+      "faq.q6": "Is this a legitimate and safe service?",
+      "faq.a6": "Yes. All trips are delivered by a licensed inbound travel agency, Shanghai Kaixuan Sightseeing Travel Service Co., Ltd., with verified, license-checked local guides. Your contract and payments go through the agency.",
+      "faq.q7": "What if my plans change?",
+      "faq.a7": "We keep terms fair and clear. Tell us as early as you can; changes and cancellations follow the written policy in your plan, and we help rebook where possible.",
+      "skip": "Skip to content"
     },
     zh: {
       "nav.explore": "探索中国", "nav.guides": "导游团队",
       "nav.partner": "合作方", "nav.about": "关于我们", "nav.plan": "规划行程",
       "hero.eyebrow": "全国本地中国专家服务网络",
-      "brand.zh": "中国本地向导",
+      "brand.zh": "中国向导",
       "hero.h1": '通过本地向导<br><span class="accent">发现中国</span>',
       "hero.sub": "地道向导 · 真实中国 · 每段旅程只为你而设",
       "hero.cta1": "探索目的地", "hero.cta2": "规划行程",
@@ -225,7 +246,25 @@
       "dest.notice": "行程为示意方案。最终旅游合同、团款收取与接待安排，由上海凯旋观光旅行社有限公司依法承担。",
       "dest.spots": "行程亮点",
       "hero.note": "私人定制之旅——小团出行，自在节奏，绝无大巴团。",
-      "stat.cities": "核心旅游城市", "stat.guides": "核心导游", "stat.exp": "旅行风格",
+      "stat.cities": "核心旅游城市", "stat.guides": "本地伙伴", "stat.exp": "旅行风格", "stat.countries": "服务国家与地区",
+
+      "faq.h2": "常见问题",
+      "faq.lead": "海外游客在下单前最常问我们的问题。",
+      "faq.q1": "你们能协助办理中国签证吗？",
+      "faq.a1": "我们会提供为你量身定制的行程单与酒店清单，可直接用于签证申请。若你的国籍需要邀请函，告知日期与城市后我们会说明所需材料——最终是否出签由使馆决定。",
+      "faq.q2": "如何付款？",
+      "faq.a2": "行程由具备资质的旅行社「上海凯旋观光旅行社有限公司」签约并开具账单。我们会在书面方案中确认可用付款方式（银行转账、主流信用卡及常见国际渠道），任何款项均在签署方案后收取，绝不预先收费。",
+      "faq.q3": "导游会说英文吗？",
+      "faq.a3": "会。我们网络中每位私人导游都经过英文能力筛选，不少人还掌握第二语言。告知你的语言需求，我们据此匹配。",
+      "faq.q4": "可以跨城市组合或调整行程吗？",
+      "faq.a4": "当然。每段旅程都是量身定制，可自由组合城市、增加休息日、替换玩法——方案围绕你的兴趣、日期与节奏，而非固定打包。",
+      "faq.q5": "是私家团还是拼团？",
+      "faq.a5": "默认私家团。你拥有专属导游、按自己的节奏出行，最多是与家人朋友的私密小团，绝无混合大巴团。",
+      "faq.q6": "这是正规、安全的服务吗？",
+      "faq.a6": "是。所有行程均由具备资质的入境旅行社「上海凯旋观光旅行社有限公司」承接，导游均经资质核验与证件核查。合同与款项均通过旅行社进行。",
+      "faq.q7": "计划有变怎么办？",
+      "faq.a7": "我们提供公平清晰的条款。请尽早告知；变更与取消按书面方案中的政策执行，并在可能时协助改期。",
+      "skip": "跳到正文",
       "explore.h2": "十五座城市，同一份信任标准",
       "city.name1": '广州 <span>Guangzhou</span>', "city.tag1": "国际门户",
       "city.desc1": "贸易、文化与美食之都，华南地区海外游客的天然入口。",
@@ -268,6 +307,7 @@
       "guides.trust": "每位导游都经过证件核验、语言能力筛选与行后评价——让您的私人行程由真正熟悉此地的人带领。",
       "featured.h2": "值得信赖的真实本地导游",
       "featured.lead": "我们网络中已认证导游的一瞥——每位都拥有标准档案、语言能力，以及可围绕其规划行程的专长。",
+      "featured.match": "以下是我们网络中本地人的示例。确认行程后，我们会按你的城市、语言和兴趣为你匹配向导——是网络撮合，而非固定花名册。",
       "g1.city": "广州", "g1.spec": "美食与文化", "g1.intro": "热爱粤菜的本地通，把每一餐都讲成城市的故事。",
       "g2.city": "深圳", "g2.spec": "科技创新", "g2.intro": "前产品经理，带你走进深圳的创客世界。",
       "g3.city": "西安", "g3.spec": "历史与遗产", "g3.intro": "兵马俑时代的讲述者，让古代中国鲜活起来。",
@@ -277,7 +317,7 @@
       "partner.kicker": "致导游与合作伙伴", "partner.h2": "三种加入网络的方式",
       "partner.note": "游客朋友 —— 告诉我们您的兴趣与日期，我们的团队将为您量身设计中国之旅。", "partner.note.link": "规划行程 →",
       "p.eyebrow": "致旅游从业者",
-      "p.h1": "加入 China Local Guides 服务网络",
+      "p.h1": "加入 China Guide 服务网络",
       "p.sub": "一个连接中国本地专家与全球游客的全国性网络。我们先帮你赢得客户——然后共同成长。",
       "p.cta": "立即申请",
       "back.site": "← 返回官网",
@@ -292,11 +332,11 @@
       "p3.title": "旅行社及地接合作", "p3.cn": "Agency &amp; Ground Partner", "p3.desc": "具备资质的旅行社与地接服务供应商合作，实现合法签约与本地履约。",
       "p3.link": "与我们合作 →",
       "form.h3": "合作伙伴申请",
-      "f.name": "姓名", "f.email": "邮箱", "f.whatsapp": "WhatsApp", "f.city": "城市", "f.type": "应聘 / 合作类型",
+      "f.name": "姓名", "f.email": "邮箱", "f.wechat": "微信", "f.city": "城市", "f.type": "应聘 / 合作类型",
       "f.type.opt": '<option value="Guide">英文导游</option><option value="Driver">英文司机</option><option value="Customer Service">英文客服</option><option value="City Partner">城市合伙人</option><option value="Agency">旅行社及地接合作</option>',
       "f.message": "留言", "f.submit": "提交申请",
       "about.kicker": "关于我们", "about.h2": "一个品牌，一个平台",
-      "about.lead": "从第一次咨询、行程设计，到每座城市迎接您的甄选本地专家，全程只有一个品牌、一个平台：China Local Guides。一个团队、一套标准，不存在品牌之间的转手。",
+      "about.lead": "从第一次咨询、行程设计，到每座城市迎接您的甄选本地专家，全程只有一个品牌、一个平台：China Guide。一个团队、一套标准，不存在品牌之间的转手。",
       "one.sub": "同一个名字，覆盖全程", "one.1": "海外咨询与行程设计", "one.2": "15 城甄选本地向导", "one.3": "全程统一服务标准", "one.4": "资质旅行社履约与合规",
       "about2.h4": "我们的使命",
       "about2.p": "连接中国各地优秀导游，让全球游客更轻松地找到值得信赖的中国本地旅行服务——从十五座城市起步，逐城拓展至一百座。",
@@ -307,7 +347,7 @@
       "inq.name.ph": "您的姓名", "inq.email.ph": "you@example.com", "inq.whatsapp.ph": "+60 / +86 …", "inq.pax.ph": "2",
       "inq.country.ph": "如：马来西亚", "inq.cities.ph": "如：广州、西安", "inq.budget.ph": "如：人均 ¥8,000",
       "inq.msg.ph": "例如：7 天大湾区科技与美食私人行程…",
-      "footer.note": "一个品牌，一个平台 · 15 座城市，200+ 位核心导游。旅游服务由上海凯旋观光旅行社有限公司依法提供。",
+      "footer.note": "一个品牌，一个平台 · 15 座城市，200+ 位本地伙伴。旅游服务由上海凯旋观光旅行社有限公司依法提供。",
       "nav.culture": "文化",
       "nav.wellness": "康养医疗",
       "nav.business": "商务考察",
@@ -372,7 +412,7 @@
       "founder.h": "越过明信片，遇见真实的中国",
       "founder.p1": "我的童年沿着水走。生在江西鄱阳湖边，在福建泉州读完小学与初中，闽南话就是在那时候留在舌尖上的。后来回到鄱阳，考进海南经贸职业技术学院旅游管理系。2010 年，我拿到国家导游资格证——那时并不知道，这张纸会把我带得那么远。",
       "founder.p2": "此后十六年，我几乎都在路上。从海南、西藏、越南芽庄的地接导游做起；中间有六年住在菲律宾，在薄荷岛一砖一瓦盖起一间小酒店，后来把它卖了，换一段新的路；最后两年在日本，带世界各地的人走东京近郊的一日游。如今我定居广州，是国家中级导游员，接待过来自六十多个国家和地区的客人。",
-      "founder.p3": "我创办 China Local Guides，只想把一件事做好：把这些年在中国、日本与东南亚走过的路，写成一条条属于你的行程，再交给真正懂那片土地的向导，一步一步陪你走完。",
+      "founder.p3": "我创办 China Guide，只想把一件事做好：把这些年在中国、日本与东南亚走过的路，写成一条条属于你的行程，再交给真正懂那片土地的向导，一步一步陪你走完。",
       "founder.n1.h": "与走过的人，慢慢商量",
       "founder.n1.p": "十六年，中国、日本、东南亚。告诉我你什么时候来、心里想看什么，我先把它写成一条路；落地之后，熟悉当地的向导会一寸一寸陪你走完。",
       "founder.n2.h": "我的承诺很简单",
@@ -402,7 +442,7 @@
       "footer.join": "加入我们 · 招聘",
       "status.missing": "请填写必填项。",
       "status.sending": "正在发送…",
-      "status.fail": "发送失败，请稍后再试，或直接发邮件至 yiyong77@qq.com",
+      "status.fail": "发送失败，请稍后再试，或直接发邮件至 hello@auronixa.com",
       "status.ok": "已收到您的提交，我们的团队将通过 WhatsApp / 邮件尽快与您联系。"
     }
   };
@@ -421,7 +461,12 @@
     }
     I18N[lg] = Object.assign({}, I18N.en, EXTRA[lg] || {});
   });
-  var HTML_LANG = { en: "en", zh: "zh-CN", "zh-Hant": "zh-Hant", ja: "ja", fr: "fr", ko: "ko", de: "de", vi: "vi" };
+  /* UI-only languages (ru/ms/th) are not in the data arrays, so merge them
+     for the interface but let data content fall back to English (like zh-Hant). */
+  ["ru", "ms", "th"].forEach(function (lg) {
+    if (EXTRA[lg]) I18N[lg] = Object.assign({}, I18N.en, EXTRA[lg]);
+  });
+  var HTML_LANG = { en: "en", zh: "zh-CN", "zh-Hant": "zh-Hant", ja: "ja", fr: "fr", ko: "ko", de: "de", vi: "vi", ru: "ru", ms: "ms", th: "th" };
   var currentLang = "en";
   function langIndex() { var i = LANGS.indexOf(currentLang); return i < 0 ? 0 : i; }
   function t(key) {
@@ -950,7 +995,7 @@
       var oh = document.getElementById("destOtherH");
       if (oh) oh.textContent = t("dest.other");
     }
-    document.title = (city ? city.n[L] : (typeKey && window.CLA_TYPES[typeKey] ? window.CLA_TYPES[typeKey][L] : "")) + " · China Local Guides";
+    document.title = (city ? city.n[L] : (typeKey && window.CLA_TYPES[typeKey] ? window.CLA_TYPES[typeKey][L] : "")) + " · China Guide";
   }
 
   /* ---------- Language apply ---------- */
@@ -1114,7 +1159,7 @@
       var data = {};
       new FormData(form).forEach(function (v, k) { data[k] = v; });
       data.access_key = "d53488e2-fb3f-42d3-9700-d06be01a1aba";
-      data.from_name = "China Local Guides";
+      data.from_name = "China Guide";
       data.subject = formId === "inquiryForm"
         ? "New trip inquiry — cn-guide.com"
         : "New partner / job application — cn-guide.com";

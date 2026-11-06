@@ -2,31 +2,40 @@
    China Local Guides — Design System
    ============================================================ */
 :root {
-  /* Warm, boutique East-Asian palette — high-end & authentic, for small private / custom tours */
-  --ink: #23201b;          /* warm charcoal (墨) */
-  --ink-2: #3a342b;        /* lighter warm charcoal */
-  --ink-soft: #5b5247;
-  --paper: #f6f1e7;        /* 宣纸米白 warm paper */
-  --paper-2: #fcf8f0;
-  --line: #e6dcc9;         /* warm border */
-  --red: #a8322c;          /* 朱砂 refined vermillion */
-  --red-soft: #c0504a;
-  --gold: #b0894f;         /* 古铜金 muted gold */
-  --gold-soft: #cda968;    /* soft gold for hero/eyebrow */
-  --jade: #5e7c6b;         /* 青瓷 celadon */
-  --text: #2c2820;         /* warm dark text */
-  --muted: #8a7f6e;        /* warm muted */
-  --white: #ffffff;
+  /* Night Market Modern — dark, atmospheric, lantern-lit.
+     The original system was light (text=--ink, bg=--paper); we flip the
+     token MEANING so every component that referenced a token re-skins dark. */
+  --ink: #EFE7D8;          /* bone (was dark text → now light text) */
+  --ink-2: #C9BFB0;        /* bone-soft */
+  --ink-soft: #C9BFB0;     /* bone-soft (text) */
+  --ink-3: #1E343A;        /* deep panel for gradients */
+  --paper: #0F1B1E;        /* night base (was light paper → now dark) */
+  --paper-2: #16282C;      /* panel */
+  --line: rgba(239,231,216,.14);          /* light hairline on dark */
+  --line-strong: rgba(239,231,216,.28);
+  --red: #C8453A;          /* 印章 seal red (CTA) */
+  --red-soft: #d65147;
+  --gold: #F2613F;         /* 灯笼 lantern orange (accent) */
+  --gold-soft: #F7A07E;    /* soft lantern */
+  --jade: #5E8B7E;         /* 青瓷 celadon (nature / wellness) */
+  --text: #EFE7D8;         /* body text (light) */
+  --muted: #9AA39B;        /* muted light */
+  --white: #16282C;        /* cards become dark panels */
+  --bone: #EFE7D8;
+  --bone-soft: #C9BFB0;
+  --bone-faint: #8C857A;
+  --lantern: #F2613F;
 
-  --font-display: "Cormorant Garamond", "Noto Serif SC", Georgia, serif;
-  --font-serif: "Noto Serif SC", "Cormorant Garamond", serif;
+  --font-display: "Fraunces", "Noto Serif SC", Georgia, serif;
+  --font-serif: "Noto Serif SC", "Fraunces", serif;
   --font-sans: "Inter", "Noto Sans SC", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --maxw: 1180px;
   --radius: 16px;
-  --shadow-sm: 0 2px 10px rgba(35,32,27,.06);
-  --shadow: 0 14px 40px rgba(35,32,27,.10);
-  --shadow-lg: 0 24px 60px rgba(35,32,27,.16);
+  --shadow-sm: 0 2px 10px rgba(0,0,0,.30);
+  --shadow: 0 14px 40px rgba(0,0,0,.40);
+  --shadow-lg: 0 24px 60px rgba(0,0,0,.50);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -84,6 +93,19 @@ img, svg { display: block; max-width: 100%; }
 .brand-text em { font-style: normal; font-size: 11px; letter-spacing: .14em; color: rgba(255,255,255,.7); text-transform: uppercase; }
 .site-header.scrolled .brand-text strong { color: var(--ink); }
 .site-header.scrolled .brand-text em { color: var(--muted); }
+.brand-logo {
+  display: block;
+  height: 40px;
+  width: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 5px 9px;
+  box-shadow: 0 2px 8px rgba(23,20,16,.14);
+}
+.footer-brand .brand-logo {
+  height: 46px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.25);
+}
 
 .nav { display: flex; align-items: center; gap: 26px; }
 .nav a { font-size: 15px; font-weight: 500; color: rgba(255,255,255,.92); transition: color .2s; }
@@ -170,6 +192,7 @@ html[lang="ko"] .hero h1 .accent { font-style: normal; }
 .kicker { letter-spacing: .24em; font-size: 12px; font-weight: 700; color: var(--red); text-transform: uppercase; margin-bottom: 14px; }
 .section-head h2 { font-size: clamp(28px, 3.6vw, 44px); }
 .lead { font-size: 17px; color: var(--muted); margin-top: 16px; }
+.featured-note { font-size: 14px; line-height: 1.55; color: var(--muted); margin: 14px auto 0; max-width: 760px; padding: 10px 0 10px 14px; border-left: 3px solid var(--jade); font-style: italic; }
 .section-aside { margin-top: 22px; font-size: 15px; color: var(--ink-2); background: rgba(58,52,43,.06); border: 1px solid var(--line); border-radius: 999px; display: inline-block; padding: 10px 20px; }
 .section-aside a { color: var(--red); font-weight: 600; text-decoration: none; white-space: nowrap; }
 .section-aside a:hover { text-decoration: underline; }
@@ -571,6 +594,7 @@ a.fc-qr:hover { border-color: var(--gold-soft); }
   .brand-seal { width: 36px; height: 36px; font-size: 19px; border-radius: 9px; }
   .brand-text strong { font-size: 15px; }
   .brand-text em { font-size: 10px; letter-spacing: .1em; }
+  .brand-logo { height: 34px; padding: 4px 7px; border-radius: 9px; }
   .header-right { gap: 8px; }
   .lang-select { padding: 9px 26px 9px 12px; font-size: 12.5px; min-height: 40px; }
   .nav-toggle { padding: 12px 4px 12px 10px; min-width: 44px; min-height: 44px; }
@@ -778,3 +802,98 @@ a.fc-qr:hover { border-color: var(--gold-soft); }
 @media (max-width: 1024px) {
   .biz-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   NIGHT MARKET MODERN — dark-theme correction layer
+   The token flip above turns the whole system dark. This block
+   fixes the few hardcoded light surfaces & stateful colors.
+   ============================================================ */
+::selection { background: var(--lantern); color: var(--bone); }
+
+/* Header scrolled: make the bar dark instead of light paper */
+.site-header.scrolled {
+  background: rgba(15, 27, 30, .92);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, .4);
+  padding: 12px 0;
+}
+.site-header.scrolled .brand-text strong { color: var(--bone); }
+.site-header.scrolled .brand-text em { color: var(--bone-soft); }
+.site-header.scrolled .nav a { color: var(--bone-soft); }
+.site-header.scrolled .nav a:hover { color: var(--lantern); }
+.site-header.scrolled .lang-switch { border-color: var(--line); }
+.site-header.scrolled .lang-switch button { color: var(--bone-soft); }
+.site-header.scrolled .lang-select {
+  color: var(--bone); border-color: var(--line); background-color: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23EFE7D8' stroke-width='1.5'/></svg>");
+}
+.site-header.scrolled .nav-toggle span { background: var(--bone); }
+
+/* Buttons that became invisible (light-on-light) after the token flip */
+.btn-ghost { background: rgba(239, 231, 216, .10); color: var(--bone); border: 1px solid var(--line-strong); }
+.btn-ghost:hover { background: rgba(239, 231, 216, .18); }
+.btn-outline { color: #fff; border-color: rgba(255, 255, 255, .6); }
+.btn-outline:hover { background: rgba(255, 255, 255, .12); }
+
+/* Guide avatar gradient was dark-on-dark; rebuild as a deep teal panel */
+.guide-avatar { background: linear-gradient(135deg, var(--ink-3), var(--ink-2)); color: var(--bone); }
+
+/* Quick-find chips: hover / current fill */
+.find-chip:hover { background: var(--lantern); color: #0F1B1E; border-color: var(--lantern); }
+.find-chip:hover .find-chip-dot { background: #0F1B1E; }
+.find-chip.is-current { background: var(--red); color: #fff; border-color: var(--red); }
+
+/* Mobile bottom conversion bar: dark, not light paper */
+.mobile-cta {
+  background: rgba(15, 27, 30, .96);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, .35);
+}
+.mobile-cta-main { background: var(--red); color: #fff; box-shadow: 0 8px 20px rgba(200, 69, 58, .35); }
+.mobile-cta-sub { border-color: var(--bone); color: var(--bone); }
+
+/* Eyebrow / kicker as a systematic mono label (route-code feel) */
+.eyebrow, .kicker { font-family: var(--font-mono); }
+
+/* --- Card text that was hardcoded dark: lift to bone on the dark cards --- */
+.biz-tag { color: var(--bone-soft); }
+.biz-hl li { color: var(--bone-soft); }
+.biz-note { color: var(--bone-faint); }
+.review-sample-note { color: var(--bone-faint); }
+.biz-card { border: 1px solid var(--line); }
+.cul-no { color: rgba(239, 231, 216, .4); }
+.city-no { color: rgba(239, 231, 216, .35); }
+.wel-no { color: rgba(247, 160, 126, .3); }
+
+/* ---------- Skip link (a11y) ---------- */
+.skip-link {
+  position: absolute; left: 16px; top: -60px; z-index: 1200;
+  background: var(--red); color: #fff; padding: 10px 18px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  transition: top .2s ease;
+}
+.skip-link:focus { top: 12px; outline: 2px solid var(--gold-soft); outline-offset: 2px; }
+
+/* ---------- FAQ accordion ---------- */
+.faq-list { max-width: 820px; margin: 0 auto; display: grid; gap: 14px; }
+.faq-item {
+  background: rgba(239, 231, 216, .05);
+  border: 1px solid var(--line);
+  border-radius: 14px; padding: 2px 22px;
+  transition: border-color .2s ease, background .2s ease;
+}
+.faq-item[open] { border-color: var(--red); background: rgba(239, 231, 216, .07); }
+.faq-item summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 18px 0; font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(16px, 1.5vw, 19px); color: var(--ink); line-height: 1.4;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+"; flex: none; width: 28px; height: 28px; border-radius: 50%;
+  display: grid; place-items: center; font-family: var(--font-mono);
+  font-size: 20px; line-height: 1; color: var(--red);
+  border: 1px solid var(--line); transition: transform .2s ease, background .2s ease, color .2s ease;
+}
+.faq-item[open] summary::after { content: "\2212"; background: var(--red); color: #fff; border-color: var(--red); }
+.faq-item p { margin: 0 0 20px; color: var(--muted); font-size: 15.5px; line-height: 1.75; max-width: 72ch; }

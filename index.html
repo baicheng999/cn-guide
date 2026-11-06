@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>China Local Guides · 中国本地向导</title>  <meta name="description" content="One brand, one platform for private, tailor-made trips across 15 destinations with vetted local guides. Small groups, your own pace, never a bus tour." />
+  <link rel="icon" type="image/png" href="assets/img/logo-mark.png" />
+  <link rel="apple-touch-icon" href="assets/img/logo-mark.png" />
+  <title>China Guide · 中国向导</title>  <meta name="description" content="One brand, one platform for private, tailor-made trips across 15 destinations with vetted local guides. Small groups, your own pace, never a bus tour." />
   <link rel="canonical" href="https://www.cn-guide.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.cn-guide.com/" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="China Local Guides" />
-  <meta property="og:title" content="China Local Guides — Private Trips with Verified Local Guides" />
+  <meta property="og:site_name" content="China Guide" />
+  <meta property="og:title" content="China Guide — Private Trips with Verified Local Guides" />
   <meta property="og:description" content="Tailor-made journeys across 15 Chinese cities with vetted local guides. Small groups, your own pace, never a bus tour." />
   <meta property="og:url" content="https://www.cn-guide.com/" />
   <meta property="og:image" content="https://www.cn-guide.com/assets/img/founder.jpg" />
@@ -15,7 +18,7 @@
   <meta name="baidu-site-verification" content="codeva-zc1d9RVD7I" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <!-- Google Analytics 4: 把下面 G-XXXXXXXXXXX 换成你的 Measurement ID 即可生效 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXXX"></script>
@@ -25,17 +28,110 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXXX');
   </script>
+
+  <!-- Structured data: TravelAgency / LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["TravelAgency", "LocalBusiness"],
+    "name": "China Guide",
+    "alternateName": "中国向导",
+    "url": "https://www.cn-guide.com/",
+    "image": "https://www.cn-guide.com/assets/img/founder.jpg",
+    "description": "Private, tailor-made trips across 15 Chinese cities with vetted, English-speaking local guides. Small groups, your own pace, never a bus tour.",
+    "email": "hello@auronixa.com",
+    "telephone": "+8613113119919",
+    "areaServed": [
+      "CN", "Guangzhou", "Shenzhen", "Dongguan", "Shanghai", "Beijing",
+      "Chengdu", "Chongqing", "Xi'an", "Guilin", "Kunming", "Lhasa",
+      "Urumqi", "Harbin", "Zhangjiajie", "Sanya"
+    ],
+    "founder": { "@type": "Person", "name": "Yiyong Liu" },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Shanghai Kaixuan Sightseeing Travel Service Co., Ltd."
+    },
+    "address": { "@type": "PostalAddress", "addressCountry": "CN" }
+  }
+  </script>
+
+  <!-- Structured data: FAQPage (matches the on-page FAQ section) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you help with Chinese visas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We send you a tailored itinerary and hotel list you can use for your visa application. If your nationality requires an invitation letter, tell us your dates and cities and we will advise what is needed — final issuance is always decided by the embassy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I pay?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trips are contracted and invoiced by our licensed agency, Shanghai Kaixuan Sightseeing Travel Service Co., Ltd. We confirm available methods such as bank transfer, major cards and common international options in your written plan before any payment — no money is taken up front without a signed plan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my guide speak English?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every private guide in our network is English-screened, and many also speak a second language. Tell us your language needs and we match accordingly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I combine cities or change the plan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Always. Every trip is tailor-made. Mix cities, add rest days, swap activities — your plan is built around your interests, dates and pace, not a fixed package."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it a private tour or a group tour?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Private, by default. You travel with your own guide at your own pace — small groups of family or friends, never a mixed bus tour."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this a legitimate and safe service?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All trips are delivered by a licensed inbound travel agency, Shanghai Kaixuan Sightseeing Travel Service Co., Ltd., with verified, license-checked local guides. Your contract and payments go through the agency."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my plans change?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We keep terms fair and clear. Tell us as early as you can; changes and cancellations follow the written policy in your plan, and we help rebook where possible."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#find" data-i18n="skip">Skip to content</a>
 
   <!-- ============ HEADER ============ -->
   <header class="site-header" id="top">
     <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="China Local Guides home">
+      <a class="brand" href="#top" aria-label="China Guide home">
         <span class="brand-seal" aria-hidden="true">游</span>
         <span class="brand-text">
-          <strong>China Local Guides</strong>
-          <em data-i18n="brand.zh">中国本地向导</em>
+          <strong>China Guide</strong>
+          <em>中国向导</em>
         </span>
       </a>
       <div class="header-right">
@@ -49,12 +145,15 @@
             <option value="ko">한국어</option>
             <option value="de">Deutsch</option>
             <option value="vi">Tiếng Việt</option>
+            <option value="ru">Русский</option>
+            <option value="ms">Bahasa Melayu</option>
+            <option value="th">ไทย</option>
           </select>
         </div>
         <nav class="nav" id="nav">
           <a href="#find" data-i18n="nav.find">Find a Trip</a>
           <a href="#explore" data-i18n="nav.explore">Explore China</a>
-          <a href="#guides" data-i18n="nav.guides">Our Guides</a>
+          <a href="#guides" data-i18n="nav.guides">Local Guides</a>
           <a href="#about" data-i18n="nav.about">About</a>
           <a href="#culture" data-i18n="nav.culture">Culture</a>
           <a href="#wellness" data-i18n="nav.wellness">Wellness</a>
@@ -88,8 +187,9 @@
       <p class="hero-note" data-i18n="hero.note">Private, tailor-made trips — small groups, your own pace. Never a bus tour.</p>
       <ul class="hero-stats">
         <li><strong>15</strong><span data-i18n="stat.cities">Key Cities</span></li>
-        <li><strong>200+</strong><span data-i18n="stat.guides">Core Guides</span></li>
+        <li><strong>200+</strong><span data-i18n="stat.guides">Local Partners</span></li>
         <li><strong>7</strong><span data-i18n="stat.exp">Travel Styles</span></li>
+        <li><strong>60+</strong><span data-i18n="stat.countries">Countries Served</span></li>
       </ul>
     </div>
   </section>
@@ -320,6 +420,7 @@
         <div class="feature-head">
           <h3 data-i18n="featured.h2">Real local guides you can trust.</h3>
           <p class="lead" data-i18n="featured.lead">A preview of the verified guides in our network — each with a standard profile, language ability and a specialty you can plan a trip around.</p>
+          <p class="featured-note" data-i18n="featured.match"></p>
         </div>
         <div class="guide-grid">
           <article class="guide-card">
@@ -505,14 +606,14 @@
   <section class="section" id="about">
     <div class="container">
       <div class="section-head">
-        <p class="kicker" data-i18n="about.kicker">About China Local Guides</p>
+        <p class="kicker" data-i18n="about.kicker">About China Guide</p>
         <h2 data-i18n="about.h2">One brand. One platform.</h2>
-        <p class="lead" data-i18n="about.lead">China Local Guides is the single brand and platform behind your whole journey — from the first inquiry and itinerary design to the vetted local experts who welcome you in each city. One team, one standard, no hand-offs between brands.</p>
+        <p class="lead" data-i18n="about.lead">China Guide is the single brand and platform behind your whole journey — from the first inquiry and itinerary design to the vetted local experts who welcome you in each city. One team, one standard, no hand-offs between brands.</p>
       </div>
 
       <div class="brand-diagram">
         <div class="brand-box brand-single">
-          <h3>China Local Guides</h3>
+          <h3>China Guide</h3>
           <p class="brand-sub" data-i18n="one.sub">Everything under one name</p>
           <ul>
             <li data-i18n="one.1">Overseas inquiries &amp; trip design</li>
@@ -531,7 +632,7 @@
       </div>
 
       <div class="founder">
-        <div class="founder-avatar"><img src="assets/img/founder.jpg" alt="Yiyong Liu"></div>
+        <div class="founder-avatar"><img src="assets/img/founder.jpg" alt="Yiyong Liu" loading="lazy" decoding="async"></div>
         <div class="founder-body">
           <p class="kicker" data-i18n="founder.k">From the founder</p>
           <h4 data-i18n="founder.h">Beyond the postcard, meet the real China.</h4>
@@ -616,6 +717,46 @@
     </div>
   </section>
 
+  <!-- ============ FAQ ============ -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="faq.h2">Questions, answered</h2>
+        <p class="lead" data-i18n="faq.lead">The things overseas travelers ask us most before they book.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary data-i18n="faq.q1">Do you help with Chinese visas?</summary>
+          <p data-i18n="faq.a1">We send you a tailored itinerary and hotel list you can use for your visa application. If your nationality requires an invitation letter, tell us your dates and cities and we'll advise what's needed — final issuance is always decided by the embassy.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q2">How do I pay?</summary>
+          <p data-i18n="faq.a2">Trips are contracted and invoiced by our licensed agency, Shanghai Kaixuan Sightseeing Travel Service Co., Ltd. We confirm available methods such as bank transfer, major cards and common international options in your written plan before any payment — no money is taken up front without a signed plan.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q3">Will my guide speak English?</summary>
+          <p data-i18n="faq.a3">Yes. Every private guide in our network is English-screened, and many also speak a second language. Tell us your language needs and we match accordingly.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q4">Can I combine cities or change the plan?</summary>
+          <p data-i18n="faq.a4">Always. Every trip is tailor-made. Mix cities, add rest days, swap activities — your plan is built around your interests, dates and pace, not a fixed package.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q5">Is it a private tour or a group tour?</summary>
+          <p data-i18n="faq.a5">Private, by default. You travel with your own guide at your own pace — small groups of family or friends, never a mixed bus tour.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q6">Is this a legitimate and safe service?</summary>
+          <p data-i18n="faq.a6">Yes. All trips are delivered by a licensed inbound travel agency, Shanghai Kaixuan Sightseeing Travel Service Co., Ltd., with verified, license-checked local guides. Your contract and payments go through the agency.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q7">What if my plans change?</summary>
+          <p data-i18n="faq.a7">We keep terms fair and clear. Tell us as early as you can; changes and cancellations follow the written policy in your plan, and we help rebook where possible.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ CONTACT ============ -->
   <section class="section section-contact" id="contact">
     <div class="container contact-wrap">
@@ -625,16 +766,16 @@
         <p class="lead" data-i18n="contact.lead">Tell us your interests and dates. Our team replies on WhatsApp Business and email — real people, not a bot.</p>
         <ul class="contact-links">
           <li><a href="https://wa.me/8613113119919" target="_blank" rel="noopener">WhatsApp Business ↗</a></li>
-          <li><a href="mailto:yiyong77@qq.com">yiyong77@qq.com</a></li>
+          <li><a href="mailto:hello@auronixa.com">hello@auronixa.com</a></li>
         </ul>
         <div class="fc-grid fc-contact">
           <div class="fc-item">
-            <a class="fc-qr fc-qr-wa" href="https://wa.me/8613113119919" target="_blank" rel="noopener"><img src="assets/img/whatsapp-qr.jpg" alt="WhatsApp QR"></a>
+            <a class="fc-qr fc-qr-wa" href="https://wa.me/8613113119919" target="_blank" rel="noopener"><img src="assets/img/whatsapp-qr.jpg" alt="WhatsApp QR" loading="lazy" decoding="async"></a>
             <p class="fc-name">WhatsApp</p>
             <p class="fc-sub" data-i18n="founder.c.wa.p">Scan to chat on WhatsApp</p>
           </div>
           <div class="fc-item">
-            <div class="fc-qr fc-qr-wx"><img src="assets/img/wechat-qr.jpg" alt="WeChat QR"></div>
+            <div class="fc-qr fc-qr-wx"><img src="assets/img/wechat-qr.jpg" alt="WeChat QR" loading="lazy" decoding="async"></div>
             <p class="fc-name" data-i18n="founder.c.wx">WeChat</p>
             <p class="fc-sub" data-i18n="founder.c.wx.p">Scan to add me on WeChat</p>
           </div>
@@ -690,8 +831,8 @@
       <div class="footer-brand">
         <span class="brand-seal" aria-hidden="true">游</span>
         <div>
-          <strong>China Local Guides</strong>
-          <em data-i18n="brand.zh">中国本地向导</em>
+          <strong>China Guide</strong>
+          <em>中国向导</em>
         </div>
       </div>
       <nav class="footer-nav">
@@ -705,7 +846,7 @@
         <a href="#contact" data-i18n="nav.plan">Contact</a>
         <a href="partner.html" data-i18n="footer.join">For Guides &amp; Drivers</a>
       </nav>
-      <p class="footer-note" data-i18n="footer.note">One brand, one platform · 15 cities, 200+ core guides. Travel services provided by Shanghai Kaixuan Sightseeing Travel Service Co., Ltd..</p>
+      <p class="footer-note" data-i18n="footer.note">One brand, one platform · 15 cities, 200+ local partners. Travel services provided by Shanghai Kaixuan Sightseeing Travel Service Co., Ltd..</p>
     </div>
   </footer>
 
