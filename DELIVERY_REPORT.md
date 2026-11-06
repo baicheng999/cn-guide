@@ -132,3 +132,92 @@
 1. ✅ 已上线（commit `17afcf3` 已推送，`origin/main` 同步，Vercel 自动部署）。
 2. 并行处理第五节待办（LOGO、web3forms 绑定、二维码、GA4、多语言深翻、遗留页去留）。
 3. 后续清理 `data.js` 虚构评价种子与 `i18n-extra.js` 死键（不影响当前展示）。
+
+---
+
+# 第二轮（2026-11-06）全面验收与优化 — 交付补充
+
+> 状态：**已上线**（commit `5823460`，8 文件 +409/−81，已 `git push origin main`，Vercel 自动部署；线上抓取核实生效）
+> 目标：在现有版本上「修复问题、补充功能、提升转化」，非重新设计。
+
+## 一、本轮修改 / 新增页面清单
+
+| 文件 | 改动 |
+|---|---|
+| `index.html` | 首页咨询表单对齐统一体系：蜜罐字段改用 `.botcheck` 类；新增 3 个条件区块（China Travel / Wellness / Business）+ 必选同意勾选框 |
+| `contact.html` | 统一询价表单重写（见第三节）；**删除**加载即显示「Your inquiry has been received」的误导性 REASSURANCE NOTE |
+| `assets/js/main.js` | `renderDestination()` 增加路由重定向；`bindForm` 增加蜜罐/同意/条件字段/`service_category`；新增 `bindConditional`；`?cat/?type/?city` 预填；新增 `status.consent` i18n |
+| `assets/js/data.js` | `CLA_SELECTS["inq.type.opt"]` 改为统一 5 类目（China Travel / Wellness & Medical / Business & Manufacturing / Local Guide Services / Other）7 语数组 |
+| `assets/css/style.css` | 新增 `.botcheck` / `.req` / `.form-cond` / `.consent` / `.city-itin` / `.itin-note` |
+| `wellness-medical.html`、`business.html`、`china-travel.html` | 内容重写（详见第二、四、五节） |
+
+## 二、页面问题修复（brief 第二节）
+
+- **路由防空白页**：`destination.html?type=wellness` → 重定向 `wellness-medical.html`；`?type=business` → `business.html`；未知 `?type=` → `china-travel.html`；裸 `destination.html` 显示首城市。全站已无 `destination.html?type=` 死链（grep 验证 0 处）。
+- **首页入口**：首页 Wellness / Business 两个区块 CTA 已正确链向 `wellness-medical.html` / `business.html`（index.html 第 227 / 233 行验证）。
+- **所有按钮可用**：三支柱页 / 城市页 / 咨询页 CTA 均链向已存在页面，并支持 `?cat=` 预填咨询类别。
+- **无虚假商品 / 价格**：城市样例行程统一标注「Sample plan — final itinerary tailored to you」，不作为固定套餐出售。
+- **空页兜底**：`destination.html` 裸页显示首城市真实内容，不出现空白。
+
+## 三、统一询价系统（brief 第六节）— 字段与逻辑
+
+- **3 大类别**（统一下拉，覆盖全站咨询表单）：China Travel / Wellness & Medical / Business & Manufacturing / Local Guide Services / Other。
+- **字段**：Name*、Email*、WhatsApp、Home country、Preferred destination、Pax、Visit date、Language、Service category*、按类别条件问题（travel_notes / wellness_notes / business_notes）、Message、Consent*。
+- **机制**：蜜罐 `botcheck` 拦截机器人；同意勾选未勾 → 提示 `status.consent` 并阻止提交；仅发送非空字段；提交含 `service_category` 与分类主题；成功后重置表单并重新应用条件显示。
+- **隐私 / 同意**：Wellness 条件区注明「never ask for detailed medical records, ID numbers or sensitive health data」；同意条款明示用途与隐私实践。
+- **联系方式跳转**：WhatsApp `wa.me/8613113119919`、WeChat 二维码、邮箱 `hello@auronixa.com` 均在咨询页呈现。
+
+## 四、Wellness & Medical（brief 第三节）
+
+- **7 大类别**：Traditional Chinese Medicine、Health Screening、Medical Appointment Assistance、Medical Interpretation、Wellness Retreats、Rehabilitation & Recovery Travel、Family Medical Travel。
+- **8 步服务流**：Submit → Initial Consultation → Match Institution → Review & Confirm → Appointment Coordination → Translation & Accompaniment → Accommodation & Transport → Follow-up。
+- **合规声明**：医疗服务由**持牌医院/诊所**提供；China Guide 仅做协调/预约/翻译/出行支持，**不诊断、不治疗、不开方、不保证医疗结果**，且不收集病历/身份证/敏感健康数据。
+- **CTA**：`contact.html?cat=WELLNESS`。
+
+## 五、Business & Manufacturing（brief 第四节）
+
+- **8 大行业**：Electronics & Technology、Machinery & Equipment、Furniture & Home Products、Garment & Textiles、Plastics & Packaging、New Materials、Consumer Products、OEM & ODM。
+- **7 步服务流**：Tell Us Needs → Industry Classification → Factory Screening → Factory Confirmation → Itinerary Design → Interpretation & Accompaniment → Transport & Accommodation。
+- **合规声明**：工厂/供应商拜访须**供应商事先确认**；China Guide 仅做协调/口译/后勤，**不代表任何供应商，不保证工厂准入、交易或商业结果**。
+- **CTA**：`contact.html?cat=BUSINESS`。
+
+## 六、8 城样例产品（brief 第五节）
+
+`china-travel.html` 覆盖 **Guangzhou / Shenzhen / Dongguan / Shanghai / Beijing / Chengdu / Chongqing / Kunming** 八城，每城含 Days / Main experiences / Best for / What's included / Optional add-ons + 「Ask about this itinerary →」(`?cat=TRAVEL`)，并标注「Sample plan — final itinerary tailored to you」。未核实产品均不作为官方在售套餐。
+
+## 七、视觉与移动端（brief 第七节）
+
+- **一致性**：统一 `China Guide` / `Your Gateway to China`；三大支柱各自配图但共用设计语言（深色夜市主题、`.wel-grid` / `.wel-card` / `.steps` / `.step` 复用）。
+- **移动端**：既有媒体查询在 `≤820px` 将 `.steps` / `.wel-grid` / `.contact-wrap` 等折叠为单列，`.form-row` 在 `≤820px` 转单列；咨询表单 `max-width:760px` 自适应。本轮新增 `.city-itin` / `.itin-note` / `.consent` / `.form-cond` 等均在移动断点下正常表现（经 CSS 审查确认；未做真机截图）。
+
+## 八、表单实测结果（brief 第六节要求「实际测试」）
+
+- **代码层**：`main.js` / `data.js` 通过 `node --check`；提交载荷格式正确（`access_key` + 字段 + `service_category` + 分类 `subject` + `from_name`）；蜜罐 / 同意 / 条件逻辑齐备。
+- **端点连通性**：向 `api.web3forms.com/submit` 发送测试 POST，**端点可达、`access_key` 被接受**。
+- **限制（重要）**：web3forms 对**非浏览器 / 服务器 IP** 的提交一律拦截（`"This method is not allowed... Pro plan is required to whitelist server IP"`）。因此**无法在本沙箱完成一次成功的真实提交/数据落库/邮件通知验证**。该接口本就设计为浏览器端（`fetch`）调用，线上真实访客提交可正常送达。
+- **建议业主**：在 web3forms 后台确认该 `access_key` 收件邮箱已绑定 `hello@auronixa.com`（第一轮待办 #2），并在线上用真实浏览器提交一次，确认收到管理员通知邮件。
+
+## 九、移动端测试结果
+
+- 经 CSS 媒体查询审查：`.steps`(4→2→1)、`.wel-grid`(3→2→1)、`.form-row`(2→1)、`.contact-wrap`(2→1) 在窄屏正确折叠；表单、卡片、按钮均自适应。
+- 由于环境无浏览器，未执行真机/无头截图测试；结论基于样式表断点审查。
+
+## 十、最终业务页链接（线上已生效）
+
+- Wellness & Medical：`https://www.cn-guide.com/wellness-medical.html`
+- Business & Manufacturing：`https://www.cn-guide.com/business.html`
+- China Travel：`https://www.cn-guide.com/china-travel.html`
+- Contact（统一询价）：`https://www.cn-guide.com/contact.html`
+
+## 十一、未完成 / 风险（含原因）
+
+1. **web3forms 真实送达与通知未实测**：受 web3forms 服务器 IP 策略限制（需 Pro 计划白名单或浏览器端），沙箱无法完成真实提交；需业主在线上浏览器实测并确认后台收件绑定。
+2. **真实评价 / 清理 `data.js` 虚构评价种子**：第一轮待办，本轮未动（新内容已规避具体虚构实体；`network.html` 的「Verified Partner Guide」为通用层级/标准表述，非具名虚构，供业主决定是否弱化）。
+3. **真实 LOGO（替换「游」）、真实二维码图片、GA4 ID、东南亚语种（ms/th/vi）深翻**：第一轮待办，顺延。
+4. **真机移动端截图测试**：环境无浏览器，基于 CSS 断点审查，未做像素级验证。
+
+## 十二、Git 状态（第二轮）
+
+- 提交：`5823460`（8 文件，+409/−81），已 `git push origin main`，Vercel 自动部署。
+- `origin/main` 现同步于 `5823460`。
+- 备份分支 `backup-pre-copy-20261106` 仍保留。
