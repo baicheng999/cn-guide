@@ -28,7 +28,7 @@ window.CLA_IMAGES = {
   "brand.icon":         { src: "assets/img/brand/china-guide-icon.png",       alt: "China Guide icon",                    ratio: "1 / 1",     fit: "contain", focus: "center", usage: "Favicon / apple-touch-icon (declared in <head>)" },
 
   /* --- Reserved slots: supply these photos to complete the look --- */
-  "hero.brand":          { src: "", alt: "", ratio: "4 / 5", fit: "cover",   focus: "center",       usage: "Homepage hero, right-hand brand photograph" },
+  "hero.brand":          { src: "", alt: "", ratio: "4 / 3", fit: "cover",   focus: "center",       usage: "Homepage hero, right-hand brand photograph (landscape, height-capped frame)" },
   "feature.wellness":   { src: "", alt: "", ratio: "4 / 3", fit: "cover",   focus: "center",       usage: "Homepage Wellness & Medical feature band" },
   "feature.business":   { src: "", alt: "", ratio: "4 / 3", fit: "cover",   focus: "center",       usage: "Homepage Business & Manufacturing feature band" },
 
