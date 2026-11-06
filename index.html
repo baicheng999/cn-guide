@@ -135,20 +135,28 @@
         </span>
       </a>
       <div class="header-right">
-        <div class="lang-switch" role="group" aria-label="Language">
-          <select class="lang-select" id="langSelect" aria-label="Select language">
-            <option value="en">English</option>
-            <option value="zh">中文</option>
-            <option value="zh-Hant">繁體中文</option>
-            <option value="ja">日本語</option>
-            <option value="fr">Français</option>
-            <option value="ko">한국어</option>
-            <option value="de">Deutsch</option>
-            <option value="vi">Tiếng Việt</option>
-            <option value="ru">Русский</option>
-            <option value="ms">Bahasa Melayu</option>
-            <option value="th">ไทย</option>
-          </select>
+        <div class="lang-switch" id="langSwitch">
+          <button class="lang-toggle" id="langToggle" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+            <svg class="lang-globe" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M3 12h18M12 3c2.6 2.6 2.6 15.4 0 18M12 3c-2.6 2.6-2.6 15.4 0 18M5.2 7.6h13.6M5.2 16.4h13.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <span class="lang-current" id="langCurrent">English</span>
+            <svg class="lang-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <ul class="lang-menu" id="langMenu" role="listbox" aria-label="Select language">
+            <li><button type="button" class="lang-opt" role="option" data-lang="en"><span>English</span><em>EN</em></button></li>
+            <li><button type="button" class="lang-opt" role="option" data-lang="zh"><span>中文</span><em>ZH</em></button></li>
+            <li><button type="button" class="lang-opt" role="option" data-lang="zh-Hant"><span>繁體中文</span><em>ZH</em></button></li>
+            <li><button type="button" class="lang-opt" role="option" data-lang="ja"><span>日本語</span><em>JA</em></button></li>
+            <li><button type="button" class="lang-opt" role="option" data-lang="fr"><span>Français</span><em>FR</em></button></li>
+            <li><button type="button" class="lang-opt" role="option" data-lang="ko"><span>한국어</span><em>KO</em></button></li>
+            <li><button type="button" class="lang-opt" role="option" data-lang="de"><span>Deutsch</span><em>DE</em></button></li>
+            <li><button type="button" class="lang-opt" role="option" data-lang="vi"><span>Tiếng Việt</span><em>VI</em></button></li>
+            <li><button type="button" class="lang-opt" role="option" data-lang="ru"><span>Русский</span><em>RU</em></button></li>
+            <li><button type="button" class="lang-opt" role="option" data-lang="ms"><span>Bahasa Melayu</span><em>MS</em></button></li>
+            <li><button type="button" class="lang-opt" role="option" data-lang="th"><span>ไทย</span><em>TH</em></button></li>
+          </ul>
         </div>
         <nav class="nav" id="nav">
           <a href="#find" data-i18n="nav.find">Find a Trip</a>

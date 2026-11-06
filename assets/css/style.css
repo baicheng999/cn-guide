@@ -114,12 +114,25 @@ img, svg { display: block; max-width: 100%; }
 .site-header.scrolled .nav a:hover { color: var(--red); }
 
 .header-right { display: flex; align-items: center; gap: 18px; }
-.lang-switch { display: flex; border: 1px solid rgba(255,255,255,.45); border-radius: 999px; overflow: hidden; flex: none; }
-.site-header.scrolled .lang-switch { border-color: var(--line); }
-.lang-switch button { background: transparent; border: 0; color: rgba(255,255,255,.85); font-size: 13px; font-weight: 600; padding: 6px 12px; cursor: pointer; font-family: var(--font-sans); transition: background .2s, color .2s; }
-.site-header.scrolled .lang-switch button { color: var(--ink-soft); }
-.lang-switch button.active { background: var(--red); color: #fff; }
-.site-header.scrolled .lang-switch button.active { background: var(--red); color: #fff; }
+/* ---------- Language switcher (custom dropdown) ---------- */
+.lang-switch { position: relative; flex: none; }
+.lang-toggle { display: inline-flex; align-items: center; gap: 7px; background: rgba(255,255,255,.10); color: #fff; border: 1px solid rgba(255,255,255,.45); border-radius: 999px; padding: 7px 12px 7px 11px; font-size: 13px; font-weight: 600; font-family: var(--font-sans); line-height: 1; cursor: pointer; transition: background .2s, border-color .2s, color .2s; }
+.lang-toggle:hover { background: rgba(255,255,255,.18); }
+.lang-toggle .lang-globe { width: 16px; height: 16px; flex: none; }
+.lang-toggle .lang-current { white-space: nowrap; }
+.lang-toggle .lang-caret { width: 9px; height: 6px; flex: none; transition: transform .2s ease; }
+.lang-switch.open .lang-caret { transform: rotate(180deg); }
+.lang-switch.open .lang-toggle { background: rgba(255,255,255,.22); border-color: rgba(255,255,255,.7); }
+.lang-menu { position: absolute; top: calc(100% + 9px); right: 0; z-index: 70; min-width: 192px; margin: 0; padding: 6px; list-style: none; background: #15262A; border: 1px solid var(--line-strong); border-radius: 14px; box-shadow: 0 16px 40px rgba(0,0,0,.5); opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .18s ease, transform .18s ease, visibility .18s; }
+.lang-switch.open .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.lang-opt { display: flex; align-items: center; justify-content: space-between; gap: 14px; width: 100%; padding: 9px 12px; border: 0; border-radius: 9px; background: transparent; color: var(--bone); cursor: pointer; font-size: 14px; font-family: var(--font-sans); text-align: left; transition: background .15s, color .15s; }
+.lang-opt em { font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: .06em; color: rgba(239,231,216,.5); }
+.lang-opt:hover, .lang-opt:focus-visible { background: rgba(242,97,63,.18); color: #fff; outline: none; }
+.lang-opt.active { background: var(--lantern); color: #fff; }
+.lang-opt.active em { color: rgba(255,255,255,.85); }
+.site-header.scrolled .lang-toggle { color: var(--ink); background: var(--paper-2); border-color: var(--line); }
+.site-header.scrolled .lang-toggle:hover { background: #fff; }
+.site-header.scrolled .lang-switch.open .lang-toggle { background: #fff; border-color: var(--line-strong); }
 
 .nav-toggle { display: none; background: none; border: 0; cursor: pointer; flex-direction: column; gap: 5px; padding: 8px; }
 .nav-toggle span { width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: .3s; }
@@ -433,20 +446,7 @@ a.fc-qr:hover { border-color: var(--gold-soft); }
 .job-cities span { font-size: 12.5px; color: var(--ink-soft); background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; white-space: nowrap; }
 .join-actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
 
-/* ---------- Language select (7 languages) ---------- */
-.lang-select {
-  appearance: none; -webkit-appearance: none;
-  background: transparent; color: #fff;
-  border: 1px solid rgba(255,255,255,.45); border-radius: 999px;
-  padding: 7px 30px 7px 14px; font-size: 13px; font-weight: 600;
-  font-family: var(--font-sans); cursor: pointer; outline: none;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23ffffff' stroke-width='1.5'/></svg>");
-  background-repeat: no-repeat; background-position: right 12px center;
-}
-.lang-select option { color: var(--ink); background: #fff; }
-.site-header.scrolled .lang-select { color: var(--ink); border-color: var(--line); background-color: var(--paper-2);
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M1 1l4 4 4-4' fill='none' stroke='%2323201b' stroke-width='1.5'/></svg>"); }
-.lang-select:focus-visible { box-shadow: 0 0 0 3px rgba(176,137,79,.35); }
+/* Language select retired — replaced by the custom .lang-switch dropdown above */
 
 /* ---------- Quick find index ---------- */
 .section-find { padding: 82px 0; background: var(--paper-2); border-bottom: 1px solid var(--line); }
@@ -596,7 +596,8 @@ a.fc-qr:hover { border-color: var(--gold-soft); }
   .brand-text em { font-size: 10px; letter-spacing: .1em; }
   .brand-logo { height: 34px; padding: 4px 7px; border-radius: 9px; }
   .header-right { gap: 8px; }
-  .lang-select { padding: 9px 26px 9px 12px; font-size: 12.5px; min-height: 40px; }
+  .lang-toggle { padding: 9px 12px; min-height: 40px; font-size: 12.5px; }
+  .lang-menu { min-width: 178px; }
   .nav-toggle { padding: 12px 4px 12px 10px; min-width: 44px; min-height: 44px; }
 
   /* ---- Drawer nav with backdrop + scroll lock ---- */
@@ -820,12 +821,6 @@ a.fc-qr:hover { border-color: var(--gold-soft); }
 .site-header.scrolled .brand-text em { color: var(--bone-soft); }
 .site-header.scrolled .nav a { color: var(--bone-soft); }
 .site-header.scrolled .nav a:hover { color: var(--lantern); }
-.site-header.scrolled .lang-switch { border-color: var(--line); }
-.site-header.scrolled .lang-switch button { color: var(--bone-soft); }
-.site-header.scrolled .lang-select {
-  color: var(--bone); border-color: var(--line); background-color: transparent;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23EFE7D8' stroke-width='1.5'/></svg>");
-}
 .site-header.scrolled .nav-toggle span { background: var(--bone); }
 
 /* Buttons that became invisible (light-on-light) after the token flip */
