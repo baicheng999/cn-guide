@@ -49,14 +49,14 @@
           </ul>
         </div>
         <nav class="nav" id="nav">
-          <a href="index.html">Home</a>
-          <a href="china-travel.html">China Travel</a>
-          <a href="wellness-medical.html">Wellness &amp; Medical</a>
-          <a href="business.html">Business &amp; Manufacturing</a>
-          <a href="network.html">Local Guide Network</a>
-          <a href="about.html">About Us</a>
-          <a href="contact.html">Contact</a>
-          <a href="contact.html" class="btn btn-sm btn-ghost">Plan Your China Journey</a>
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="china-travel.html" data-i18n="nav.chinatravel">China Travel</a>
+          <a href="wellness-medical.html" data-i18n="nav.wmed">Wellness &amp; Medical</a>
+          <a href="business.html" data-i18n="nav.biz">Business &amp; Manufacturing</a>
+          <a href="network.html" data-i18n="nav.network">Local Guide Network</a>
+          <a href="about.html" data-i18n="nav.about">About Us</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact</a>
+          <a href="contact.html" class="btn btn-sm btn-ghost" data-i18n="nav.planbtn">Plan Your China Journey</a>
         </nav>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -75,9 +75,9 @@
       <div class="hero-sun" aria-hidden="true"></div>
     </div>
     <div class="container hero-inner">
-      <p class="eyebrow">Contact</p>
-      <h1>Let's Plan Your China Experience.</h1>
-      <p class="hero-tagline">Tell Us What You Are Looking For. We Will Help You Find the Right Way Forward.</p>
+      <p class="eyebrow" data-i18n="ctt.eyebrow">Contact</p>
+      <h1 data-i18n="ctt.h1">Let's Plan Your China Experience.</h1>
+      <p class="hero-tagline" data-i18n="ctt.tagline">Tell Us What You Are Looking For. We Will Help You Find the Right Way Forward.</p>
     </div>
   </section>
 
@@ -85,23 +85,23 @@
   <section class="section section-contact" id="contact">
     <div class="container contact-wrap">
       <div class="contact-intro">
-        <p class="kicker">Plan Your China Experience</p>
-        <h2>How to reach our team</h2>
-        <p class="lead">Tell us your interests and dates. Our team replies on WhatsApp Business and email — real people, not a bot.</p>
+        <p class="kicker" data-i18n="ctt.intro.kicker">Plan Your China Experience</p>
+        <h2 data-i18n="ctt.intro.h2">How to reach our team</h2>
+        <p class="lead" data-i18n="ctt.intro.lead">Tell us your interests and dates. Our team replies on WhatsApp Business and email — real people, not a bot.</p>
         <ul class="contact-links">
-          <li><a href="https://wa.me/8613113119919" target="_blank" rel="noopener">WhatsApp Business ↗</a></li>
+          <li><a href="https://wa.me/8613113119919" target="_blank" rel="noopener" data-i18n="ctt.wa">WhatsApp Business ↗</a></li>
           <li><a href="mailto:hello@auronixa.com">hello@auronixa.com</a></li>
         </ul>
         <div class="fc-grid fc-contact">
           <div class="fc-item">
             <a class="fc-qr fc-qr-wa" href="https://wa.me/8613113119919" target="_blank" rel="noopener"><img src="assets/img/whatsapp-qr.jpg" alt="WhatsApp QR" loading="lazy" decoding="async"></a>
-            <p class="fc-name">WhatsApp</p>
-            <p class="fc-sub">Scan to chat on WhatsApp</p>
+            <p class="fc-name" data-i18n="ctt.fc.wa.name">WhatsApp</p>
+            <p class="fc-sub" data-i18n="ctt.fc.wa.sub">Scan to chat on WhatsApp</p>
           </div>
           <div class="fc-item">
             <div class="fc-qr fc-qr-wx"><img src="assets/img/wechat-qr.jpg" alt="WeChat QR" loading="lazy" decoding="async"></div>
-            <p class="fc-name">WeChat</p>
-            <p class="fc-sub">Scan to add me on WeChat</p>
+            <p class="fc-name" data-i18n="ctt.fc.wx.name">WeChat</p>
+            <p class="fc-sub" data-i18n="ctt.fc.wx.sub">Scan to add me on WeChat</p>
           </div>
         </div>
       </div>
@@ -109,71 +109,71 @@
       <form class="inquiry-form" id="inquiryForm" novalidate>
         <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" aria-hidden="true">
         <div class="form-row">
-          <label>Name <span class="req">*</span>
-            <input type="text" name="name" required placeholder="Your name" />
+          <label><span data-i18n="ctt.f.name">Name</span> <span class="req">*</span>
+            <input type="text" name="name" required placeholder="Your name" data-i18n-ph="ctt.ph.name" />
           </label>
-          <label>Email <span class="req">*</span>
-            <input type="email" name="email" required placeholder="you@example.com" />
-          </label>
-        </div>
-        <div class="form-row">
-          <label>WhatsApp
-            <input type="text" name="whatsapp" placeholder="+60 ..." />
-          </label>
-          <label>Home country / Region
-            <input type="text" name="country" placeholder="Malaysia" />
+          <label><span data-i18n="ctt.f.email">Email</span> <span class="req">*</span>
+            <input type="email" name="email" required placeholder="you@example.com" data-i18n-ph="ctt.ph.email" />
           </label>
         </div>
         <div class="form-row">
-          <label>Preferred destination
-            <input type="text" name="cities" placeholder="Guangzhou, Xi'an" />
+          <label><span data-i18n="ctt.f.whatsapp">WhatsApp</span>
+            <input type="text" name="whatsapp" placeholder="+60 ..." data-i18n-ph="ctt.ph.whatsapp" />
           </label>
-          <label>Number of travelers / visitors
-            <input type="number" name="pax" min="1" placeholder="2" />
+          <label><span data-i18n="ctt.f.country">Home country / Region</span>
+            <input type="text" name="country" placeholder="Malaysia" data-i18n-ph="ctt.ph.country" />
           </label>
         </div>
         <div class="form-row">
-          <label>Visit / travel date
-            <input type="text" name="traveldate" placeholder="e.g. October 2026" />
+          <label><span data-i18n="ctt.f.cities">Preferred destination</span>
+            <input type="text" name="cities" placeholder="Guangzhou, Xi'an" data-i18n-ph="ctt.ph.cities" />
           </label>
-          <label>Language preference
-            <input type="text" name="language" placeholder="English, Bahasa, 中文…" />
+          <label><span data-i18n="ctt.f.pax">Number of travelers / visitors</span>
+            <input type="number" name="pax" min="1" placeholder="2" data-i18n-ph="ctt.ph.pax" />
           </label>
         </div>
-        <label>Service category <span class="req">*</span>
+        <div class="form-row">
+          <label><span data-i18n="ctt.f.date">Visit / travel date</span>
+            <input type="text" name="traveldate" placeholder="e.g. October 2026" data-i18n-ph="ctt.ph.date" />
+          </label>
+          <label><span data-i18n="ctt.f.lang">Language preference</span>
+            <input type="text" name="language" placeholder="English, Bahasa, 中文…" data-i18n-ph="ctt.ph.lang" />
+          </label>
+        </div>
+        <label><span data-i18n="ctt.f.cat">Service category</span> <span class="req">*</span>
           <select name="type" id="inqType" required>
-            <option value="">Select…</option>
-            <option value="China Travel">China Travel</option>
-            <option value="Wellness & Medical">Wellness & Medical</option>
-            <option value="Business & Manufacturing">Business & Manufacturing</option>
-            <option value="Local Guide Services">Local Guide Services</option>
-            <option value="Other">Other</option>
+            <option value="" data-i18n="ctt.opt.sel">Select…</option>
+            <option value="China Travel" data-i18n="ctt.opt.travel">China Travel</option>
+            <option value="Wellness & Medical" data-i18n="ctt.opt.wellness">Wellness & Medical</option>
+            <option value="Business & Manufacturing" data-i18n="ctt.opt.business">Business & Manufacturing</option>
+            <option value="Local Guide Services" data-i18n="ctt.opt.guide">Local Guide Services</option>
+            <option value="Other" data-i18n="ctt.opt.other">Other</option>
           </select>
         </label>
         <div class="form-cond" data-show="China Travel">
-          <label>Travel interests / style
-            <textarea name="travel_notes" rows="2" placeholder="Culture, food, multi-city, family…"></textarea>
+          <label><span data-i18n="ctt.f.travel">Travel interests / style</span>
+            <textarea name="travel_notes" rows="2" placeholder="Culture, food, multi-city, family…" data-i18n-ph="ctt.ph.travel"></textarea>
           </label>
         </div>
         <div class="form-cond" data-show="Wellness & Medical">
-          <label>Areas of interest
-            <textarea name="wellness_notes" rows="2" placeholder="TCM, health screening, check-up, recovery…"></textarea>
+          <label><span data-i18n="ctt.f.areas">Areas of interest</span>
+            <textarea name="wellness_notes" rows="2" placeholder="TCM, health screening, check-up, recovery…" data-i18n-ph="ctt.ph.areas"></textarea>
           </label>
-          <p class="fineprint">We never ask for detailed medical records, ID numbers or sensitive health data through this form.</p>
+          <p class="fineprint" data-i18n="ctt.f.note">We never ask for detailed medical records, ID numbers or sensitive health data through this form.</p>
         </div>
         <div class="form-cond" data-show="Business & Manufacturing">
-          <label>Industry / products of interest
-            <textarea name="business_notes" rows="2" placeholder="Electronics, furniture, OEM…"></textarea>
+          <label><span data-i18n="ctt.f.industry">Industry / products of interest</span>
+            <textarea name="business_notes" rows="2" placeholder="Electronics, furniture, OEM…" data-i18n-ph="ctt.ph.industry"></textarea>
           </label>
         </div>
-        <label>Anything else we should know?
-          <textarea name="message" rows="4" placeholder="Tell us about your plans, group, budget range…"></textarea>
+        <label><span data-i18n="ctt.f.else">Anything else we should know?</span>
+          <textarea name="message" rows="4" placeholder="Tell us about your plans, group, budget range…" data-i18n-ph="ctt.ph.msg"></textarea>
         </label>
         <label class="consent">
           <input type="checkbox" name="consent" required />
-          <span>I agree that China Guide may use the details above to respond to my inquiry and coordinate services, in line with our privacy practice. We do not request unnecessary medical or sensitive data.</span>
+          <span data-i18n="ctt.f.consent">I agree that China Guide may use the details above to respond to my inquiry and coordinate services, in line with our privacy practice. We do not request unnecessary medical or sensitive data.</span>
         </label>
-        <button type="submit" class="btn btn-primary">Submit Your Inquiry</button>
+        <button type="submit" class="btn btn-primary" data-i18n="ctt.f.submit">Submit Your Inquiry</button>
         <p class="form-status" id="inquiryStatus" role="status"></p>
       </form>
     </div>
@@ -190,23 +190,23 @@
         </div>
       </div>
       <nav class="footer-nav">
-        <a href="index.html">Home</a>
-        <a href="china-travel.html">China Travel</a>
-        <a href="wellness-medical.html">Wellness &amp; Medical</a>
-        <a href="business.html">Business &amp; Manufacturing</a>
-        <a href="network.html">Local Guide Network</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-        <a href="partner.html">For Guides &amp; Drivers</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="china-travel.html" data-i18n="nav.chinatravel">China Travel</a>
+        <a href="wellness-medical.html" data-i18n="nav.wmed">Wellness &amp; Medical</a>
+        <a href="business.html" data-i18n="nav.biz">Business &amp; Manufacturing</a>
+        <a href="network.html" data-i18n="nav.network">Local Guide Network</a>
+        <a href="about.html" data-i18n="nav.about">About Us</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="partner.html" data-i18n="nav.partner2">For Guides &amp; Drivers</a>
       </nav>
-      <p class="footer-note">China Guide is an international-facing platform connecting visitors with China's local professionals, wellness providers and business resources. Travel services are delivered by a licensed inbound travel agency, Shanghai Kaixuan Sightseeing Travel Service Co., Ltd.</p>
+      <p class="footer-note" data-i18n="footer.note">China Guide is an international-facing platform connecting visitors with China's local professionals, wellness providers and business resources. Travel services are delivered by a licensed inbound travel agency, Shanghai Kaixuan Sightseeing Travel Service Co., Ltd.</p>
     </div>
   </footer>
 
   <!-- Mobile bottom conversion bar (phone only) -->
   <div class="mobile-cta" id="mobileCta">
-    <a href="contact.html" class="mobile-cta-main">Plan Your China Journey</a>
-    <a href="index.html" class="mobile-cta-sub">Home</a>
+    <a href="contact.html" class="mobile-cta-main" data-i18n="nav.planbtn">Plan Your China Journey</a>
+    <a href="index.html" class="mobile-cta-sub" data-i18n="nav.home">Home</a>
   </div>
 
   <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
