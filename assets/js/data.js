@@ -656,11 +656,11 @@
   window.CLA_SELECTS = {
     "inq.type.opt": [
       { v: "", t: ["Select…", "请选择…", "選択してください…", "Choisir…", "선택하세요…", "Bitte wählen…", "Chọn…"] },
-      { v: "Tech", t: ["China Technology Tour", "中国科技制造游", "中国テクノロジーツアー", "Circuit technologique Chine", "중국 테크놀로지 투어", "China-Technologiereise", "Tour công nghệ Trung Quốc"] },
-      { v: "Cultural", t: ["China Cultural Tour", "中国文化深度游", "中国文化ディープツアー", "Circuit culturel Chine", "중국 문화 심층 투어", "China-Kulturreise", "Tour văn hóa Trung Quốc"] },
-      { v: "Private", t: ["Private China Tour", "中国私人定制游", "中国プライベートツアー", "Voyage privé en Chine", "중국 프라이빗 투어", "China-Privatreise", "Tour riêng Trung Quốc"] },
-      { v: "Business", t: ["Business Visit", "商务考察游", "ビジネス視察", "Visite d'affaires", "비즈니스 시찰", "Geschäftsbesuch", "Tham quan doanh nghiệp"] },
-      { v: "Wellness", t: ["Wellness & Medical Trip", "康养医疗游", "ウェルネス・医療ツアー", "Voyage bien-être & santé", "웰니스·의료 투어", "Wellness- & Medizinreise", "Du lịch dưỡng sinh & y tế"] }
+      { v: "China Travel", t: ["China Travel", "中国旅游", "中国旅行", "Voyage en Chine", "중국 여행", "China-Reise", "Du lịch Trung Quốc"] },
+      { v: "Wellness & Medical", t: ["Wellness & Medical", "康养医疗", "ウェルネス・医療", "Bien-être & santé", "웰니스·의료", "Wellness & Medizin", "Dưỡng sinh & Y tế"] },
+      { v: "Business & Manufacturing", t: ["Business & Manufacturing", "商务与制造", "ビジネス・製造", "Affaires & industrie", "비즈니스·제조", "Geschäft & Industrie", "Kinh doanh & sản xuất"] },
+      { v: "Local Guide Services", t: ["Local Guide Services", "本地向导服务", "現地ガイドサービス", "Services de guide local", "현지 가이드 서비스", "Lokaler Reiseleiterservice", "Dịch vụ hướng dẫn viên địa phương"] },
+      { v: "Other", t: ["Other", "其他", "その他", "Autre", "기타", "Sonstiges", "Khác"] }
     ],
     "f.type.opt": [
       { v: "Guide", t: ["Join as a Guide or Driver", "导游与司机加入", "ガイド・ドライバーとして参加", "Rejoindre comme guide ou chauffeur", "가이드·기사로 참여", "Als Guide oder Fahrer dabei sein", "Tham gia làm HDV / tài xế"] },

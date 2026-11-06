@@ -332,6 +332,19 @@ textarea { resize: vertical; }
 .inquiry-form input::placeholder, .inquiry-form textarea::placeholder { color: rgba(255,255,255,.62); }
 .inquiry-form input:focus, .inquiry-form textarea:focus { border-color: var(--gold-soft); box-shadow: 0 0 0 3px rgba(205,169,104,.22); }
 
+/* Honeypot + conditional blocks + consent (unified inquiry form) */
+.botcheck { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.req { color: var(--red-bright); margin-left: 2px; }
+.form-cond { display: block; }
+.consent { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; font-weight: 400; color: var(--ink-2); margin: 20px 0 22px; }
+.consent input { width: 18px; min-height: 0; margin: 2px 0 0; padding: 0; flex: 0 0 auto; }
+.consent span { line-height: 1.5; }
+
+/* City sample itineraries (china-travel) */
+.city-itin { margin-top: 44px; }
+.city-itin > h3 { font-size: clamp(22px, 2.6vw, 30px); margin-bottom: 22px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.itin-note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; }
+
 /* ---------- Footer ---------- */
 .site-footer { background: #171410; color: rgba(255,255,255,.7); padding: 44px 0; }
 .footer-wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }

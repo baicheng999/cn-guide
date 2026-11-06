@@ -200,6 +200,7 @@
       "status.sending": "Sending…",
       "status.fail": "Something went wrong — please try again, or email hello@auronixa.com directly.",
       "status.ok": "Thank you — your request has been received. Our team will reply via WhatsApp / email shortly.",
+      "status.consent": "Please tick the consent box to continue.",
 
       "nav.business": "Business Tours",
       "biz.kicker": "Business & Inspection Tours",
@@ -447,7 +448,8 @@
       "status.missing": "请填写必填项。",
       "status.sending": "正在发送…",
       "status.fail": "发送失败，请稍后再试，或直接发邮件至 hello@auronixa.com",
-      "status.ok": "已收到您的提交，我们的团队将通过 WhatsApp / 邮件尽快与您联系。"
+      "status.ok": "已收到您的提交，我们的团队将通过 WhatsApp / 邮件尽快与您联系。",
+      "status.consent": "请勾选同意框以继续。"
     }
   };
 
@@ -929,6 +931,12 @@
     var params = new URLSearchParams(window.location.search);
     var slug = params.get("city");
     var typeKey = params.get("type");
+    /* Route legacy wellness / business travel-style views to the dedicated pages */
+    if (typeKey === "wellness") { window.location.replace("wellness-medical.html"); return; }
+    if (typeKey === "business") { window.location.replace("business.html"); return; }
+    if (typeKey && window.CLA_TYPES && !window.CLA_TYPES[typeKey]) {
+      window.location.replace("china-travel.html"); return;
+    }
     /* Bare destination.html: show the first city instead of an empty page. */
     if (!slug && !typeKey && window.CLA_CITIES.length) slug = window.CLA_CITIES[0].slug;
     var city = null, idx = -1;
@@ -1161,33 +1169,57 @@
     });
   });
 
-  /* Prefill inquiry form from a destination link (?city= & ?type=) */
+  /* Prefill inquiry form from a destination / category link (?city= & ?type= & ?cat=) */
   try {
     var p = new URLSearchParams(window.location.search);
-    var preCity = p.get("city"), preType = p.get("type");
+    var preCity = p.get("city"), preType = p.get("type"), preCat = (p.get("cat") || "").toUpperCase();
+    var typeField = document.querySelector('#inquiryForm [name="type"]');
+    var typeMap = { tech: "China Travel", culture: "China Travel", private: "China Travel", city: "China Travel", nature: "China Travel", wellness: "Wellness & Medical", business: "Business & Manufacturing" };
+    var catMap = { TRAVEL: "China Travel", WELLNESS: "Wellness & Medical", BUSINESS: "Business & Manufacturing" };
+    if (preCat && catMap[preCat] && typeField) typeField.value = catMap[preCat];
+    else if (preType && typeField) typeField.value = typeMap[preType] || "";
     if (preCity) {
       var cityField = document.querySelector('#inquiryForm [name="cities"]');
       var match = (window.CLA_CITIES || []).filter(function (c) { return c.slug === preCity; })[0];
       if (cityField && match) cityField.value = match.n[langIndex()];
     }
-    if (preType) {
-      var typeField = document.querySelector('#inquiryForm [name="type"]');
-      var typeMap = { tech: "Tech", culture: "Cultural", private: "Private", business: "Business", city: "Private", nature: "Cultural", wellness: "Wellness" };
-      if (typeField) typeField.value = typeMap[preType] || "";
-    }
   } catch (e) {}
 
   /* ---------------- Forms ---------------- */
+  /* Toggle conditional fields based on the selected service category */
+  function bindConditional(form) {
+    var select = form.querySelector('select[name="type"]');
+    if (!select) return;
+    function apply() {
+      var val = select.value;
+      form.querySelectorAll(".form-cond").forEach(function (box) {
+        box.style.display = (box.getAttribute("data-show") === val) ? "" : "none";
+      });
+    }
+    select.addEventListener("change", apply);
+    apply();
+  }
+
   function bindForm(formId, statusId) {
     var form = document.getElementById(formId);
     var status = document.getElementById(statusId);
     if (!form) return;
+    bindConditional(form);
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      var honey = form.querySelector('input[name="botcheck"]');
+      if (honey && honey.checked) { return; }
+      var consent = form.querySelector('input[name="consent"]');
+      if (consent && !consent.checked) {
+        status.textContent = t("status.consent") || "Please tick the consent box to continue.";
+        status.className = "form-status err";
+        if (consent) consent.focus();
+        return;
+      }
       var required = form.querySelectorAll("[required]");
       var missing = false;
       required.forEach(function (el) {
-        if (!el.value.trim()) { el.style.borderColor = "var(--red)"; missing = true; }
+        if (!el.value || !el.value.trim()) { el.style.borderColor = "var(--red)"; missing = true; }
         else { el.style.borderColor = ""; }
       });
       if (missing) {
@@ -1200,12 +1232,12 @@
       status.textContent = t("status.sending");
       status.className = "form-status";
       var data = {};
-      new FormData(form).forEach(function (v, k) { data[k] = v; });
+      new FormData(form).forEach(function (v, k) { if (v !== "") data[k] = v; });
+      var cat = (form.querySelector('select[name="type"]') || {}).value || "";
       data.access_key = "d53488e2-fb3f-42d3-9700-d06be01a1aba";
       data.from_name = "China Guide";
-      data.subject = formId === "inquiryForm"
-        ? "New trip inquiry — cn-guide.com"
-        : "New partner / job application — cn-guide.com";
+      data.subject = (cat ? "New inquiry — " + cat + " — cn-guide.com" : "New inquiry — cn-guide.com");
+      data.service_category = cat;
       fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
@@ -1216,6 +1248,7 @@
           status.className = "form-status ok";
           form.reset();
           if (typeSelect) typeSelect.value = "Guide";
+          bindConditional(form);
         } else {
           throw new Error("submit failed");
         }

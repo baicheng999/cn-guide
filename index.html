@@ -727,7 +727,7 @@
       </div>
 
       <form class="inquiry-form" id="inquiryForm" novalidate>
-        <input type="checkbox" name="botcheck" style="display: none" tabindex="-1">
+        <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" aria-hidden="true">
         <div class="form-row">
           <label data-i18n="inq.name">Name
             <input type="text" name="name" required data-i18n-ph="inq.name.ph" placeholder="Your name" />
@@ -762,6 +762,26 @@
         </div>
         <label data-i18n="inq.msg">What would you like to experience?
           <textarea name="message" rows="4" data-i18n-ph="inq.msg.ph" placeholder="e.g. 7-day Greater Bay Area tech &amp; food private tour..."></textarea>
+        </label>
+        <div class="form-cond" data-show="China Travel">
+          <label>Travel interests / style
+            <textarea name="travel_notes" rows="2" placeholder="Culture, food, multi-city, family…"></textarea>
+          </label>
+        </div>
+        <div class="form-cond" data-show="Wellness & Medical">
+          <label>Areas of interest
+            <textarea name="wellness_notes" rows="2" placeholder="TCM, health screening, check-up, recovery…"></textarea>
+          </label>
+          <p class="fineprint">We never ask for detailed medical records, ID numbers or sensitive health data through this form.</p>
+        </div>
+        <div class="form-cond" data-show="Business & Manufacturing">
+          <label>Industry / products of interest
+            <textarea name="business_notes" rows="2" placeholder="Electronics, furniture, OEM…"></textarea>
+          </label>
+        </div>
+        <label class="consent">
+          <input type="checkbox" name="consent" required />
+          <span>I agree that China Guide may use the details above to respond to my inquiry and coordinate services, in line with our privacy practice. We do not request unnecessary medical or sensitive data.</span>
         </label>
         <button type="submit" class="btn btn-primary" data-i18n="inq.submit">Send inquiry</button>
         <p class="form-status" id="inquiryStatus" role="status"></p>

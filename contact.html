@@ -107,62 +107,75 @@
       </div>
 
       <form class="inquiry-form" id="inquiryForm" novalidate>
-        <input type="checkbox" name="botcheck" style="display: none" tabindex="-1">
+        <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" aria-hidden="true">
         <div class="form-row">
-          <label>Name
+          <label>Name <span class="req">*</span>
             <input type="text" name="name" required placeholder="Your name" />
           </label>
-          <label>Email
+          <label>Email <span class="req">*</span>
             <input type="email" name="email" required placeholder="you@example.com" />
           </label>
         </div>
         <div class="form-row">
           <label>WhatsApp
-            <input type="text" name="whatsapp" placeholder="+60..." />
+            <input type="text" name="whatsapp" placeholder="+60 ..." />
+          </label>
+          <label>Home country / Region
+            <input type="text" name="country" placeholder="Malaysia" />
+          </label>
+        </div>
+        <div class="form-row">
+          <label>Preferred destination
+            <input type="text" name="cities" placeholder="Guangzhou, Xi'an" />
           </label>
           <label>Number of travelers / visitors
             <input type="number" name="pax" min="1" placeholder="2" />
           </label>
         </div>
         <div class="form-row">
-          <label>Home country / Region
-            <input type="text" name="country" placeholder="Malaysia" />
-          </label>
-          <label>Preferred destination
-            <input type="text" name="cities" placeholder="Guangzhou, Xi'an" />
-          </label>
-        </div>
-        <div class="form-row">
-          <label>Travel or visit date
+          <label>Visit / travel date
             <input type="text" name="traveldate" placeholder="e.g. October 2026" />
           </label>
           <label>Language preference
             <input type="text" name="language" placeholder="English, Bahasa, 中文…" />
           </label>
         </div>
-        <label>Service Interest
-          <select name="type" id="inqType">
+        <label>Service category <span class="req">*</span>
+          <select name="type" id="inqType" required>
+            <option value="">Select…</option>
             <option value="China Travel">China Travel</option>
-            <option value="Wellness & Medical">Wellness &amp; Medical</option>
-            <option value="Business & Factory Visits">Business &amp; Factory Visits</option>
+            <option value="Wellness & Medical">Wellness & Medical</option>
+            <option value="Business & Manufacturing">Business & Manufacturing</option>
             <option value="Local Guide Services">Local Guide Services</option>
             <option value="Other">Other</option>
           </select>
         </label>
-        <label>What would you like to experience?
-          <textarea name="message" rows="4" placeholder="e.g. 7-day Greater Bay Area tech &amp; food private tour..."></textarea>
+        <div class="form-cond" data-show="China Travel">
+          <label>Travel interests / style
+            <textarea name="travel_notes" rows="2" placeholder="Culture, food, multi-city, family…"></textarea>
+          </label>
+        </div>
+        <div class="form-cond" data-show="Wellness & Medical">
+          <label>Areas of interest
+            <textarea name="wellness_notes" rows="2" placeholder="TCM, health screening, check-up, recovery…"></textarea>
+          </label>
+          <p class="fineprint">We never ask for detailed medical records, ID numbers or sensitive health data through this form.</p>
+        </div>
+        <div class="form-cond" data-show="Business & Manufacturing">
+          <label>Industry / products of interest
+            <textarea name="business_notes" rows="2" placeholder="Electronics, furniture, OEM…"></textarea>
+          </label>
+        </div>
+        <label>Anything else we should know?
+          <textarea name="message" rows="4" placeholder="Tell us about your plans, group, budget range…"></textarea>
         </label>
-        <p class="fineprint">We collect only the information needed to respond to your inquiry and coordinate services. We do not request unnecessary medical or sensitive data. Your details are used to contact you about your request and are handled according to our privacy practice.</p>
+        <label class="consent">
+          <input type="checkbox" name="consent" required />
+          <span>I agree that China Guide may use the details above to respond to my inquiry and coordinate services, in line with our privacy practice. We do not request unnecessary medical or sensitive data.</span>
+        </label>
         <button type="submit" class="btn btn-primary">Submit Your Inquiry</button>
         <p class="form-status" id="inquiryStatus" role="status"></p>
       </form>
-    </div>
-  </section>
-
-  <!-- ============ REASSURANCE NOTE ============ -->
-  <section class="section">
-    <div class="container" style="text-align:center;">
-      <p class="fineprint" style="font-style:normal; font-size:15px; color:var(--muted); max-width:680px; margin:0 auto;">Thank you for contacting China Guide. Your inquiry has been received. Our team will review your requirements and get back to you as soon as possible.</p>
     </div>
   </section>
 
