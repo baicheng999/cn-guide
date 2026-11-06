@@ -954,6 +954,10 @@ input, select, textarea {
   .vu-about-media .vu-img-frame { width: min(100%, 470px); }
 }
 
+/* --- 16. Home layout: explore follows services directly; hairline between
+       the white business band and the white why section --- */
+#why { border-top: 1px solid var(--cg-line-soft); }
+
 /* --- 15.8 Contact: quieter QR cards --- */
 .vu-channel { border-color: rgba(255,255,255,.16); background: rgba(255,255,255,.05); }
 @media (max-width: 820px) {
