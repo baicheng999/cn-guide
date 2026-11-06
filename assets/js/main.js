@@ -1128,7 +1128,7 @@
   /* UI-only languages (ru/ms/th) are not in the data arrays, so merge them
      for the interface but let data content fall back to English (like zh-Hant). */
   ["ru", "ms", "th"].forEach(function (lg) {
-    if (EXTRA[lg]) I18N[lg] = Object.assign({}, I18N.en, EXTRA[lg]);
+    I18N[lg] = Object.assign({}, I18N.en, EXTRA[lg] || {});
   });
   var HTML_LANG = { en: "en", zh: "zh-CN", "zh-Hant": "zh-Hant", ja: "ja", fr: "fr", ko: "ko", de: "de", vi: "vi", ru: "ru", ms: "ms", th: "th" };
   var currentLang = "en";
@@ -1688,6 +1688,19 @@
 
   function applyLang(lang) {
     if (!I18N[lang]) lang = "en";
+    /* Non-base dictionaries load on demand. Re-merge the English baseline
+       with the arrived dictionary, then apply again. A failed request
+       leaves the UI on the English baseline instead of getting stuck. */
+    if (lang !== "en" && lang !== "zh" && lang !== "zh-Hant" &&
+        window.CLA_LOAD_LANG &&
+        !(window.CLA_I18N_READY && window.CLA_I18N_READY[lang])) {
+      window.CLA_LOAD_LANG(lang, function () {
+        I18N[lang] = Object.assign({}, I18N.en,
+          (window.CLA_I18N_EXTRA && window.CLA_I18N_EXTRA[lang]) || {});
+        applyLang(lang);
+      });
+      return;
+    }
     currentLang = lang;
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var key = el.getAttribute("data-i18n");
