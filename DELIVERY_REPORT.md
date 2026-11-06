@@ -1,7 +1,7 @@
 # CHINA GUIDE 全网站品牌文案与转化升级 — 交付报告
 
 > 生成日期：2026-11（续前次会话）
-> 状态：**本地预览完成，未部署**（按任务书约束，未经你确认不执行 `git push`）
+> 状态：**已上线**（用户 2026-11-06 11:09 确认「可以上线」；commit `17afcf3` 已 `git push origin main`，Vercel 自动部署触发）
 > 备份分支：`backup-pre-copy-20261106`（改动前已创建）
 
 ---
@@ -109,8 +109,8 @@
 
 ## 七、未完成 / 风险提示
 
-- **未部署**：严格遵守「未经确认不线上部署」。当前仅为本地预览结果，待你确认后我再执行 `git push` / Vercel 上线。
-- **虚构评价数据**：`data.js` 仍含虚构评价种子（当前**不渲染**，因 `#reviewGrid` 已从首页移除且 `renderReviews` 有空网格守卫）。建议上线前删除或替换为真实评价机制。
+- **已部署**：用户已确认上线，commit `17afcf3`（14 文件，+1690/−298）已推送至 `origin/main`，Vercel 自动构建触发。推送经 `env -u http(s)_proxy` 直连绕过本地代理 502，`credential.helper=manager` 自动鉴权，无需 PAT。
+- **虚构评价数据**：`data.js` 仍含虚构评价种子（当前**不渲染**，因 `#reviewGrid` 已从首页移除且 `renderReviews` 有空网格守卫）。建议后续删除或替换为真实评价机制。
 - **i18n 死键残留**：`i18n-extra.js` 中 ja/fr/ko/de/vi/ru/ms/th 的 `one.2`/`about2.p` 等少数**不再渲染**的键仍含 “15 cities” 字样；不影响展示，建议清理。
 - **redesign.html**：旧概念稿，含 “One brand · 15 cities · 200+ guides”，未上线，建议归档或删除。
 - **视觉**：按约束沿用原风格 / 配色 / LOGO / 架构，本次未做重设计；仅新增少量必要样式。
@@ -119,16 +119,16 @@
 
 ## 八、Git 状态
 
-- 分支：`main`（领先 `origin/main`）
-- 已修改：`index.html`、`assets/js/main.js`、`assets/css/style.css`
-- 未跟踪（新增）：`china-travel.html`、`wellness-medical.html`、`business.html`、`network.html`、`about.html`、`contact.html`、`faq.html`
-- **未提交、未推送**（待你确认上线）
-- 备份：`backup-pre-copy-20261106`（改动前干净快照）
+- 分支：`main`（与 `origin/main` 同步于 `17afcf3`）
+- 已修改并推送：`index.html`、`assets/js/main.js`、`assets/css/style.css`、`destination.html`、`partner.html`
+- 新增并推送：`china-travel.html`、`wellness-medical.html`、`business.html`、`network.html`、`about.html`、`contact.html`、`faq.html`、`DELIVERY_REPORT.md`
+- 提交：`17afcf3`（14 文件，+1690/−298），已 `git push origin main`
+- 备份：`backup-pre-copy-20261106`（改动前干净快照，仍在）
 
 ---
 
 ## 九、下一步建议
 
-1. 你确认预览无误后，回复「可以上线」，我再提交并 `git push` 触发 Vercel 部署。
+1. ✅ 已上线（commit `17afcf3` 已推送，`origin/main` 同步，Vercel 自动部署）。
 2. 并行处理第五节待办（LOGO、web3forms 绑定、二维码、GA4、多语言深翻、遗留页去留）。
-3. 上线前清理 `data.js` 虚构评价种子与 `i18n-extra.js` 死键。
+3. 后续清理 `data.js` 虚构评价种子与 `i18n-extra.js` 死键（不影响当前展示）。
