@@ -986,4 +986,108 @@ a.fc-qr:hover { border-color: var(--gold-soft); }
 .founder-sign span { display: block; font-weight: 400; color: var(--muted); font-size: 14px; margin-top: 2px; }
 .wel-card h4 { font-size: 17px; color: var(--ink); margin-bottom: 10px; line-height: 1.4; }
 .sea-list { justify-content: center; }
+
+/* ============================================================
+   Before You Arrive in China — practical pre-arrival guide
+   (upgraded from the old "Know a little China" culture section)
+   ============================================================ */
+.bya-section { position: relative; }
+.bya-legacy-anchor { position: absolute; top: -84px; left: 0; width: 1px; height: 1px; overflow: hidden; }
+.bya-head { max-width: 880px; margin-bottom: 44px; }
+.bya-head .kicker { color: var(--gold-soft); font-size: 11.5px; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 12px; }
+.bya-head h2 { font-size: clamp(28px, 3.6vw, 44px); }
+.bya-head .lead { margin-top: 16px; font-size: 16px; line-height: 1.75; }
+
+.bya-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.bya-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: border-color .22s ease, box-shadow .22s ease, transform .22s ease;
+}
+.bya-card:hover { border-color: rgba(242, 97, 63, .55); box-shadow: var(--shadow); transform: translateY(-3px); }
+.bya-img { width: 100%; height: auto; aspect-ratio: 480 / 280; object-fit: cover; display: block; border-bottom: 1px solid var(--line); }
+.bya-body { padding: 22px 22px 20px; display: flex; flex-direction: column; flex: 1 1 auto; }
+.bya-no { font-family: var(--font-mono); font-size: 11px; letter-spacing: .16em; color: var(--gold-soft); margin-bottom: 10px; }
+.bya-body h3 { font-size: 19px; line-height: 1.35; margin-bottom: 10px; }
+.bya-body > p { font-size: 14.5px; line-height: 1.7; color: var(--muted); padding-bottom: 20px; }
+
+/* Learn More — in-card disclosure, no placeholder detail pages */
+.bya-more { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); }
+.bya-more summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; gap: 9px; width: 100%;
+  font-size: 13.5px; font-weight: 600; color: var(--red-bright);
+  transition: color .2s ease;
+}
+.bya-more summary::-webkit-details-marker { display: none; }
+.bya-more summary::marker { content: ""; }
+.bya-more summary:hover, .bya-more summary:focus-visible { color: var(--gold-soft); }
+.bya-more-hide { display: none; }
+.bya-more[open] .bya-more-show { display: none; }
+.bya-more[open] .bya-more-hide { display: inline; }
+.bya-more-caret {
+  width: 7px; height: 7px; flex: none; margin-left: auto;
+  border-right: 1.8px solid currentColor; border-bottom: 1.8px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform .22s ease;
+}
+.bya-more[open] .bya-more-caret { transform: rotate(-135deg) translateY(-2px); }
+.bya-points { list-style: none; margin: 14px 0 2px; display: grid; gap: 9px; }
+.bya-points li { position: relative; padding-left: 16px; font-size: 13.5px; line-height: 1.65; color: var(--ink-2); }
+.bya-points li::before {
+  content: ""; position: absolute; left: 0; top: 9px;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--jade-bright);
+}
+
+/* Existing 30 everyday-life notes: quiet, collapsed disclosure */
+.bya-notes { margin-top: 28px; text-align: center; }
+.bya-notes-toggle {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 9px;
+  width: fit-content; margin: 0 auto; padding: 10px 20px;
+  font-family: var(--font-sans); font-size: 13px; font-weight: 600;
+  color: var(--bone-soft); background: rgba(239, 231, 216, .05);
+  border: 1px solid var(--line-strong); border-radius: 999px;
+  transition: color .2s ease, border-color .2s ease;
+}
+.bya-notes-toggle::-webkit-details-marker { display: none; }
+.bya-notes-toggle::marker { content: ""; }
+.bya-notes-toggle:hover { color: var(--gold-soft); border-color: var(--gold); }
+.bya-notes-hide { display: none; }
+.bya-notes[open] .bya-notes-show { display: none; }
+.bya-notes[open] .bya-notes-hide { display: inline; }
+.bya-notes[open] .bya-notes-toggle { margin-bottom: 8px; }
+.bya-notes-caret {
+  width: 8px; height: 8px; flex: none;
+  border-right: 1.8px solid currentColor; border-bottom: 1.8px solid currentColor;
+  transform: rotate(45deg) translateY(-2px); transition: transform .22s ease;
+}
+.bya-notes[open] .bya-notes-caret { transform: rotate(-135deg) translateY(-2px); }
+
+/* Conversion panel */
+.bya-cta {
+  margin-top: 48px; padding: 44px 32px; text-align: center;
+  border: 1px solid rgba(242, 97, 63, .28); border-radius: 20px;
+  background: linear-gradient(135deg, #1E343A 0%, #12262A 55%, #0F1B1E 100%);
+  box-shadow: var(--shadow-sm);
+}
+.bya-cta h3 { font-size: clamp(22px, 2.6vw, 30px); color: var(--bone); margin-bottom: 12px; }
+.bya-cta p { max-width: 660px; margin: 0 auto 24px; font-size: 15.5px; line-height: 1.75; color: var(--muted); }
+.bya-cta .btn { min-width: 220px; }
+
+@media (max-width: 900px) {
+  .bya-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .bya-head { margin-bottom: 34px; }
+  .bya-cta { margin-top: 36px; padding: 34px 22px; }
+}
+@media (max-width: 600px) {
+  .bya-grid { grid-template-columns: 1fr; gap: 14px; }
+  .bya-img { aspect-ratio: 480 / 240; }
+  .bya-body { padding: 20px 18px 18px; }
+  .bya-body h3 { font-size: 18px; }
+  .bya-cta { padding: 30px 18px; }
+  .bya-cta .btn { width: 100%; }
+}
 .sea-list span { display: inline-flex; align-items: center; padding: 9px 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); font-size: 14px; font-weight: 600; color: var(--ink); }

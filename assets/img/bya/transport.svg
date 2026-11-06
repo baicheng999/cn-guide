@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" width="480" height="280" role="img" aria-label="Abstract illustration of a high-speed train and railway track">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1B3338"/><stop offset="1" stop-color="#0F1B1E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="76%" cy="12%" r="72%">
+      <stop offset="0" stop-color="#F2613F" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#F2613F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EFE7D8" stop-opacity="0"/>
+      <stop offset="1" stop-color="#EFE7D8" stop-opacity=".055"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="280" fill="url(#bg)"/>
+  <rect width="480" height="280" fill="url(#glow)"/>
+  <g stroke="#EFE7D8" stroke-opacity=".05" stroke-width="1">
+    <path d="M0 70H480M0 140H480M0 210H480"/>
+    <path d="M120 0V280M240 0V280M360 0V280"/>
+  </g>
+  <rect x="0" y="186" width="480" height="94" fill="url(#floor)"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+
+    <g fill="none" stroke="#F7A07E" stroke-width="2" stroke-opacity=".32">
+      <path d="M12 112h34M4 134h44M14 156h28"/>
+    </g>
+    <g fill="none" stroke="#F7A07E" stroke-width="2.6">
+      <path d="M58 196h228c48 0 88-22 110-58 6-10 4-22-8-32-22-18-58-26-102-26H110c-30 0-52 20-52 50Z"/>
+      <path d="M58 132h338" stroke-opacity=".22"/>
+      <rect x="94" y="104" width="44" height="34" rx="6"/>
+      <rect x="150" y="104" width="44" height="34" rx="6"/>
+      <rect x="206" y="104" width="44" height="34" rx="6"/>
+      <path d="M96 168h222" stroke-opacity=".32"/>
+    </g>
+    <circle cx="374" cy="138" r="7" fill="#84B8A8" fill-opacity=".85" stroke="none"/>
+    <g fill="none" stroke="#EFE7D8" stroke-width="2" stroke-opacity=".34">
+      <path d="M18 214h444M18 232h444"/>
+    </g>
+    <g fill="none" stroke="#84B8A8" stroke-width="2" stroke-opacity=".55">
+      <path d="M44 214v18M94 214v18M144 214v18M194 214v18M244 214v18M294 214v18M344 214v18M394 214v18M444 214v18"/>
+    </g>
+
+  </g>
+  <path d="M32 252H448" stroke="#EFE7D8" stroke-opacity=".12" stroke-width="1"/>
+</svg>
