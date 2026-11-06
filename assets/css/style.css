@@ -376,6 +376,44 @@ textarea { resize: vertical; }
 .cul-body { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .cul-group { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 24px 26px 20px; scroll-margin-top: 96px; transition: border-color .2s, box-shadow .2s; }
 .cul-group:hover { border-color: var(--gold-soft); box-shadow: var(--shadow-sm); }
+
+/* ---------- Culture collapse (mobile-only disclosure; desktop always open) ---------- */
+.cul-toggle {
+  display: none;                 /* hidden on desktop */
+  list-style: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 0 auto 30px;
+  padding: 12px 22px;
+  width: fit-content;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--bone);
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  transition: border-color .2s, color .2s;
+}
+.cul-toggle::-webkit-details-marker { display: none; }
+.cul-toggle::marker { content: ""; }
+.cul-toggle:hover { border-color: var(--gold); color: var(--gold-soft); }
+.cul-caret {
+  width: 9px; height: 9px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform .25s ease;
+  margin-top: -3px;
+}
+@media (min-width: 821px) {
+  /* Desktop: culture always expanded, toggle never shown */
+  .cul-toggle { display: none !important; }
+  .cul-details > .cul-nav { display: flex !important; }
+  .cul-details > .cul-body { display: grid !important; }
+}
 .cul-ghead { display: flex; align-items: baseline; gap: 12px; padding-bottom: 13px; margin-bottom: 15px; border-bottom: 1px solid var(--line); }
 .cul-gnum { font-family: var(--font-display); font-size: 12px; letter-spacing: .16em; color: var(--gold); flex: none; }
 .cul-ghead h3 { font-size: 17px; line-height: 1.35; color: var(--ink); }
@@ -717,6 +755,22 @@ a.fc-qr:hover { border-color: var(--gold-soft); }
   .mobile-cta-sub { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 20px; border: 1.5px solid var(--ink); color: var(--ink); font-weight: 600; font-size: 14px; font-family: var(--font-sans); border-radius: 999px; }
   /* Back-to-top clears the mobile bottom bar on phones */
   .back-to-top { bottom: calc(84px + env(safe-area-inset-bottom)); right: 14px; }
+
+  /* ---- Culture: collapsed by default on mobile, toggle reveals ---- */
+  .cul-toggle { display: inline-flex; }
+  .cul-details:not([open]) > .cul-nav,
+  .cul-details:not([open]) > .cul-body { display: none; }
+  .cul-details[open] > .cul-nav { display: flex; }
+  .cul-details[open] > .cul-body { display: grid; }
+  .cul-details[open] .cul-caret { transform: rotate(-135deg); margin-top: 2px; }
+  .cul-t-hide { display: none; }
+  .cul-details[open] .cul-t-show { display: none; }
+  .cul-details[open] .cul-t-hide { display: inline; }
+
+  /* ---- About + Join merge: drop the inter-section gap so they read as one block ---- */
+  #about { padding-bottom: 0; }
+  #join { padding-top: 0; border-top: none; margin-top: 26px; }
+  #join .section-head { margin-top: 0; }
 }
 
 @media (max-width: 560px) {

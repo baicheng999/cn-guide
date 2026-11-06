@@ -720,8 +720,15 @@
         <h2 data-i18n="cul.h2">Know a little China before you go</h2>
         <p class="lead" data-i18n="cul.lead">Table etiquette, the time of tea, dialects and market life — the parts of China no menu can show you. We weave them into every day of your trip.</p>
       </div>
-      <nav class="cul-nav" id="culNav" aria-label="Culture topics"></nav>
-      <div class="cul-body" id="culBody"></div>
+      <details class="cul-details" id="culDetails">
+        <summary class="cul-toggle">
+          <span class="cul-t-show" data-i18n="cul.toggleShow">Show culture &amp; local life</span>
+          <span class="cul-t-hide" data-i18n="cul.toggleHide">Hide culture &amp; local life</span>
+          <span class="cul-caret" aria-hidden="true"></span>
+        </summary>
+        <nav class="cul-nav" id="culNav" aria-label="Culture topics"></nav>
+        <div class="cul-body" id="culBody"></div>
+      </details>
     </div>
   </section>
 
