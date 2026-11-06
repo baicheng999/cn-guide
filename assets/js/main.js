@@ -487,7 +487,77 @@
       "hnet.c3.d": "Coordinate travel arrangements, medical visit support and business visits based on individual requirements.",
       "hnet.cta.h": "Looking for a specific destination or service in China?",
       "hnet.cta.p": "Tell us what you need. Our team will explore suitable local options and coordinate the next steps with you.",
-      "hnet.cta.btn": "Tell Us What You Need"
+      "hnet.cta.btn": "Tell Us What You Need",
+
+      /* 首页重构 7 区块 + 迁移承载页 */
+      "nh.hero.eyebrow": "YOUR GATEWAY TO CHINA",
+      "nh.hero.h1": "China Guide — <span class=\"accent\">Your Gateway to China.</span>",
+      "nh.hero.lead": "Private travel, wellness &amp; medical visits, and business trips across China — coordinated with local professionals, built around what you need.",
+      "nh.hero.who.label": "Who we welcome",
+      "nh.hero.who": "Visitors from Malaysia, Singapore, the Philippines, Vietnam, Indonesia, Thailand and around the world.",
+      "nh.hero.how.label": "How to start",
+      "nh.hero.how": "Send a short inquiry or a WhatsApp message. We will reply with options and next steps.",
+      "nh.hero.cta1": "Explore Our Services",
+      "nh.hero.cta2": "Start Your Inquiry",
+      "nh.svc.kicker": "Our Services",
+      "nh.svc.h2": "Three ways to experience China",
+      "nh.svc.lead": "Three core services, equally supported. Choose where to begin — we coordinate the local resources behind each one.",
+      "nh.svc.1.t": "China Travel",
+      "nh.svc.1.d": "Private journeys, cultural discoveries and multi-city itineraries shaped around your interests.",
+      "nh.svc.link1": "Explore China Travel <span aria-hidden=\"true\">→</span>",
+      "nh.svc.2.t": "Wellness &amp; Medical",
+      "nh.svc.2.d": "Coordination for wellness stays, health checks and medical visit support with local providers.",
+      "nh.svc.link2": "Explore Wellness &amp; Medical <span aria-hidden=\"true\">→</span>",
+      "nh.svc.3.t": "Business &amp; Manufacturing",
+      "nh.svc.3.d": "Factory visits, supplier meetings, industry exploration and professional interpretation.",
+      "nh.svc.link3": "Explore Business Services <span aria-hidden=\"true\">→</span>",
+      "nh.exp.kicker": "Explore China",
+      "nh.exp.h2": "Six places to start",
+      "nh.exp.lead": "A selection of destinations our visitors ask about most. Tell us where you want to go — we will explore suitable local options for you.",
+      "nh.exp.all": "View all 15 destinations →",
+      "nh.exp.note": "Local resource availability varies by destination and is confirmed for each request.",
+      "nh.why.kicker": "Why China Guide",
+      "nh.why.h2": "Local knowledge, coordinated around you",
+      "nh.why.1.t": "Local professional resources",
+      "nh.why.1.d": "We work with guides and service professionals who know their own city and its practical arrangements.",
+      "nh.why.2.t": "Personalized service",
+      "nh.why.2.d": "Every plan starts with your purpose, dates, pace and requirements — not a fixed package.",
+      "nh.why.3.t": "Nationwide connections",
+      "nh.why.3.d": "We coordinate suitable local resources across cities, subject to availability and verification.",
+      "nh.why.4.t": "Compliant travel services",
+      "nh.why.4.d": "Travel services are contracted and delivered by a licensed inbound travel agency, Shanghai Kaixuan Sightseeing Travel Service Co., Ltd.",
+      "nh.why.more": "How we coordinate across China →",
+      "nh.how.kicker": "How It Works",
+      "nh.about.kicker": "About China Guide",
+      "nh.about.h2": "A personal connection to China.",
+      "nh.about.lead": "China Guide was founded by Yiyong Liu, a certified national guide with more than a decade in the travel industry and experience hosting guests from over sixty countries and regions. We believe meaningful travel is about people, not just places.",
+      "nh.about.link": "Read our full story →",
+      "nh.cta.kicker": "Start Here",
+      "nh.cta.h2": "Tell us what you need.",
+      "nh.cta.lead": "Tell us your purpose, destination and dates. We will review your request, explore suitable local options and come back with a proposal. No commitment required.",
+      "nh.cta.mobile": "Start Your Inquiry",
+      "nh.cta.mobile2": "Services",
+      "nh.form.title": "Start Your Inquiry",
+      "nh.form.service": "Service Required",
+      "nh.form.brief": "Brief Description",
+      "nh.form.brief.ph": "Where you want to go, when, and what you would like to do...",
+      "nh.form.note": "We will collect any further details on the relevant service page. Travel services are contracted by Shanghai Kaixuan Sightseeing Travel Service Co., Ltd.",
+      "nh.faq.h": "Quick answers",
+      "nh.faq.all": "Read all frequently asked questions →",
+      "nh.foot.dest": "Destinations",
+      "nh.foot.guide": "Practical Guide",
+      "nh.foot.faq": "FAQ",
+      "nh.wa.float": "Chat with us on WhatsApp",
+      "nh.cta.inq": "Inquiry",
+      "dh.eyebrow": "Explore China",
+      "dh.h1": "Every city has its own story.",
+      "dh.tagline": "Browse the full list of destinations, then tell us where you would like to go.",
+      "dh.kicker": "Explore China",
+      "dh.h2": "Destinations Across China",
+      "dh.lead": "Fifteen destinations, each with its own character, culture and local experts. Ask us about any city in China — we will explore suitable local options for you.",
+      "dh.cta": "Ask about a destination",
+      "dh.note": "Availability of local resources varies by destination and is confirmed for each request.",
+      "pg.h1": "Before You Arrive in China."
     },
     zh: {
       "nav.explore": "探索中国", "nav.guides": "导游团队",
@@ -967,7 +1037,77 @@
       "hnet.c3.d": "根据每位客户的具体需求，协调行程安排、就医陪同支持与商务参访。",
       "hnet.cta.h": "在寻找中国某个特定目的地或服务？",
       "hnet.cta.p": "告诉我们你的需求。我们的团队会探索合适的本地资源，并与你协调后续安排。",
-      "hnet.cta.btn": "告诉我们你的需求"
+      "hnet.cta.btn": "告诉我们你的需求",
+
+      /* 首页重构 7 区块 + 迁移承载页 */
+      "nh.hero.eyebrow": "通往中国的大门",
+      "nh.hero.h1": "China Guide — <span class=\"accent\">你的中国之门。</span>",
+      "nh.hero.lead": "私人旅行、康养与医疗、商务考察，覆盖中国各地——由本地专业人士协同安排，围绕你的需求量身规划。",
+      "nh.hero.who.label": "服务客群",
+      "nh.hero.who": "欢迎来自马来西亚、新加坡、菲律宾、越南、印度尼西亚、泰国及世界各地的访客。",
+      "nh.hero.how.label": "如何开始",
+      "nh.hero.how": "提交一份简短咨询，或通过 WhatsApp 留言。我们会回复可行方案与后续步骤。",
+      "nh.hero.cta1": "了解我们的服务",
+      "nh.hero.cta2": "开始咨询",
+      "nh.svc.kicker": "我们的服务",
+      "nh.svc.h2": "三种方式，走进中国",
+      "nh.svc.lead": "三大核心业务，同等重视。选择你想了解的方向——背后的本地资源由我们来协调。",
+      "nh.svc.1.t": "中国旅游",
+      "nh.svc.1.d": "私人行程、文化探索与多城市路线，按你的兴趣量身安排。",
+      "nh.svc.link1": "了解中国旅游 <span aria-hidden=\"true\">→</span>",
+      "nh.svc.2.t": "康养医疗",
+      "nh.svc.2.d": "协调康养旅居、健康体检与就医支持，对接本地服务方。",
+      "nh.svc.link2": "了解康养医疗 <span aria-hidden=\"true\">→</span>",
+      "nh.svc.3.t": "商务与制造",
+      "nh.svc.3.d": "工厂参访、供应商会谈、产业考察与专业翻译陪同。",
+      "nh.svc.link3": "了解商务服务 <span aria-hidden=\"true\">→</span>",
+      "nh.exp.kicker": "探索中国",
+      "nh.exp.h2": "从这六座城市开始",
+      "nh.exp.lead": "精选访客最常咨询的目的地。告诉我们你想去哪里，我们会为你寻找合适的本地资源。",
+      "nh.exp.all": "查看全部 15 个目的地 →",
+      "nh.exp.note": "各地本地资源可约情况不同，将按每次具体需求确认。",
+      "nh.why.kicker": "为什么选择 China Guide",
+      "nh.why.h2": "立足本地，为你协调",
+      "nh.why.1.t": "本地专业资源",
+      "nh.why.1.d": "我们与熟悉本地城市与实际安排的向导、服务专业人士协作。",
+      "nh.why.2.t": "个性化服务",
+      "nh.why.2.d": "每份方案都从你的出行目的、日期、节奏与要求出发，而非固定套餐。",
+      "nh.why.3.t": "全国资源连接",
+      "nh.why.3.d": "视资源可约情况与核验结果，跨城市协调合适的本地资源。",
+      "nh.why.4.t": "合规旅游服务",
+      "nh.why.4.d": "旅游服务由持证入境旅行社上海凯旋观光旅行社有限公司签约并提供。",
+      "nh.why.more": "了解我们如何跨城市协调 →",
+      "nh.how.kicker": "服务流程",
+      "nh.about.kicker": "关于 China Guide",
+      "nh.about.h2": "与中国的私人联结。",
+      "nh.about.lead": "China Guide 由刘义勇创立。他是持证全国导游，拥有十余年旅游行业经验，曾接待来自六十多个国家和地区的客人。我们相信，有意义的旅行关乎人，而不只是风景。",
+      "nh.about.link": "阅读完整故事 →",
+      "nh.cta.kicker": "从这里开始",
+      "nh.cta.h2": "告诉我们你的需求。",
+      "nh.cta.lead": "只需说明出行目的、目的地与日期。我们会评估需求、寻找合适的本地资源，并提供方案建议，无需任何承诺。",
+      "nh.cta.mobile": "开始咨询",
+      "nh.cta.mobile2": "服务",
+      "nh.form.title": "开始咨询",
+      "nh.form.service": "所需服务",
+      "nh.form.brief": "需求简述",
+      "nh.form.brief.ph": "想去哪里、什么时间、希望体验什么……",
+      "nh.form.note": "更详细的信息会在对应业务页面进一步收集。旅游服务由上海凯旋观光旅行社有限公司签约。",
+      "nh.faq.h": "常见问题速览",
+      "nh.faq.all": "查看全部常见问题 →",
+      "nh.foot.dest": "目的地",
+      "nh.foot.guide": "行前指南",
+      "nh.foot.faq": "常见问题",
+      "nh.wa.float": "通过 WhatsApp 与我们联系",
+      "nh.cta.inq": "咨询",
+      "dh.eyebrow": "探索中国",
+      "dh.h1": "每座城市，都有自己的故事。",
+      "dh.tagline": "浏览完整目的地列表，再告诉我们你想去哪里。",
+      "dh.kicker": "探索中国",
+      "dh.h2": "中国目的地",
+      "dh.lead": "十五个目的地，各有性格、文化与本地专家。中国任何城市都可以询问我们——我们会为你探索合适的本地资源。",
+      "dh.cta": "咨询某个目的地",
+      "dh.note": "各地本地资源可约情况不同，将按每次具体需求确认。",
+      "pg.h1": "抵达中国之前。"
     }
   };
 
@@ -1534,6 +1674,18 @@
     "fr": "Français", "ko": "한국어", "de": "Deutsch", "vi": "Tiếng Việt",
     "ru": "Русский", "ms": "Bahasa Melayu", "th": "ไทย"
   };
+  /* Central image manifest: every homepage image is replaceable from
+     assets/js/site-images.js without touching any HTML. */
+  function applyImages() {
+    var manifest = window.CLA_IMAGES || {};
+    document.querySelectorAll("[data-img]").forEach(function (img) {
+      var item = manifest[img.getAttribute("data-img")];
+      if (!item) return;
+      if (item.src) img.setAttribute("src", item.src);
+      if (item.alt) img.setAttribute("alt", item.alt);
+    });
+  }
+
   function applyLang(lang) {
     if (!I18N[lang]) lang = "en";
     currentLang = lang;
@@ -1559,6 +1711,10 @@
     document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
       el.setAttribute("placeholder", t(el.getAttribute("data-i18n-ph")));
     });
+    document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+      el.setAttribute("aria-label", t(el.getAttribute("data-i18n-aria")));
+    });
+    applyImages();
     document.documentElement.lang = HTML_LANG[lang] || lang;
     var lc = document.getElementById("langCurrent");
     if (lc) lc.textContent = CLA_LANG_NAMES[lang] ? CLA_LANG_NAMES[lang] : lang;
@@ -1665,18 +1821,35 @@
     nav.addEventListener("click", function (e) { if (e.target.tagName === "A") closeMenu(); });
   }
 
-  /* Mobile bottom conversion bar — hidden while the contact form is on screen */
+  /* Mobile bottom conversion bar + WhatsApp float — hidden while the
+     contact form / footer is on screen so neither covers a line of copy */
   var ctaBar = document.getElementById("mobileCta");
+  var waFloat = document.querySelector(".wa-float");
   var contactSection = document.getElementById("contact");
-  if (ctaBar) {
-    if ("IntersectionObserver" in window && contactSection) {
-      var ctaObs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          ctaBar.classList.toggle("is-hidden", en.isIntersecting);
-        });
-      }, { threshold: 0.08 });
-      ctaObs.observe(contactSection);
+  var siteFooter = document.querySelector(".site-footer");
+  if (ctaBar || waFloat) {
+    var floatingTicking = false;
+    function syncFloatingCta() {
+      floatingTicking = false;
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      var hide = false;
+      [contactSection, siteFooter].forEach(function (el) {
+        if (!el) return;
+        var r = el.getBoundingClientRect();
+        if (r.top < vh * 0.8 && r.bottom > 0) hide = true;
+      });
+      if (ctaBar) ctaBar.classList.toggle("is-hidden", hide);
+      if (waFloat) waFloat.classList.toggle("is-hidden", hide);
     }
+    function queueFloatingCta() {
+      if (floatingTicking) return;
+      floatingTicking = true;
+      window.requestAnimationFrame(syncFloatingCta);
+    }
+    window.addEventListener("scroll", queueFloatingCta, { passive: true });
+    window.addEventListener("resize", queueFloatingCta);
+    syncFloatingCta();
+    window.setTimeout(syncFloatingCta, 600);
   }
 
   /* Partner "apply as X" links pre-select the type */

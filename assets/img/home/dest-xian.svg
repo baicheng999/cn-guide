@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16282C"/><stop offset="100%" stop-color="#0F1B1E"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <g fill="none" stroke="#EFE7D8" stroke-opacity=".07" stroke-width="1">
+    <path d="M0 144 H320"/><path d="M0 164 H320"/>
+  </g>
+<g fill="none" stroke="#84B8A8" stroke-width="2.2" stroke-linejoin="round"><path d="M0 162 H320"/><path d="M40 162 V96 h240 v66"/><path d="M28 96 l132 -44 l132 44"/><path d="M52 96 h216"/><path d="M96 162 v-40 h48 v40 M176 162 v-40 h48 v40"/><path d="M136 96 h48 v-18 h-48 z"/></g><g fill="#F7A07E" fill-opacity=".18"><rect x="108" y="136" width="24" height="26"/><rect x="188" y="136" width="24" height="26"/></g><g fill="none" stroke="#EFE7D8" stroke-opacity=".26" stroke-width="1.6"><path d="M160 52 v-18 M146 40 h28"/></g><path d="M0 180 q40 -12 80 0 t80 0 t80 0 t80 0" fill="none" stroke="#84B8A8" stroke-opacity=".45" stroke-width="2"/>
+</svg>

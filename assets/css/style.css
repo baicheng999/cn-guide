@@ -944,7 +944,7 @@ a.fc-qr:hover { border-color: var(--gold-soft); }
   position: fixed; right: 18px; bottom: 22px; z-index: 44;
   width: 46px; height: 46px; border-radius: 50%;
   display: grid; place-items: center;
-  background: var(--ink); color: var(--bone);
+  background: var(--ink); color: #0F1B1E;
   border: 1px solid var(--line-strong);
   box-shadow: 0 8px 22px rgba(0, 0, 0, .4);
   cursor: pointer; opacity: 0; visibility: hidden; transform: translateY(12px);
@@ -1159,4 +1159,152 @@ a.fc-qr:hover { border-color: var(--gold-soft); }
   .hnet-map img { max-width: 240px; }
   .hnet-cta { padding: 30px 18px; }
   .hnet-cta .btn { width: 100%; }
+}
+
+/* ============================================================
+   Homepage restructure — 7 sections, mobile-first, 2026-11-06
+   Only additive rules. All existing components / tokens reused.
+   ============================================================ */
+
+/* ---------- Shared section rhythm ---------- */
+.nh-services, .nh-explore, .nh-why, .nh-how, .nh-about, .nh-contact { padding-top: clamp(56px, 7vw, 96px); padding-bottom: clamp(56px, 7vw, 96px); }
+.nh-services .section-head, .nh-explore .section-head, .nh-why .section-head, .nh-how .section-head { margin-bottom: 40px; }
+
+/* ---------- 1. Hero ---------- */
+.nh-hero .hero-inner { max-width: 900px; padding-top: clamp(72px, 10vh, 120px); padding-bottom: clamp(44px, 6vh, 72px); }
+.nh-hero h1 { font-size: clamp(38px, 6.2vw, 76px); line-height: 1.08; }
+.nh-hero .hero-tagline { max-width: 680px; font-size: clamp(16px, 1.7vw, 20px); }
+.nh-hero-meta { margin-top: 26px; display: grid; gap: 8px; max-width: 720px; }
+.nh-hero-meta p { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,.82); }
+.nh-meta-label { display: inline-block; min-width: 118px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-soft); }
+.nh-hero .hero-cta { margin-top: 30px; }
+
+/* ---------- 2. Our Services : one image + one intro + one link ---------- */
+.nh-svc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.nh-svc-card { display: flex; flex-direction: column; background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .22s, box-shadow .22s, border-color .22s; }
+.nh-svc-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--line-strong); }
+.nh-svc-img { display: block; width: 100%; aspect-ratio: 640 / 420; object-fit: cover; background: var(--ink-3); }
+.nh-svc-body { padding: 24px 24px 26px; display: flex; flex-direction: column; flex: 1 1 auto; }
+.nh-svc-body h3 { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--bone); margin-bottom: 12px; }
+.nh-svc-body p { font-size: 14.5px; line-height: 1.7; color: var(--muted); margin-bottom: 22px; }
+.nh-svc-link { margin-top: auto; align-self: flex-start; font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--gold-soft); border-bottom: 1px solid rgba(247,160,126,.4); padding-bottom: 4px; transition: color .2s, border-color .2s; }
+.nh-svc-link:hover { color: var(--bone); border-color: var(--bone); }
+
+/* ---------- 3. Explore China : six featured destinations ---------- */
+.nh-dest-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.nh-dest { display: block; background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .22s, box-shadow .22s, border-color .22s; }
+.nh-dest:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: var(--line-strong); }
+.nh-dest img { display: block; width: 100%; aspect-ratio: 320 / 200; object-fit: cover; }
+.nh-dest-body { padding: 16px 20px 20px; }
+.nh-dest-body h3 { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--bone); }
+.nh-dest-body h3 span { font-family: var(--font-serif); font-size: 13px; color: var(--bone-faint); margin-left: 6px; font-weight: 400; }
+.nh-dest-body p { margin-top: 6px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--jade-bright); }
+.nh-explore .wel-actions { margin-top: 30px; }
+.nh-explore .fineprint { margin-top: 16px; }
+
+/* ---------- 4. Why China Guide ---------- */
+.nh-why-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.nh-why-card { background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 24px 30px; }
+.nh-why-no { display: block; font-family: var(--font-mono); font-size: 12px; letter-spacing: .12em; color: var(--gold-soft); margin-bottom: 16px; }
+.nh-why-card h3 { font-size: 17px; font-weight: 600; color: var(--bone); margin-bottom: 10px; line-height: 1.35; }
+.nh-why-card p { font-size: 14px; line-height: 1.7; color: var(--muted); }
+.nh-why .wel-actions { margin-top: 30px; }
+
+/* ---------- 6. About : condensed founder ---------- */
+.nh-about-wrap { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+.nh-about-media img { display: block; width: 100%; max-height: 420px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); }
+.nh-about-body h2 { font-family: var(--font-display); font-size: clamp(28px, 3.4vw, 42px); color: var(--bone); margin: 12px 0 20px; line-height: 1.2; }
+.nh-about-body .lead { font-size: 16px; line-height: 1.8; color: var(--muted); margin-bottom: 28px; max-width: 620px; }
+
+/* ---------- 7. Final CTA + simplified form ---------- */
+.nh-form-title { font-family: var(--font-display); font-size: 22px; color: var(--bone); margin-bottom: 20px; }
+.nh-form > label { display: block; margin-bottom: 16px; }
+.nh-contact-row { margin-bottom: 16px; }
+.nh-form .fineprint { margin-top: 14px; font-size: 12px; line-height: 1.6; }
+.nh-quickfaq { margin-top: clamp(48px, 6vw, 76px); padding-top: clamp(36px, 4vw, 56px); border-top: 1px solid var(--line); }
+.nh-quickfaq h3 { font-family: var(--font-display); font-size: 24px; color: var(--bone); margin-bottom: 22px; }
+.nh-quickfaq .faq-list { max-width: 860px; margin: 0 auto; }
+.nh-quickfaq .wel-actions { margin-top: 24px; }
+
+/* ---------- Fixed WhatsApp entry (phones only, never covers copy) ---------- */
+.wa-float { display: none; }
+@media (max-width: 820px) {
+  .wa-float {
+    position: fixed; right: 14px; z-index: 46;
+    bottom: calc(84px + env(safe-area-inset-bottom));
+    width: 52px; height: 52px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: #25D366; color: #0F1B1E;
+    box-shadow: 0 8px 22px rgba(0,0,0,.45);
+    transition: transform .2s, opacity .2s, visibility .2s;
+  }
+  .wa-float.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(14px); }
+  .wa-float:hover { transform: scale(1.06); }
+  .wa-float svg { width: 27px; height: 27px; }
+  /* reserve space so the fixed bar + float never cover the last line of copy */
+  .site-footer { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }
+}
+
+/* ---------- Migration landing pages ---------- */
+.mig-fold { border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper-2); padding: 0 24px; margin-bottom: 16px; }
+.mig-fold > summary { cursor: pointer; list-style: none; padding: 20px 0; font-family: var(--font-display); font-size: 19px; color: var(--bone); }
+.mig-fold > summary::-webkit-details-marker { display: none; }
+.mig-fold > summary::after { content: "+"; float: right; color: var(--gold-soft); font-family: var(--font-mono); }
+.mig-fold[open] > summary::after { content: "−"; }
+.mig-fold > :not(summary) { margin-bottom: 20px; }
+.mig-fold[open] { padding-bottom: 20px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .nh-svc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nh-dest-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .nh-why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 820px) {
+  .nh-services, .nh-explore, .nh-why, .nh-how, .nh-about, .nh-contact { padding-top: 46px; padding-bottom: 46px; }
+  .nh-services .section-head, .nh-explore .section-head, .nh-why .section-head, .nh-how .section-head { margin-bottom: 28px; }
+  .nh-about-wrap { grid-template-columns: 1fr; gap: 26px; }
+  .nh-about-media { max-width: 340px; }
+  .nh-about-media img { max-height: 300px; }
+  .contact-wrap { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 600px) {
+  .nh-svc-grid { grid-template-columns: 1fr; gap: 16px; }
+  .nh-svc-card { flex-direction: row; align-items: stretch; }
+  .nh-svc-img { width: 36%; flex: 0 0 36%; aspect-ratio: auto; height: auto; min-height: 148px; }
+  .nh-svc-body { padding: 16px 16px 18px; }
+  .nh-svc-body h3 { font-size: 18px; margin-bottom: 8px; }
+  .nh-svc-body p { font-size: 13px; line-height: 1.55; margin-bottom: 12px; }
+  .nh-svc-link { font-size: 9.5px; letter-spacing: .02em; white-space: nowrap; max-width: 100%; }
+  .nh-dest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .nh-dest-body { padding: 12px 14px 14px; }
+  .nh-dest-body h3 { font-size: 16px; }
+  .nh-dest-body h3 span { display: none; }
+  .nh-dest-body p { font-size: 9.5px; letter-spacing: .04em; }
+  .nh-why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .nh-why-card { padding: 18px 16px 20px; }
+  .nh-why-card h3 { font-size: 14px; }
+  .nh-why-card p { font-size: 12.5px; line-height: 1.55; }
+  .nh-hero-meta p { font-size: 13px; }
+  .nh-meta-label { min-width: 0; display: block; margin-bottom: 2px; }
+  .nh-hero .hero-cta { gap: 10px; }
+  .nh-hero .hero-cta .btn { flex: 1 1 auto; text-align: center; }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .step { padding: 20px 16px; }
+  .step h3 { font-size: 15px; }
+  .step p { font-size: 12.5px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+}
+
+/* Secondary in-section text link (no extra CTA weight) */
+.nh-inline-link {
+  display: inline-block; margin-left: 20px;
+  font-family: var(--font-sans); font-size: 13px; letter-spacing: .02em;
+  color: var(--bone-soft); text-decoration: underline;
+  text-underline-offset: 4px; text-decoration-color: var(--line-strong);
+  transition: color .2s ease, text-decoration-color .2s ease;
+}
+.nh-inline-link:hover, .nh-inline-link:focus-visible { color: var(--gold-soft); text-decoration-color: var(--gold-soft); }
+@media (max-width: 600px) {
+  .nh-inline-link { display: block; margin: 14px 0 0; font-size: 12.5px; }
 }
