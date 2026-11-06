@@ -1094,6 +1094,19 @@
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
   }
+
+  /* ---------------- Back to top ---------------- */
+  var backToTop = document.getElementById("backToTop");
+  if (backToTop) {
+    function onScrollTop() {
+      backToTop.classList.toggle("show", window.scrollY > 600);
+    }
+    window.addEventListener("scroll", onScrollTop, { passive: true });
+    onScrollTop();
+    backToTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
   if (toggle && nav) {
     var backdrop = document.createElement("div");
     backdrop.className = "nav-backdrop";
