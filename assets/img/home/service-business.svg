@@ -1,27 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-hidden="true">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#16282C"/><stop offset="100%" stop-color="#0F1B1E"/>
+      <stop offset="0%" stop-color="#102B46"/><stop offset="100%" stop-color="#0C2337"/>
     </linearGradient>
   </defs>
   <rect width="640" height="420" fill="url(#bg)"/>
-  <g fill="none" stroke="#EFE7D8" stroke-opacity=".07" stroke-width="1">
+  <g fill="none" stroke="#F5F7F8" stroke-opacity=".07" stroke-width="1">
     <path d="M0 302.4 H640"/><path d="M0 344.4 H640"/>
   </g>
 
-  <g fill="none" stroke="#84B8A8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="#4FB3AB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
     <path d="M56 336 V236 l92 -46 v146 M148 336 V190 l92 46 v100 M240 336 V236 l92 -46 v146"/>
     <path d="M56 236 l92 -46 l92 46 l92 -46"/>
     <path d="M332 336 V214 h128 v122"/>
     <path d="M332 214 l40 -34 h48 l40 34"/>
   </g>
-  <g fill="#F7A07E" fill-opacity=".18" stroke="#F7A07E" stroke-width="1.8">
+  <g fill="#D9BE8C" fill-opacity=".18" stroke="#D9BE8C" stroke-width="1.8">
     <rect x="78" y="262" width="24" height="26" rx="2"/><rect x="116" y="262" width="24" height="26" rx="2"/>
     <rect x="170" y="222" width="24" height="26" rx="2"/><rect x="208" y="222" width="24" height="26" rx="2"/>
     <rect x="262" y="262" width="24" height="26" rx="2"/><rect x="300" y="262" width="24" height="26" rx="2"/>
     <rect x="356" y="246" width="30" height="30" rx="2"/><rect x="402" y="246" width="30" height="30" rx="2"/>
   </g>
-  <g fill="none" stroke="#F7A07E" stroke-width="2.4" stroke-linecap="round">
+  <g fill="none" stroke="#D9BE8C" stroke-width="2.4" stroke-linecap="round">
     <path d="M56 366 h404"/><path d="M56 366 v14 M460 366 v14"/>
   </g>
 </svg>

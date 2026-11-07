@@ -1,46 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" width="480" height="280" role="img" aria-label="Abstract illustration of a factory roofline and a rising bar chart">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1B3338"/><stop offset="1" stop-color="#0F1B1E"/>
+      <stop offset="0" stop-color="#16395A"/><stop offset="1" stop-color="#0C2337"/>
     </linearGradient>
     <radialGradient id="glow" cx="76%" cy="12%" r="72%">
-      <stop offset="0" stop-color="#F2613F" stop-opacity=".22"/>
-      <stop offset="1" stop-color="#F2613F" stop-opacity="0"/>
+      <stop offset="0" stop-color="#C6A46A" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#C6A46A" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#EFE7D8" stop-opacity="0"/>
-      <stop offset="1" stop-color="#EFE7D8" stop-opacity=".055"/>
+      <stop offset="0" stop-color="#F5F7F8" stop-opacity="0"/>
+      <stop offset="1" stop-color="#F5F7F8" stop-opacity=".055"/>
     </linearGradient>
   </defs>
   <rect width="480" height="280" fill="url(#bg)"/>
   <rect width="480" height="280" fill="url(#glow)"/>
-  <g stroke="#EFE7D8" stroke-opacity=".05" stroke-width="1">
+  <g stroke="#F5F7F8" stroke-opacity=".05" stroke-width="1">
     <path d="M0 70H480M0 140H480M0 210H480"/>
     <path d="M120 0V280M240 0V280M360 0V280"/>
   </g>
   <rect x="0" y="186" width="480" height="94" fill="url(#floor)"/>
   <g stroke-linecap="round" stroke-linejoin="round">
 
-    <g fill="none" stroke="#F7A07E" stroke-width="2.6">
+    <g fill="none" stroke="#D9BE8C" stroke-width="2.6">
       <path d="M52 198V114l42 24v-24l42 24v-24l42 24v60Z"/>
       <path d="M52 198h126"/>
       <path d="M74 156h16v18H74zM116 156h16v18h-16zM158 156h16v18h-16z" stroke-opacity=".48"/>
     </g>
-    <g fill="none" stroke="#84B8A8" stroke-width="2.2" stroke-opacity=".7">
+    <g fill="none" stroke="#4FB3AB" stroke-width="2.2" stroke-opacity=".7">
       <path d="M210 198v-54h40v54M210 144h40M222 120v-24h18v24M231 88v-18"/>
     </g>
-    <g fill="none" stroke="#EFE7D8" stroke-width="2" stroke-opacity=".32">
+    <g fill="none" stroke="#F5F7F8" stroke-width="2" stroke-opacity=".32">
       <path d="M268 198h156"/>
     </g>
-    <g fill="none" stroke="#84B8A8" stroke-width="2.6">
+    <g fill="none" stroke="#4FB3AB" stroke-width="2.6">
       <path d="M282 198v-34M312 198v-58M342 198v-84M372 198v-48"/>
     </g>
-    <g fill="none" stroke="#F7A07E" stroke-width="2.6">
+    <g fill="none" stroke="#D9BE8C" stroke-width="2.6">
       <path d="M282 152l30-26 30 12 30-48"/>
       <path d="M372 90l-12 1m12-1l-3 12"/>
     </g>
-    <circle cx="342" cy="114" r="5" fill="#F7A07E" stroke="none"/>
+    <circle cx="342" cy="114" r="5" fill="#D9BE8C" stroke="none"/>
 
   </g>
-  <path d="M32 252H448" stroke="#EFE7D8" stroke-opacity=".12" stroke-width="1"/>
+  <path d="M32 252H448" stroke="#F5F7F8" stroke-opacity=".12" stroke-width="1"/>
 </svg>

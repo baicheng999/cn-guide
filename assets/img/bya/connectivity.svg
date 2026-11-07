@@ -1,42 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" width="480" height="280" role="img" aria-label="Abstract illustration of a SIM card, signal arcs and connected nodes">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1B3338"/><stop offset="1" stop-color="#0F1B1E"/>
+      <stop offset="0" stop-color="#16395A"/><stop offset="1" stop-color="#0C2337"/>
     </linearGradient>
     <radialGradient id="glow" cx="76%" cy="12%" r="72%">
-      <stop offset="0" stop-color="#F2613F" stop-opacity=".22"/>
-      <stop offset="1" stop-color="#F2613F" stop-opacity="0"/>
+      <stop offset="0" stop-color="#C6A46A" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#C6A46A" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#EFE7D8" stop-opacity="0"/>
-      <stop offset="1" stop-color="#EFE7D8" stop-opacity=".055"/>
+      <stop offset="0" stop-color="#F5F7F8" stop-opacity="0"/>
+      <stop offset="1" stop-color="#F5F7F8" stop-opacity=".055"/>
     </linearGradient>
   </defs>
   <rect width="480" height="280" fill="url(#bg)"/>
   <rect width="480" height="280" fill="url(#glow)"/>
-  <g stroke="#EFE7D8" stroke-opacity=".05" stroke-width="1">
+  <g stroke="#F5F7F8" stroke-opacity=".05" stroke-width="1">
     <path d="M0 70H480M0 140H480M0 210H480"/>
     <path d="M120 0V280M240 0V280M360 0V280"/>
   </g>
   <rect x="0" y="186" width="480" height="94" fill="url(#floor)"/>
   <g stroke-linecap="round" stroke-linejoin="round">
 
-    <g fill="none" stroke="#84B8A8" stroke-width="2.4">
+    <g fill="none" stroke="#4FB3AB" stroke-width="2.4">
       <rect x="196" y="26" width="88" height="100" rx="13"/>
       <rect x="216" y="46" width="48" height="38" rx="6" stroke-opacity=".72"/>
       <path d="M240 46v38M216 65h48" stroke-opacity=".42"/>
       <path d="M216 104h48" stroke-opacity=".3"/>
     </g>
-    <g fill="none" stroke="#F7A07E" stroke-width="2.6">
+    <g fill="none" stroke="#D9BE8C" stroke-width="2.6">
       <path d="M140 176a142 142 0 0 1 200 0" stroke-opacity=".3"/>
       <path d="M172 196a98 98 0 0 1 136 0" stroke-opacity=".58"/>
       <path d="M204 216a52 52 0 0 1 72 0"/>
     </g>
-    <circle cx="240" cy="230" r="8" fill="#F7A07E" stroke="none"/>
-    <g fill="none" stroke="#EFE7D8" stroke-width="1.8" stroke-opacity=".34">
+    <circle cx="240" cy="230" r="8" fill="#D9BE8C" stroke="none"/>
+    <g fill="none" stroke="#F5F7F8" stroke-width="1.8" stroke-opacity=".34">
       <path d="M74 74l34 22M406 74l-34 22"/>
     </g>
-    <g fill="#84B8A8" fill-opacity=".8" stroke="none">
+    <g fill="#4FB3AB" fill-opacity=".8" stroke="none">
       <circle cx="70" cy="72" r="6"/>
       <circle cx="410" cy="72" r="6"/>
       <circle cx="106" cy="96" r="4"/>
@@ -44,5 +44,5 @@
     </g>
 
   </g>
-  <path d="M32 252H448" stroke="#EFE7D8" stroke-opacity=".12" stroke-width="1"/>
+  <path d="M32 252H448" stroke="#F5F7F8" stroke-opacity=".12" stroke-width="1"/>
 </svg>
