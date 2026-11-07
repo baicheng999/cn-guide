@@ -490,7 +490,7 @@
       "hnet.cta.btn": "Tell Us What You Need",
 
       /* 首页重构 7 区块 + 迁移承载页 */
-      "nh.hero.eyebrow": "YOUR GATEWAY TO CHINA",
+      "nh.hero.eyebrow": "PRIVATE TRAVEL · WELLNESS · BUSINESS",
       "nh.hero.h1": "China Guide — <span class=\"accent\">Your Gateway to China.</span>",
       "nh.hero.lead": "Private travel, wellness &amp; medical visits, and business trips across China — coordinated with local professionals, built around what you need.",
       "nh.hero.who.label": "Who we welcome",
@@ -1040,7 +1040,7 @@
       "hnet.cta.btn": "告诉我们你的需求",
 
       /* 首页重构 7 区块 + 迁移承载页 */
-      "nh.hero.eyebrow": "通往中国的大门",
+      "nh.hero.eyebrow": "私人旅行 · 康养医疗 · 商务考察",
       "nh.hero.h1": "China Guide — <span class=\"accent\">你的中国之门。</span>",
       "nh.hero.lead": "私人旅行、康养与医疗、商务考察，覆盖中国各地——由本地专业人士协同安排，围绕你的需求量身规划。",
       "nh.hero.who.label": "服务客群",
@@ -1674,15 +1674,43 @@
     "fr": "Français", "ko": "한국어", "de": "Deutsch", "vi": "Tiếng Việt",
     "ru": "Русский", "ms": "Bahasa Melayu", "th": "ไทย"
   };
-  /* Central image manifest: every homepage image is replaceable from
-     assets/js/site-images.js without touching any HTML. */
+  /* Central image manifest: every image position on every page is declared
+     once in assets/js/site-images.js. Reserved slots with an empty src stay
+     as neutral placeholders until a real photograph is supplied. */
   function applyImages() {
     var manifest = window.CLA_IMAGES || {};
+    function applySlotVars(item, node) {
+      if (!item || !node || !node.style) return;
+      if (item.ratio) node.style.setProperty("--slot-ratio", item.ratio);
+      if (item.fit) node.style.setProperty("--slot-fit", item.fit);
+      if (item.focus) node.style.setProperty("--slot-focus", item.focus);
+    }
     document.querySelectorAll("[data-img]").forEach(function (img) {
       var item = manifest[img.getAttribute("data-img")];
       if (!item) return;
       if (item.src) img.setAttribute("src", item.src);
       if (item.alt) img.setAttribute("alt", item.alt);
+      var frame = img.closest(".vu-img-frame, .vu-img-slot, .vu-dest-media, .vu-pillar-media");
+      applySlotVars(item, frame || img.parentElement);
+    });
+    document.querySelectorAll("[data-img-frame]").forEach(function (frame) {
+      applySlotVars(manifest[frame.getAttribute("data-img-frame")], frame);
+    });
+    document.querySelectorAll("[data-img-slot]").forEach(function (slot) {
+      var item = manifest[slot.getAttribute("data-img-slot")];
+      applySlotVars(item, slot);
+      if (!item || !item.src) { slot.setAttribute("data-filled", "false"); return; }
+      var img = slot.querySelector("img");
+      if (!img) {
+        img = document.createElement("img");
+        img.setAttribute("alt", item.alt || "");
+        img.setAttribute("loading", "lazy");
+        img.setAttribute("decoding", "async");
+        slot.appendChild(img);
+      }
+      img.setAttribute("src", item.src);
+      if (item.alt) img.setAttribute("alt", item.alt);
+      slot.setAttribute("data-filled", "true");
     });
   }
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <link rel="icon" type="image/png" href="assets/img/logo-mark.png" />
-  <link rel="apple-touch-icon" href="assets/img/logo-mark.png" />
+  <link rel="icon" type="image/png" href="assets/img/brand/china-guide-icon.png" />
+  <link rel="apple-touch-icon" href="assets/img/brand/china-guide-icon.png" />
   <title>China Guide | Your Gateway to China</title>
   <meta name="description" content="China Guide connects international visitors with local travel, wellness and medical, and business resources across China. Tell us what you need and we will coordinate the next steps." />
   <link rel="canonical" href="https://www.cn-guide.com/" />
@@ -19,8 +19,9 @@
   <meta name="baidu-site-verification" content="codeva-zc1d9RVD7I" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/brand.css" />
   <!-- Google Analytics 4: insert your Measurement ID here when ready (placeholder removed). -->
 
   <!-- Structured data: TravelAgency / LocalBusiness -->
@@ -79,18 +80,15 @@
   }
   </script>
 </head>
-<body>
+<body data-page="index">
   <a class="skip-link" href="#home" data-i18n="skip">Skip to content</a>
 
   <!-- ============ HEADER (unchanged navigation) ============ -->
   <header class="site-header" id="top">
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="China Guide home">
-        <span class="brand-seal" aria-hidden="true">游</span>
-        <span class="brand-text">
-          <strong>China Guide</strong>
-          <em>中国向导</em>
-        </span>
+        <img class="brand-logo brand-logo--light" data-img="brand.logo.light" src="assets/img/brand/china-guide-logo-light.png" alt="China Guide — Your Gateway to China" width="1200" height="253" decoding="async" />
+        <img class="brand-logo brand-logo--dark" data-img="brand.logo" src="assets/img/brand/china-guide-logo.png" alt="" aria-hidden="true" width="1200" height="253" decoding="async" />
       </a>
       <div class="header-right">
         <div class="lang-switch" id="langSwitch">
@@ -134,7 +132,7 @@
   </header>
 
   <!-- ============ 1. HERO ============ -->
-  <section class="hero nh-hero" id="home">
+  <section class="hero vu-hero" id="home">
     <div class="hero-bg" aria-hidden="true">
       <svg class="hero-mountains" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path d="M0,224 L160,160 L320,224 L480,128 L640,224 L800,176 L960,96 L1120,208 L1280,144 L1440,224 L1440,320 L0,320 Z" fill="rgba(255,255,255,0.06)"/>
@@ -142,144 +140,225 @@
       </svg>
       <div class="hero-sun" aria-hidden="true"></div>
     </div>
-    <div class="container hero-inner">
-      <p class="eyebrow" data-i18n="nh.hero.eyebrow">YOUR GATEWAY TO CHINA</p>
-      <h1 data-i18n="nh.hero.h1">China Guide — <span class="accent">Your Gateway to China.</span></h1>
-      <p class="hero-tagline" data-i18n="nh.hero.lead">Private travel, wellness &amp; medical visits, and business trips across China — coordinated with local professionals, built around what you need.</p>
-      <div class="nh-hero-meta">
-        <p><span class="nh-meta-label" data-i18n="nh.hero.who.label">Who we welcome</span> <span data-i18n="nh.hero.who">Visitors from Malaysia, Singapore, the Philippines, Vietnam, Indonesia, Thailand and around the world.</span></p>
-        <p><span class="nh-meta-label" data-i18n="nh.hero.how.label">How to start</span> <span data-i18n="nh.hero.how">Send a short inquiry or a WhatsApp message. We will reply with options and next steps.</span></p>
+    <div class="container vu-hero-grid">
+      <div class="vu-hero-copy">
+        <p class="eyebrow" data-i18n="nh.hero.eyebrow">PRIVATE TRAVEL · WELLNESS · BUSINESS</p>
+        <h1 data-i18n="nh.hero.h1">China Guide — <span class="accent">Your Gateway to China.</span></h1>
+        <p class="hero-tagline" data-i18n="nh.hero.lead">Private travel, wellness &amp; medical visits, and business trips across China — coordinated with local professionals, built around what you need.</p>
+        <div class="hero-cta vu-hero-cta">
+          <a href="#services" class="btn btn-primary" data-i18n="nh.hero.cta1">Explore Our Services</a>
+          <a href="#contact" class="btn btn-outline" data-i18n="nh.hero.cta2">Start Your Inquiry</a>
+        </div>
+        <div class="vu-hero-meta">
+          <p><span class="vu-meta-label" data-i18n="nh.hero.who.label">Who we welcome</span> <span data-i18n="nh.hero.who">Visitors from Malaysia, Singapore, the Philippines, Vietnam, Indonesia, Thailand and around the world.</span></p>
+          <p><span class="vu-meta-label" data-i18n="nh.hero.how.label">How to start</span> <span data-i18n="nh.hero.how">Send a short inquiry or a WhatsApp message. We will reply with options and next steps.</span></p>
+        </div>
       </div>
-      <div class="hero-cta">
-        <a href="#services" class="btn btn-primary" data-i18n="nh.hero.cta1">Explore Our Services</a>
-        <a href="#contact" class="btn btn-outline" data-i18n="nh.hero.cta2">Start Your Inquiry</a>
+      <div class="vu-hero-visual">
+        <div class="vu-img-slot" data-img-slot="hero.brand" data-ratio="4/5">
+          <span class="vu-slot-tag">Brand image 01</span>
+        </div>
+      </div>
+    </div>
+    <div class="vu-hero-index">
+      <div class="container">
+        <a href="#services"><span data-i18n="nh.svc.1.t">China Travel</span><span aria-hidden="true">↗</span></a>
+        <a href="#wellness"><span data-i18n="nh.svc.2.t">Wellness &amp; Medical</span><span aria-hidden="true">↗</span></a>
+        <a href="#business"><span data-i18n="nh.svc.3.t">Business &amp; Manufacturing</span><span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </section>
 
-  <!-- ============ 2. OUR SERVICES ============ -->
-  <section class="section nh-services" id="services">
+  <!-- ============ 2. OUR SERVICES — three distinct visual treatments ============ -->
+  <section class="section vu-section" id="services">
     <div class="container">
-      <div class="section-head">
-        <p class="kicker" data-i18n="nh.svc.kicker">Our Services</p>
-        <h2 data-i18n="nh.svc.h2">Three ways to experience China</h2>
-        <p class="lead" data-i18n="nh.svc.lead">Three core services, equally supported. Choose where to begin — we coordinate the local resources behind each one.</p>
+      <div class="vu-head vu-head--split">
+        <div>
+          <p class="kicker" data-i18n="nh.svc.kicker">Our Services</p>
+          <h2 data-i18n="nh.svc.h2">Three ways to experience China</h2>
+        </div>
+        <p class="vu-head-aside" data-i18n="nh.svc.lead">Three core services, equally supported. Choose where to begin — we coordinate the local resources behind each one.</p>
       </div>
-      <div class="nh-svc-grid">
-        <article class="nh-svc-card">
-          <img class="nh-svc-img" data-img="service.travel" src="assets/img/home/service-travel.svg" alt="" width="640" height="420" loading="lazy" decoding="async" />
-          <div class="nh-svc-body">
+      <div class="vu-pillars">
+        <article class="vu-pillar vu-pillar--travel">
+          <span class="vu-pillar-no">01</span>
+          <div class="vu-pillar-media">
+            <img data-img="service.travel" src="assets/img/home/service-travel.svg" alt="" width="640" height="420" loading="lazy" decoding="async" />
+          </div>
+          <div class="vu-pillar-body">
             <h3 data-i18n="nh.svc.1.t">China Travel</h3>
             <p data-i18n="nh.svc.1.d">Private journeys, cultural discoveries and multi-city itineraries shaped around your interests.</p>
-            <a class="nh-svc-link" href="china-travel.html" data-i18n="nh.svc.link1">Explore China Travel <span aria-hidden="true">→</span></a>
+            <a class="vu-link" href="china-travel.html" data-i18n="nh.svc.link1">Explore China Travel <span aria-hidden="true">→</span></a>
           </div>
         </article>
-        <article class="nh-svc-card">
-          <img class="nh-svc-img" data-img="service.wellness" src="assets/img/home/service-wellness.svg" alt="" width="640" height="420" loading="lazy" decoding="async" />
-          <div class="nh-svc-body">
-            <h3 data-i18n="nh.svc.2.t">Wellness &amp; Medical</h3>
-            <p data-i18n="nh.svc.2.d">Coordination for wellness stays, health checks and medical visit support with local providers.</p>
-            <a class="nh-svc-link" href="wellness-medical.html" data-i18n="nh.svc.link2">Explore Wellness &amp; Medical <span aria-hidden="true">→</span></a>
-          </div>
+        <article class="vu-pillar vu-pillar--wellness">
+          <img class="vu-pillar-emblem" data-img="service.wellness" src="assets/img/home/service-wellness.svg" alt="" width="640" height="420" loading="lazy" decoding="async" aria-hidden="true" />
+          <span class="vu-pillar-no">02</span>
+          <h3 data-i18n="nh.svc.2.t">Wellness &amp; Medical</h3>
+          <p data-i18n="nh.svc.2.d">Coordination for wellness stays, health checks and medical visit support with local providers.</p>
+          <ul class="vu-pillar-ticks">
+            <li data-i18n="wm.c1.t">Traditional Chinese Medicine</li>
+            <li data-i18n="wm.c2.t">Health Screening</li>
+            <li data-i18n="wm.c3.t">Medical Appointment Assistance</li>
+          </ul>
+          <a class="vu-link vu-link--light" href="wellness-medical.html" data-i18n="nh.svc.link2">Explore Wellness &amp; Medical <span aria-hidden="true">→</span></a>
         </article>
-        <article class="nh-svc-card">
-          <img class="nh-svc-img" data-img="service.business" src="assets/img/home/service-business.svg" alt="" width="640" height="420" loading="lazy" decoding="async" />
-          <div class="nh-svc-body">
-            <h3 data-i18n="nh.svc.3.t">Business &amp; Manufacturing</h3>
-            <p data-i18n="nh.svc.3.d">Factory visits, supplier meetings, industry exploration and professional interpretation.</p>
-            <a class="nh-svc-link" href="business.html" data-i18n="nh.svc.link3">Explore Business Services <span aria-hidden="true">→</span></a>
+        <article class="vu-pillar vu-pillar--business">
+          <span class="vu-pillar-no">03</span>
+          <h3 data-i18n="nh.svc.3.t">Business &amp; Manufacturing</h3>
+          <p data-i18n="nh.svc.3.d">Factory visits, supplier meetings, industry exploration and professional interpretation.</p>
+          <div class="vu-pillar-tags">
+            <span data-i18n="biz.c1.t">Electronics &amp; Technology</span>
+            <span data-i18n="biz.c2.t">Machinery &amp; Equipment</span>
+            <span data-i18n="biz.c3.t">Furniture &amp; Home Products</span>
           </div>
+          <a class="vu-link" href="business.html" data-i18n="nh.svc.link3">Explore Business Services <span aria-hidden="true">→</span></a>
+          <img class="vu-pillar-strip" data-img="service.business" src="assets/img/home/service-business.svg" alt="" width="640" height="420" loading="lazy" decoding="async" aria-hidden="true" />
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ 3. EXPLORE CHINA ============ -->
-  <section class="section section-alt nh-explore" id="explore">
-    <div class="container">
-      <div class="section-head">
-        <p class="kicker" data-i18n="nh.exp.kicker">Explore China</p>
-        <h2 data-i18n="nh.exp.h2">Six places to start</h2>
-        <p class="lead" data-i18n="nh.exp.lead">A selection of destinations our visitors ask about most. Tell us where you want to go — we will explore suitable local options for you.</p>
+  <!-- ============ 2b. WELLNESS & MEDICAL — dedicated visual band ============ -->
+  <section class="vu-feature vu-feature--dark" id="wellness">
+    <div class="container vu-feature-grid">
+      <div class="vu-feature-media">
+        <div class="vu-img-slot" data-img-slot="feature.wellness" data-ratio="4/3"><span class="vu-slot-tag">Image slot 02</span></div>
       </div>
-      <div class="nh-dest-grid">
-        <a class="nh-dest" href="destination.html?city=guangzhou">
-          <img data-img="dest.guangzhou" src="assets/img/home/dest-guangzhou.svg" alt="" width="320" height="200" loading="lazy" decoding="async" />
-          <div class="nh-dest-body"><h3 data-i18n="city.name1">Guangzhou <span>广州</span></h3><p data-i18n="city.tag1">International Gateway</p></div>
+      <div class="vu-feature-copy">
+        <p class="kicker" data-i18n="wm.eyebrow">Wellness &amp; Medical</p>
+        <h2 data-i18n="wm.intro.h2">Wellness &amp; Medical Experiences in China</h2>
+        <p class="vu-lead" data-i18n="wm.intro.lead">China has a long tradition of wellness practices and a rapidly developing modern healthcare sector. China Guide helps international visitors explore suitable wellness experiences and connect with professional healthcare providers through coordinated local services.</p>
+        <div class="vu-points">
+          <div class="vu-point"><span class="vu-point-no">01</span><div><h3 data-i18n="wm.c1.t">Traditional Chinese Medicine</h3><p data-i18n="wm.c1.d">Acupuncture, tuina, moxibustion and herbal consultation arranged through licensed TCM clinics.</p></div></div>
+          <div class="vu-point"><span class="vu-point-no">02</span><div><h3 data-i18n="wm.c2.t">Health Screening</h3><p data-i18n="wm.c2.d">Executive check-up packages and health assessments at international hospital departments, subject to provider availability.</p></div></div>
+          <div class="vu-point"><span class="vu-point-no">03</span><div><h3 data-i18n="wm.c3.t">Medical Appointment Assistance</h3><p data-i18n="wm.c3.d">We coordinate appointment times, documents and communication with suitable healthcare providers.</p></div></div>
+        </div>
+        <a class="btn btn-outline" href="wellness-medical.html" data-i18n="wm.cta1">Explore Wellness Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2c. BUSINESS & MANUFACTURING — dedicated visual band ============ -->
+  <section class="vu-feature vu-feature--light vu-feature--reverse" id="business">
+    <div class="container vu-feature-grid">
+      <div class="vu-feature-media">
+        <div class="vu-img-slot" data-img-slot="feature.business" data-ratio="4/3"><span class="vu-slot-tag">Image slot 03</span></div>
+      </div>
+      <div class="vu-feature-copy">
+        <p class="kicker" data-i18n="biz.eyebrow">Business &amp; Manufacturing</p>
+        <h2 data-i18n="biz.h2">Explore China's Industries. Discover New Opportunities.</h2>
+        <p class="vu-lead" data-i18n="biz.lead">China is one of the world's most dynamic manufacturing and business environments. We help international buyers, entrepreneurs and business delegations plan focused visits and connect with relevant local resources.</p>
+        <div class="vu-points">
+          <div class="vu-point"><span class="vu-point-no">01</span><div><h3 data-i18n="biz.c1.t">Electronics &amp; Technology</h3><p data-i18n="biz.c1.d">Consumer electronics, components and hardware supply chains across the Greater Bay Area.</p></div></div>
+          <div class="vu-point"><span class="vu-point-no">02</span><div><h3 data-i18n="biz.c2.t">Machinery &amp; Equipment</h3><p data-i18n="biz.c2.d">Industrial machinery, automation and equipment manufacturers for many sectors.</p></div></div>
+          <div class="vu-point"><span class="vu-point-no">03</span><div><h3 data-i18n="biz.c3.t">Furniture &amp; Home Products</h3><p data-i18n="biz.c3.d">Furniture clusters, home goods and ceramics concentrated in Guangdong.</p></div></div>
+        </div>
+        <a class="btn btn-outline-dark" href="business.html" data-i18n="biz.cta1">Arrange a Factory Visit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. EXPLORE CHINA — six large editorial images ============ -->
+  <section class="section section-alt vu-section" id="explore">
+    <div class="container">
+      <div class="vu-head vu-head--split">
+        <div>
+          <p class="kicker" data-i18n="nh.exp.kicker">Explore China</p>
+          <h2 data-i18n="nh.exp.h2">Six places to start</h2>
+        </div>
+        <p class="vu-head-aside" data-i18n="nh.exp.lead">A selection of destinations our visitors ask about most. Tell us where you want to go — we will explore suitable local options for you.</p>
+      </div>
+      <div class="vu-dest-grid">
+        <a class="vu-dest vu-dest--lead" href="destination.html?city=guangzhou">
+          <div class="vu-dest-media"><img data-img="dest.guangzhou" src="assets/img/home/dest-guangzhou.svg" alt="" width="320" height="200" loading="lazy" decoding="async" /></div>
+          <span class="vu-dest-no">01</span>
+          <div class="vu-dest-body"><h3 data-i18n="city.name1">Guangzhou <span>广州</span></h3><p data-i18n="city.tag1">International Gateway</p></div>
         </a>
-        <a class="nh-dest" href="destination.html?city=shanghai">
-          <img data-img="dest.shanghai" src="assets/img/home/dest-shanghai.svg" alt="" width="320" height="200" loading="lazy" decoding="async" />
-          <div class="nh-dest-body"><h3 data-i18n="city.name4">Shanghai <span>上海</span></h3><p data-i18n="city.tag4">Global Metropolis</p></div>
+        <a class="vu-dest" href="destination.html?city=shanghai">
+          <div class="vu-dest-media"><img data-img="dest.shanghai" src="assets/img/home/dest-shanghai.svg" alt="" width="320" height="200" loading="lazy" decoding="async" /></div>
+          <span class="vu-dest-no">02</span>
+          <div class="vu-dest-body"><h3 data-i18n="city.name4">Shanghai <span>上海</span></h3><p data-i18n="city.tag4">Global Metropolis</p></div>
         </a>
-        <a class="nh-dest" href="destination.html?city=beijing">
-          <img data-img="dest.beijing" src="assets/img/home/dest-beijing.svg" alt="" width="320" height="200" loading="lazy" decoding="async" />
-          <div class="nh-dest-body"><h3 data-i18n="city.name5">Beijing <span>北京</span></h3><p data-i18n="city.tag5">Classic Destination</p></div>
+        <a class="vu-dest" href="destination.html?city=beijing">
+          <div class="vu-dest-media"><img data-img="dest.beijing" src="assets/img/home/dest-beijing.svg" alt="" width="320" height="200" loading="lazy" decoding="async" /></div>
+          <span class="vu-dest-no">03</span>
+          <div class="vu-dest-body"><h3 data-i18n="city.name5">Beijing <span>北京</span></h3><p data-i18n="city.tag5">Classic Destination</p></div>
         </a>
-        <a class="nh-dest" href="destination.html?city=xian">
-          <img data-img="dest.xian" src="assets/img/home/dest-xian.svg" alt="" width="320" height="200" loading="lazy" decoding="async" />
-          <div class="nh-dest-body"><h3 data-i18n="city.name8">Xi'an <span>西安</span></h3><p data-i18n="city.tag8">Cultural Depth</p></div>
+        <a class="vu-dest" href="destination.html?city=xian">
+          <div class="vu-dest-media"><img data-img="dest.xian" src="assets/img/home/dest-xian.svg" alt="" width="320" height="200" loading="lazy" decoding="async" /></div>
+          <span class="vu-dest-no">04</span>
+          <div class="vu-dest-body"><h3 data-i18n="city.name8">Xi'an <span>西安</span></h3><p data-i18n="city.tag8">Cultural Depth</p></div>
         </a>
-        <a class="nh-dest" href="destination.html?city=guilin">
-          <img data-img="dest.guilin" src="assets/img/home/dest-guilin.svg" alt="" width="320" height="200" loading="lazy" decoding="async" />
-          <div class="nh-dest-body"><h3 data-i18n="city.name9">Guilin <span>桂林</span></h3><p data-i18n="city.tag9">Natural Beauty</p></div>
+        <a class="vu-dest" href="destination.html?city=guilin">
+          <div class="vu-dest-media"><img data-img="dest.guilin" src="assets/img/home/dest-guilin.svg" alt="" width="320" height="200" loading="lazy" decoding="async" /></div>
+          <span class="vu-dest-no">05</span>
+          <div class="vu-dest-body"><h3 data-i18n="city.name9">Guilin <span>桂林</span></h3><p data-i18n="city.tag9">Natural Beauty</p></div>
         </a>
-        <a class="nh-dest" href="destination.html?city=chengdu">
-          <img data-img="dest.chengdu" src="assets/img/home/dest-chengdu.svg" alt="" width="320" height="200" loading="lazy" decoding="async" />
-          <div class="nh-dest-body"><h3 data-i18n="city.name6">Chengdu <span>成都</span></h3><p data-i18n="city.tag6">Leisure &amp; Culture</p></div>
+        <a class="vu-dest" href="destination.html?city=chengdu">
+          <div class="vu-dest-media"><img data-img="dest.chengdu" src="assets/img/home/dest-chengdu.svg" alt="" width="320" height="200" loading="lazy" decoding="async" /></div>
+          <span class="vu-dest-no">06</span>
+          <div class="vu-dest-body"><h3 data-i18n="city.name6">Chengdu <span>成都</span></h3><p data-i18n="city.tag6">Leisure &amp; Culture</p></div>
         </a>
+      </div>
+      <p class="fineprint center" data-i18n="nh.exp.note">Local resource availability varies by destination and is confirmed for each request.</p>
+
+      <!-- Practical resources: short entries only, detail pages stay separate -->
+      <div class="vu-resources">
+        <a href="practical-guide.html"><span data-i18n="bya.h2">Before You Arrive in China</span><span aria-hidden="true">↗</span></a>
+        <a href="destinations.html"><span data-i18n="nh.foot.dest">Destinations</span><span aria-hidden="true">↗</span></a>
+        <a href="faq.html"><span data-i18n="nh.foot.faq">FAQ</span><span aria-hidden="true">↗</span></a>
       </div>
       <div class="wel-actions">
         <a class="btn btn-outline-dark" href="destinations.html" data-i18n="nh.exp.all">View all 15 destinations →</a>
-        <a class="nh-inline-link" href="practical-guide.html" data-i18n="bya.h2">Before You Arrive in China</a>
       </div>
-      <p class="fineprint center" data-i18n="nh.exp.note">Local resource availability varies by destination and is confirmed for each request.</p>
     </div>
   </section>
 
-  <!-- ============ 4. WHY CHINA GUIDE ============ -->
-  <section class="section nh-why" id="why">
-    <div class="container">
-      <div class="section-head">
+  <!-- ============ 4. WHY CHINA GUIDE — editorial list, not a card wall ============ -->
+  <section class="section vu-section" id="why">
+    <div class="container vu-why-grid">
+      <div class="vu-why-intro">
         <p class="kicker" data-i18n="nh.why.kicker">Why China Guide</p>
         <h2 data-i18n="nh.why.h2">Local knowledge, coordinated around you</h2>
+        <a class="vu-link" href="network.html" data-i18n="nh.why.more">How we coordinate across China →</a>
       </div>
-      <div class="nh-why-grid">
-        <article class="nh-why-card"><span class="nh-why-no">01</span><h3 data-i18n="nh.why.1.t">Local professional resources</h3><p data-i18n="nh.why.1.d">We work with guides and service professionals who know their own city and its practical arrangements.</p></article>
-        <article class="nh-why-card"><span class="nh-why-no">02</span><h3 data-i18n="nh.why.2.t">Personalized service</h3><p data-i18n="nh.why.2.d">Every plan starts with your purpose, dates, pace and requirements — not a fixed package.</p></article>
-        <article class="nh-why-card"><span class="nh-why-no">03</span><h3 data-i18n="nh.why.3.t">Nationwide connections</h3><p data-i18n="nh.why.3.d">We coordinate suitable local resources across cities, subject to availability and verification.</p></article>
-        <article class="nh-why-card"><span class="nh-why-no">04</span><h3 data-i18n="nh.why.4.t">Compliant travel services</h3><p data-i18n="nh.why.4.d">Travel services are contracted and delivered by a licensed inbound travel agency, Shanghai Kaixuan Sightseeing Travel Service Co., Ltd.</p></article>
-      </div>
-      <div class="wel-actions">
-        <a class="link-arrow" href="network.html" data-i18n="nh.why.more">How we coordinate across China →</a>
+      <div class="vu-why-list">
+        <article class="vu-why-item"><span class="vu-why-no">01</span><div><h3 data-i18n="nh.why.1.t">Local professional resources</h3><p data-i18n="nh.why.1.d">We work with guides and service professionals who know their own city and its practical arrangements.</p></div></article>
+        <article class="vu-why-item"><span class="vu-why-no">02</span><div><h3 data-i18n="nh.why.2.t">Personalized service</h3><p data-i18n="nh.why.2.d">Every plan starts with your purpose, dates, pace and requirements — not a fixed package.</p></div></article>
+        <article class="vu-why-item"><span class="vu-why-no">03</span><div><h3 data-i18n="nh.why.3.t">Nationwide connections</h3><p data-i18n="nh.why.3.d">We coordinate suitable local resources across cities, subject to availability and verification.</p></div></article>
+        <article class="vu-why-item"><span class="vu-why-no">04</span><div><h3 data-i18n="nh.why.4.t">Compliant travel services</h3><p data-i18n="nh.why.4.d">Travel services are contracted and delivered by a licensed inbound travel agency, Shanghai Kaixuan Sightseeing Travel Service Co., Ltd.</p></div></article>
       </div>
     </div>
   </section>
 
-  <!-- ============ 5. HOW IT WORKS ============ -->
-  <section class="section section-alt nh-how" id="how">
+  <!-- ============ 5. HOW IT WORKS — horizontal editorial timeline ============ -->
+  <section class="section section-alt vu-section" id="how">
     <div class="container">
-      <div class="section-head">
-        <p class="kicker" data-i18n="nh.how.kicker">How It Works</p>
-        <h2 data-i18n="how.h2">Your China journey in four simple steps.</h2>
+      <div class="vu-head vu-head--split">
+        <div>
+          <p class="kicker" data-i18n="nh.how.kicker">How It Works</p>
+          <h2 data-i18n="how.h2">Your China journey in four simple steps.</h2>
+        </div>
       </div>
-      <div class="steps">
-        <article class="step">
-          <span class="step-no">1</span>
+      <div class="vu-steps">
+        <article class="vu-step">
+          <span class="vu-step-no">01</span>
           <h3 data-i18n="how.s1.t">Tell us your trip</h3>
           <p data-i18n="how.s1.d">Share your interests, dates, group size and preferred cities through the form or WhatsApp. No commitment required.</p>
         </article>
-        <article class="step">
-          <span class="step-no">2</span>
+        <article class="vu-step">
+          <span class="vu-step-no">02</span>
           <h3 data-i18n="how.s2.t">Receive a tailored plan</h3>
           <p data-i18n="how.s2.d">Our team designs an itinerary with local guides, clear inclusions and transparent pricing — built around you.</p>
         </article>
-        <article class="step">
-          <span class="step-no">3</span>
+        <article class="vu-step">
+          <span class="vu-step-no">03</span>
           <h3 data-i18n="how.s3.t">Confirm &amp; travel with confidence</h3>
           <p data-i18n="how.s3.d">Shanghai Kaixuan Sightseeing Travel Service Co., Ltd. contracts and handles the trip. Your local guide meets you on the ground, fully briefed.</p>
         </article>
-        <article class="step">
-          <span class="step-no">4</span>
+        <article class="vu-step">
+          <span class="vu-step-no">04</span>
           <h3 data-i18n="how.s4.t">Enjoy &amp; share</h3>
           <p data-i18n="how.s4.d">Travel at your own pace with a private guide. We follow up on your experience and keep improving our network.</p>
         </article>
@@ -287,13 +366,15 @@
     </div>
   </section>
 
-  <!-- ============ 6. ABOUT CHINA GUIDE ============ -->
-  <section class="section nh-about" id="about">
-    <div class="container nh-about-wrap">
-      <div class="nh-about-media">
-        <img data-img="founder" src="assets/img/founder.jpg" alt="Yiyong Liu, Founder of China Guide" width="640" height="720" loading="lazy" decoding="async" />
+  <!-- ============ 6. ABOUT CHINA GUIDE — portrait + short introduction ============ -->
+  <section class="section vu-section" id="about">
+    <div class="container vu-about-wrap">
+      <div class="vu-about-media">
+        <div class="vu-img-frame" data-img-frame="founder">
+          <img data-img="founder" src="assets/img/founder.jpg" alt="Yiyong Liu, Founder of China Guide" width="640" height="720" loading="lazy" decoding="async" />
+        </div>
       </div>
-      <div class="nh-about-body">
+      <div class="vu-about-body">
         <p class="kicker" data-i18n="nh.about.kicker">About China Guide</p>
         <h2 data-i18n="nh.about.h2">A personal connection to China.</h2>
         <p class="lead" data-i18n="nh.about.lead">China Guide was founded by Yiyong Liu, a certified national guide with more than a decade in the travel industry and experience hosting guests from over sixty countries and regions. We believe meaningful travel is about people, not just places.</p>
@@ -303,26 +384,25 @@
   </section>
 
   <!-- ============ 7. FINAL CTA ============ -->
-  <section class="section section-contact nh-contact" id="contact">
-    <div class="container contact-wrap">
+  <section class="section section-contact vu-section" id="contact">
+    <div class="container vu-contact-wrap">
       <div class="contact-intro">
         <p class="kicker" data-i18n="nh.cta.kicker">Start Here</p>
         <h2 data-i18n="nh.cta.h2">Tell us what you need.</h2>
         <p class="lead" data-i18n="nh.cta.lead">Tell us your purpose, destination and dates. We will review your request, explore suitable local options and come back with a proposal. No commitment required.</p>
-        <ul class="contact-links">
+        <ul class="vu-contact-links">
           <li><a href="https://wa.me/8613113119919" target="_blank" rel="noopener" data-i18n="ctt.wa">WhatsApp Business ↗</a></li>
           <li><a href="mailto:hello@auronixa.com">hello@auronixa.com</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
         </ul>
-        <div class="fc-grid fc-contact">
-          <div class="fc-item">
-            <a class="fc-qr fc-qr-wa" href="https://wa.me/8613113119919" target="_blank" rel="noopener"><img data-img="qr.whatsapp" src="assets/img/whatsapp-qr.jpg" alt="WhatsApp QR" loading="lazy" decoding="async"></a>
-            <p class="fc-name" data-i18n="ctt.fc.wa.name">WhatsApp</p>
-            <p class="fc-sub" data-i18n="founder.c.wa.p">Scan to chat on WhatsApp</p>
-          </div>
-          <div class="fc-item">
+        <div class="vu-channels">
+          <a class="vu-channel vu-channel--qr" href="https://wa.me/8613113119919" target="_blank" rel="noopener">
+            <div class="fc-qr fc-qr-wa"><img data-img="qr.whatsapp" src="assets/img/whatsapp-qr.jpg" alt="WhatsApp QR" loading="lazy" decoding="async"></div>
+            <div><span class="vu-channel-label">WhatsApp</span><strong data-i18n="ctt.fc.wa.name">WhatsApp</strong><p data-i18n="founder.c.wa.p">Scan to chat on WhatsApp</p></div>
+          </a>
+          <div class="vu-channel vu-channel--qr">
             <div class="fc-qr fc-qr-wx"><img data-img="qr.wechat" src="assets/img/wechat-qr.jpg" alt="WeChat QR" loading="lazy" decoding="async"></div>
-            <p class="fc-name" data-i18n="founder.c.wx">WeChat</p>
-            <p class="fc-sub" data-i18n="founder.c.wx.p">Scan to add me on WeChat</p>
+            <div><span class="vu-channel-label">WeChat</span><strong data-i18n="founder.c.wx">WeChat</strong><p data-i18n="founder.c.wx.p">Scan to add me on WeChat</p></div>
           </div>
         </div>
       </div>
@@ -387,11 +467,7 @@
   <footer class="site-footer">
     <div class="container footer-wrap">
       <div class="footer-brand">
-        <span class="brand-seal" aria-hidden="true">游</span>
-        <div>
-          <strong>China Guide</strong>
-          <em>中国向导</em>
-        </div>
+        <img class="brand-logo brand-logo--footer" data-img="brand.logo.light" src="assets/img/brand/china-guide-logo-light.png" alt="China Guide — Your Gateway to China" width="1200" height="253" loading="lazy" decoding="async" />
       </div>
       <nav class="footer-nav">
         <a href="index.html" data-i18n="nav.home">Home</a>
