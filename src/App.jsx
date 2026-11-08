@@ -1,5 +1,6 @@
 import { HomePhotoCredits } from "./HomePhotoCredits";
 import "./home-photos.css";
+import "./hero-worlds.css";
 import { useEffect, useState } from "react";
 import { Globe } from "lucide-react";
 import { guidePages } from "./guideContent";
@@ -136,12 +137,12 @@ export function App() {
       <button className="menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="打开导航" aria-expanded={menuOpen}>☰</button>
     </header>
 
-    <section id="top" className="hero">
+    <section id="top" className="hero hero-worlds">
       <div className="hero-image" style={{ transform: `scale(1.035) translate3d(${pointer.x * -.18}px, ${pointer.y * -.14}px, 0)` }} />
       <img className="song-architecture-overlay" src="/assets/song-architecture-overlay-v2.png" alt="" aria-hidden="true" />
       <div className="paper-plane plane-one" style={{ transform: `translate3d(${pointer.x * .7}px, ${pointer.y * .45}px, 0) rotateY(-8deg)` }} />
       <div className="paper-plane plane-two" style={{ transform: `translate3d(${pointer.x * 1.05}px, ${pointer.y * .6}px, 0) rotateY(-13deg)` }} />
-      <div className="hero-shade" />
+      <div className="hero-history" role="img" aria-label="金山岭长城云海与重庆朝天门两江天际线实景照片的编辑拼贴" /><div className="hero-shade" /><div className="hero-place-notes"><span>千年文明 <small>河北 · 金山岭长城</small></span><i /><span>未来城市 <small>重庆 · 朝天门</small></span></div>
       <div className="hero-copy"><p className="eyebrow">深入中国 · 私人定制 · 在地体验</p><h1>一个中国<br />多重世界</h1><span className="rule" /><p>从千年文明到未来城市，<br />由真正了解中国的人，<br />为你设计一段只属于你的旅程。</p><div className="actions"><button className="primary" onClick={openConsultation}>开始规划旅程</button><button className="secondary" onClick={scrollToWorlds}>探索中国的六种面貌</button></div></div>
       <button className="scroll-cue" onClick={scrollToWorlds} aria-label="向下浏览"><span>向下探索</span>⌄</button>
     </section>
