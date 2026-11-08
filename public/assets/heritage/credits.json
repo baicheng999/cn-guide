@@ -1,178 +1,29 @@
 [
   {
-    "id": 142402640,
-    "title": "File:Kunqu performance in Hangzhou Grand Theatre.jpg",
+    "id": "昆曲",
+    "title": "昆曲演出 · 杭州大剧院（横幅备用）",
     "author": "Yushuo Tina",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Kunqu_performance_in_Hangzhou_Grand_Theatre.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/b/be/Kunqu_performance_in_Hangzhou_Grand_Theatre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:Kunqu_opera_performance_in_Hangzhou_Grand_Theatre.jpg",
+    "original": "https://commons.wikimedia.org/wiki/File:Kunqu_opera_performance_in_Hangzhou_Grand_Theatre.jpg",
     "changes": "缩放、WebP 转换与展示裁切",
-    "metadata": {
-      "DateTime": {
-        "value": "2023-12-18 11:08:23",
-        "source": "mediawiki-metadata",
-        "hidden": ""
-      },
-      "ObjectName": {
-        "value": "Kunqu performance in Hangzhou Grand Theatre",
-        "source": "mediawiki-metadata"
-      },
-      "CommonsMetadataExtension": {
-        "value": 1.2,
-        "source": "extension",
-        "hidden": ""
-      },
-      "Categories": {
-        "value": "Zhejiang Kun Opera Troupe|Self-published work|Journey to the West in Kunqu|Borrowing the Fan",
-        "source": "commons-categories",
-        "hidden": ""
-      },
-      "Assessments": {
-        "value": "",
-        "source": "commons-categories",
-        "hidden": ""
-      },
-      "ImageDescription": {
-        "value": "Kunqu performance in Hangzhou Grand Theatre",
-        "source": "commons-desc-page"
-      },
-      "DateTimeOriginal": {
-        "value": "2023-12-18",
-        "source": "commons-desc-page"
-      },
-      "Credit": {
-        "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-        "source": "commons-desc-page"
-      },
-      "Artist": {
-        "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Yushuo_Tina&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Yushuo Tina (page does not exist)\">Yushuo Tina</a>",
-        "source": "commons-desc-page"
-      },
-      "LicenseShortName": {
-        "value": "CC BY-SA 4.0",
-        "source": "commons-desc-page",
-        "hidden": ""
-      },
-      "UsageTerms": {
-        "value": "Creative Commons Attribution-Share Alike 4.0",
-        "source": "commons-desc-page"
-      },
-      "AttributionRequired": {
-        "value": "true",
-        "source": "commons-desc-page",
-        "hidden": ""
-      },
-      "LicenseUrl": {
-        "value": "https://creativecommons.org/licenses/by-sa/4.0",
-        "source": "commons-desc-page"
-      },
-      "Copyrighted": {
-        "value": "True",
-        "source": "commons-desc-page",
-        "hidden": ""
-      },
-      "Restrictions": {
-        "value": "",
-        "source": "commons-desc-page",
-        "hidden": ""
-      },
-      "License": {
-        "value": "cc-by-sa-4.0",
-        "source": "commons-templates",
-        "hidden": ""
-      }
-    }
+    "asset": "/assets/aesthetics-refresh/commons-kunqu.webp",
+    "licenseStatus": "open-license",
+    "publicationInstruction": "开放许可图片"
   },
   {
-    "id": 2912923,
-    "title": "File:Shuzhou.manufaktura.jedwabny.haft.artystyczny.JPG",
-    "author": "user:Kwz",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Shuzhou.manufaktura.jedwabny.haft.artystyczny.JPG",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/a/af/Shuzhou.manufaktura.jedwabny.haft.artystyczny.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "id": "501433372",
+    "title": "上海非物质文化遗产苏绣",
+    "author": "摄图网用户（ID:17653226）",
+    "license": "VRF；当前账号未获得企业商用授权",
+    "licenseUrl": "https://699pic.com/vrf.html",
+    "source": "https://699pic.com/tupian-501433372.html",
+    "original": "https://699pic.com/tupian-501433372.html",
     "changes": "缩放、WebP 转换与展示裁切",
-    "metadata": {
-      "DateTime": {
-        "value": "2007-10-14 09:45:26",
-        "source": "mediawiki-metadata",
-        "hidden": ""
-      },
-      "ObjectName": {
-        "value": "Shuzhou.manufaktura.jedwabny.haft.artystyczny",
-        "source": "mediawiki-metadata"
-      },
-      "CommonsMetadataExtension": {
-        "value": 1.2,
-        "source": "extension",
-        "hidden": ""
-      },
-      "Categories": {
-        "value": "Taken with Sony DSC-W35|Suzhou embroidery|Suzhou silk mill",
-        "source": "commons-categories",
-        "hidden": ""
-      },
-      "Assessments": {
-        "value": "",
-        "source": "commons-categories",
-        "hidden": ""
-      },
-      "ImageDescription": {
-        "value": "Suzhou, silk embroidery manufacture - silk <i>paravent</i> (screen)",
-        "source": "commons-desc-page"
-      },
-      "DateTimeOriginal": {
-        "value": "2007-09",
-        "source": "commons-desc-page"
-      },
-      "Credit": {
-        "value": "own work of <a href=\"//commons.wikimedia.org/w/index.php?title=User:Kwz&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Kwz (page does not exist)\">user:Kwz</a>",
-        "source": "commons-desc-page"
-      },
-      "Artist": {
-        "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Kwz&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Kwz (page does not exist)\">user:Kwz</a>",
-        "source": "commons-desc-page"
-      },
-      "Permission": {
-        "value": "<div class=\"responsive-license-cc layouttemplate licensetpl\" dir=\"ltr\" lang=\"en\"><div class=\"rlicense-icons\"><span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"w:en:Creative Commons\"><img alt=\"w:en:Creative Commons\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/120px-CC_some_rights_reserved.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"90\" height=\"36\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/250px-CC_some_rights_reserved.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"744\" data-file-height=\"300\"></span></span><br>\n<span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"attribution\"><img alt=\"attribution\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/40px-Cc-by_new_white.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/60px-Cc-by_new_white.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"64\" data-file-height=\"64\"></span></span> <span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"share alike\"><img alt=\"share alike\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Cc-sa_white.svg/40px-Cc-sa_white.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Cc-sa_white.svg/60px-Cc-sa_white.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"64\" data-file-height=\"64\"></span></span></div><div class=\"rlicense-text\"><div class=\"rlicense-declaration\">This file is licensed under the <a href=\"https://en.wikipedia.org/wiki/en:Creative_Commons\" class=\"extiw\" title=\"w:en:Creative Commons\">Creative Commons</a> <a href=\"//creativecommons.org/licenses/by-sa/3.0/deed.en\" class=\"extiw\" title=\"creativecommons:by-sa/3.0/deed.en\">Attribution-Share Alike 3.0 Unported</a> license.</div><div class=\"rlicense-desc\" style=\"text-align:start;\" lang=\"en\">\n<dl><dd>You are free:\n<ul><li><b>to share</b> – to copy, distribute and transmit the work</li>\n<li><b>to remix</b> – to adapt the work</li></ul></dd>\n<dd>Under the following conditions:\n<ul><li><b>attribution</b> – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</li>\n<li><b>share alike</b> – If you remix, transform, or build upon the material, you must distribute your contributions under the <a href=\"https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses\" class=\"extiw\" title=\"ccorg:share-your-work/licensing-considerations/compatible-licenses\">same or compatible license</a> as the original.</li></ul></dd></dl></div><span class=\"licensetpl_link\" style=\"display:none;\">https://creativecommons.org/licenses/by-sa/3.0</span><span class=\"licensetpl_short\" style=\"display:none;\">CC BY-SA 3.0 </span><span class=\"licensetpl_long\" style=\"display:none;\">Creative Commons Attribution-Share Alike 3.0 </span><span class=\"licensetpl_link_req\" style=\"display:none;\">true</span><span class=\"licensetpl_attr_req\" style=\"display:none;\">true</span></div></div>",
-        "source": "commons-desc-page",
-        "hidden": ""
-      },
-      "LicenseShortName": {
-        "value": "CC BY-SA 3.0",
-        "source": "commons-desc-page",
-        "hidden": ""
-      },
-      "UsageTerms": {
-        "value": "Creative Commons Attribution-Share Alike 3.0",
-        "source": "commons-desc-page"
-      },
-      "AttributionRequired": {
-        "value": "true",
-        "source": "commons-desc-page",
-        "hidden": ""
-      },
-      "LicenseUrl": {
-        "value": "https://creativecommons.org/licenses/by-sa/3.0",
-        "source": "commons-desc-page"
-      },
-      "Copyrighted": {
-        "value": "True",
-        "source": "commons-desc-page",
-        "hidden": ""
-      },
-      "Restrictions": {
-        "value": "",
-        "source": "commons-desc-page",
-        "hidden": ""
-      },
-      "License": {
-        "value": "cc-by-sa-3.0",
-        "source": "commons-templates",
-        "hidden": ""
-      }
-    }
+    "asset": "/assets/aesthetics-refresh/501433372.webp",
+    "licenseStatus": "not-confirmed-for-enterprise-commercial",
+    "publicationInstruction": "用户明确要求授权未明确的候选也发布"
   },
   {
     "id": 364986,
@@ -260,101 +111,16 @@
     }
   },
   {
-    "id": 108934457,
-    "title": "File:Making Xuan Paper (9974380895).jpg",
+    "id": "宣纸传统制作",
+    "title": "安徽博物院 · 宣纸制作工艺展陈（备用，非现场生产）",
     "author": "Gary Todd from Xinzheng, China",
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "source": "https://commons.wikimedia.org/wiki/File:Making_Xuan_Paper_(9974380895).jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Making_Xuan_Paper_%289974380895%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "source": "https://commons.wikimedia.org/wiki/File:Making_Xuan_Paper_(9974514453).jpg",
+    "original": "https://commons.wikimedia.org/wiki/File:Making_Xuan_Paper_(9974514453).jpg",
     "changes": "缩放、WebP 转换与展示裁切",
-    "metadata": {
-      "DateTime": {
-        "value": "2021-08-19 14:57:46",
-        "source": "mediawiki-metadata",
-        "hidden": ""
-      },
-      "ObjectName": {
-        "value": "Making Xuan Paper (9974380895)",
-        "source": "mediawiki-metadata"
-      },
-      "CommonsMetadataExtension": {
-        "value": 1.2,
-        "source": "extension",
-        "hidden": ""
-      },
-      "Categories": {
-        "value": "Taken with Canon EOS 600D|CC-Zero|Xuan paper|Photographs by Gary Lee Todd|Files with coordinates missing SDC location of creation|Flickr images reviewed by FlickreviewR 2|Files uploaded by Orizan|Dioramas and models in the Anhui Museum",
-        "source": "commons-categories",
-        "hidden": ""
-      },
-      "Assessments": {
-        "value": "",
-        "source": "commons-categories",
-        "hidden": ""
-      },
-      "GPSLatitude": {
-        "value": "31.865782",
-        "source": "commons-desc-page"
-      },
-      "GPSLongitude": {
-        "value": "117.269600",
-        "source": "commons-desc-page"
-      },
-      "GPSMapDatum": {
-        "value": "WGS-84",
-        "source": "commons-desc-page",
-        "hidden": ""
-      },
-      "ImageDescription": {
-        "value": "Four Treasures of the Study, Exhibit at Anhui Provincial Museum, Hefei. Complete indexed photo collection at WorldHistoryPics.com.",
-        "source": "commons-desc-page"
-      },
-      "DateTimeOriginal": {
-        "value": "2012-12-28 14:16",
-        "source": "commons-desc-page"
-      },
-      "Credit": {
-        "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/101561334@N08/9974380895/\">Making Xuan Paper</a>",
-        "source": "commons-desc-page"
-      },
-      "Artist": {
-        "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/101561334@N08\">Gary Todd</a> from Xinzheng, China",
-        "source": "commons-desc-page"
-      },
-      "LicenseShortName": {
-        "value": "CC0",
-        "source": "commons-desc-page",
-        "hidden": ""
-      },
-      "UsageTerms": {
-        "value": "Creative Commons Zero, Public Domain Dedication",
-        "source": "commons-desc-page"
-      },
-      "AttributionRequired": {
-        "value": "false",
-        "source": "commons-desc-page",
-        "hidden": ""
-      },
-      "LicenseUrl": {
-        "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "source": "commons-desc-page"
-      },
-      "Copyrighted": {
-        "value": "True",
-        "source": "commons-desc-page",
-        "hidden": ""
-      },
-      "Restrictions": {
-        "value": "",
-        "source": "commons-desc-page",
-        "hidden": ""
-      },
-      "License": {
-        "value": "cc0",
-        "source": "commons-templates",
-        "hidden": ""
-      }
-    }
+    "asset": "/assets/aesthetics-refresh/commons-xuanpaper.webp",
+    "licenseStatus": "open-license",
+    "publicationInstruction": "开放许可图片"
   }
 ]
