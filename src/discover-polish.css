@@ -1,0 +1,12 @@
+/* Focused photography polish. Existing split hero and single-row 3D layout remain intact. */
+.home-photography .hero-worlds .hero-image{background-position:50% 20%!important}
+.home-photography .hero-worlds .hero-shade{background:linear-gradient(90deg,rgba(5,25,32,.58),rgba(5,25,32,.12) 44%,transparent 72%),linear-gradient(0deg,rgba(5,20,28,.36),transparent 30%)}
+.home-photography .hero-worlds .hero-copy>p:not(.eyebrow){max-width:430px;text-shadow:0 2px 16px #091e2dcc}
+.home-photography .hero-worlds .secondary{background:#0c293c66;border-color:#fff9e0c2}
+.home-photography .world-card{text-decoration:none;isolation:isolate}
+.home-photography .world-card img{filter:saturate(1) contrast(1.025)}
+.home-photography .world-card .card-shade{background:linear-gradient(180deg,transparent 35%,rgba(6,22,18,.12) 55%,rgba(6,22,18,.88))}
+.home-photography .world-card .card-copy strong{text-shadow:0 2px 10px #06161280}
+.home-photography .world-card:focus-visible{outline:3px solid #a52c24;outline-offset:6px}
+.home-photography .world-card.active:after{content:'↗';position:absolute;right:18px;top:18px;width:32px;height:32px;display:grid;place-items:center;border:1px solid #fff8e1a0;border-radius:50%;color:#fff8e1;background:#14332e33;font:19px/1 sans-serif}
+@media(max-width:640px){.home-photography .hero-worlds .hero-image{background-position:50% 26%!important}.home-photography .hero-worlds .hero-shade{background:linear-gradient(90deg,rgba(5,25,32,.52),rgba(5,25,32,.1) 80%),linear-gradient(0deg,rgba(5,20,28,.24),transparent 40%)}.home-photography .world-card.active:after{top:15px;right:15px}}

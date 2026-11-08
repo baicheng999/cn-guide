@@ -11,6 +11,7 @@ import { discoverThemes } from "./discoverThemes";
 import { HomePhotoCredits } from "./HomePhotoCredits";
 import "./home-photos.css";
 import "./hero-worlds.css";
+import "./discover-polish.css";
 import { useEffect, useState } from "react";
 import { Globe } from "lucide-react";
 import { guidePages } from "./guideContent";
@@ -27,37 +28,43 @@ const worlds = [
     "name": "东方美学",
     "image": "/assets/discover-photos/tiantan-a.webp",
     "alt": "暖光下仰望北京天坛祈年殿三重檐",
-    "note": "园林、古建、茶与非遗"
+    "note": "园林、古建、茶与非遗",
+    "position": "48% 48%"
   },
   {
     "name": "未来城市",
     "image": "/assets/discover-photos/city-approved.webp",
     "alt": "深圳湾人才公园水面与华润大厦春笋天际线",
-    "note": "科技、设计与城市生活"
+    "note": "科技、设计与城市生活",
+    "position": "51% 48%"
   },
   {
     "name": "超级基建",
     "image": "/assets/discover-photos/airport-approved.webp",
     "alt": "日落时北京大兴机场航站楼放射形全景",
-    "note": "高铁、机场与超级工程"
+    "note": "高铁、机场与超级工程",
+    "position": "51% 54%"
   },
   {
     "name": "山河自然",
     "image": "/assets/home-photos/hero.webp",
     "alt": "桂林阳朔漓江河湾与青绿峰林全景",
-    "note": "从高原群峰到江南水乡"
+    "note": "漓江峰林、峡谷与乡间慢行",
+    "position": "66% 50%"
   },
   {
     "name": "饮食日常",
     "image": "/assets/discover-photos/food-approved.webp",
     "alt": "炭火上的羊肉串与现场翻烤撒料动作",
-    "note": "市场、早餐与地方风味"
+    "note": "市场、早餐与地方风味",
+    "position": "58% 48%"
   },
   {
     "name": "人与文化",
     "image": "/assets/discover-photos/culture.webp",
     "alt": "手艺人用双手在陶轮上拉坯",
-    "note": "日常相遇与手艺传承"
+    "note": "日常相遇与手艺传承",
+    "position": "56% 48%"
   }
 ];
 const destinations = [
@@ -202,7 +209,7 @@ export function App() {
 
     <section id="worlds" className="worlds-section">
       <div className="section-heading"><div><p className="eyebrow">发现中国</p><h2>什么样的中国最打动你？</h2></div><p>从心之所向，看见中国的不同面貌。</p></div>
-      <div className="world-stage">{worlds.map((world, index) => <button key={world.name} className={index === active ? "world-card active" : "world-card"} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} onClick={() => window.location.assign(discoverThemes[index].path)} style={{ "--i": index }}><img src={world.image} alt={world.alt} loading="lazy" style={{objectPosition:world.position||"center"}} /><span className="card-shade" /><span className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><em>{world.note}</em></span></button>)}</div>
+      <div className="world-stage">{worlds.map((world, index) => <a key={world.name} href={discoverThemes[index].path} aria-label={world.name+"："+world.note+"，查看专题"} className={index === active ? "world-card active" : "world-card"} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} style={{ "--i": index }}><img src={world.image} alt={world.alt} loading="lazy" style={{objectPosition:world.position||"center"}} /><span className="card-shade" /><span className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><em>{world.note}</em></span></a>)}</div>
       <a className="garden-home-entry" href={discoverThemes[active].path}>{worlds[active].name} · 走近这一重中国 <span>{discoverThemes[active].short} ↗</span></a>
     </section>
 
