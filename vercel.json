@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npx vite build",
+  "outputDirectory": "dist/client",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://china-guide-song.liuyiyong9999.chatgpt.site/api/:path*"
+    },
+    {
+      "source": "/media/:path*",
+      "destination": "https://china-guide-song.liuyiyong9999.chatgpt.site/media/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

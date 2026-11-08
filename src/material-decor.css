@@ -1,0 +1,30 @@
+/* 最终材质层：必须在旧装饰样式之后加载 */
+.worlds-section{background:linear-gradient(115deg,#ece5d8 0 78%,#e4dacb 78%)}
+.worlds-section:before{content:"";display:block;position:absolute;z-index:1;top:34px;right:-58px;width:420px;height:430px;border:0;background:url('/assets/song-lattice-window-v1.png') right top/contain no-repeat;opacity:.34;filter:saturate(.78);pointer-events:none}
+.worlds-section:after{display:none!important}
+
+.destinations-section:before{display:none!important}
+.destinations-section:after{content:"";display:block!important;position:absolute;z-index:1;right:-72px;top:78px;width:430px;height:450px;border:0!important;border-radius:0!important;background:url('/assets/song-lattice-window-v1.png') right top/contain no-repeat!important;box-shadow:none!important;opacity:.42;filter:saturate(.82);pointer-events:none}
+
+.services-section:before{content:"";display:block;position:absolute;z-index:0;right:-3%;left:auto;top:auto;bottom:1%;width:74%;height:50%;border:0;background:url('/assets/song-handscroll-v1.png') right bottom/contain no-repeat;opacity:.24;filter:saturate(.62);pointer-events:none}
+.services-section:after{opacity:.48}.services-heading,.service-list{max-width:88%}
+
+.partner-network:before{content:"";display:block;position:absolute;z-index:0;right:-5%;top:4%;width:min(48vw,650px);height:94%;border:0!important;background:url('/assets/song-folding-screen-v1.png') right center/contain no-repeat!important;box-shadow:none!important;opacity:.42;filter:saturate(.74);pointer-events:none}
+.partner-network:after{display:none!important}
+
+.guide-only .guide-gateway:before{content:"";display:block;position:absolute;z-index:0;right:2%;top:auto;bottom:-10%;width:48%;height:64%;background:url('/assets/song-handscroll-v1.png') right bottom/contain no-repeat;box-shadow:none;opacity:.18;filter:saturate(.52);pointer-events:none}
+
+.founder-section:after{content:"";display:block!important;position:absolute;z-index:0;right:-4%;bottom:-7%;width:47%;height:61%;border:0!important;border-radius:0!important;transform:none!important;background:url('/assets/song-handscroll-v1.png') right bottom/contain no-repeat!important;box-shadow:none!important;opacity:.15;filter:grayscale(.25);pointer-events:none}
+
+.contact-section:before{content:"";display:block;position:absolute;z-index:0;right:-10%;top:2%;width:min(50vw,650px);height:96%;border:0!important;transform:none!important;background:url('/assets/song-folding-screen-v1.png') right center/contain no-repeat!important;opacity:.21;filter:saturate(.55) brightness(.78);pointer-events:none}
+.contact-section:after{display:none!important}
+
+@media(max-width:640px){
+  .worlds-section:before{top:22px;right:-80px;width:250px;height:270px;opacity:.31}
+  .destinations-section:after{right:-116px;top:112px;width:270px;height:300px;opacity:.36}
+  .services-heading,.service-list{max-width:100%}.services-section:before{right:-15%;bottom:6%;width:94%;height:32%;opacity:.18}
+  .partner-network:before{right:-42%;top:8%;width:94vw;height:84%;opacity:.34}
+  .guide-only .guide-gateway:before{right:-18%;bottom:-2%;width:90%;height:39%;opacity:.14}
+  .founder-section:after{right:-34%;bottom:0;width:96%;height:35%;opacity:.13}
+  .contact-section:before{right:-54%;width:112vw;height:96%;opacity:.17}
+}

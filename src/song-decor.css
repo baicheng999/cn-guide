@@ -1,0 +1,124 @@
+/* 当代宋韵：以留白、框景、书页比例、材质和秩序表达东方气质 */
+
+/* 首屏保持纯净 */
+.song-curtain,.moon-window,.chinese-knot,.hero-seal,.song-architecture-overlay,.paper-plane{display:none!important}
+.hero-image{background-image:url('/assets/hero.png')!important;background-position:center center!important}
+.hero-copy{position:relative;z-index:4}
+
+/* 下方内容统一使用纸色、细线和建筑比例 */
+.worlds-section,.destinations-section,.services-section,.partner-network,.gateway-section,.founder-section,.contact-section{position:relative;isolation:isolate;overflow:hidden}
+.worlds-section>*,.destinations-section>*,.services-section>*,.partner-network>*,.gateway-section>*,.founder-section>*,.contact-section>*{position:relative;z-index:2}
+
+/* 发现中国：仿画册开页的偏心留白 */
+.worlds-section:before{content:"";position:absolute;z-index:0;top:clamp(54px,8vw,108px);right:clamp(24px,6vw,96px);width:clamp(110px,18vw,270px);height:1px;background:rgba(36,77,62,.22)}
+.worlds-section:after{content:"";position:absolute;z-index:0;right:clamp(24px,6vw,96px);top:clamp(54px,8vw,108px);width:1px;height:clamp(74px,10vw,138px);background:linear-gradient(rgba(36,77,62,.22),transparent)}
+.world-card img{transition:transform .85s cubic-bezier(.2,.65,.25,1),filter .65s ease}
+.world-card:hover img,.world-card:focus-visible img,.world-card.active img{transform:scale(1.035);filter:saturate(.86) contrast(.98)}
+
+/* 目的地：用画框式图片边界制造园林框景 */
+.destinations-section:before{content:"";position:absolute;z-index:0;inset:0 0 auto;height:1px;background:linear-gradient(90deg,transparent 4%,rgba(36,77,62,.18) 18%,rgba(36,77,62,.18) 82%,transparent 96%)}
+.destinations-section:after,.song-cloud-divider:before{display:none!important}
+.destination-card{background:rgba(249,246,238,.42);border:1px solid rgba(36,77,62,.12)}
+.destination-image{margin:clamp(10px,1.2vw,16px) clamp(10px,1.2vw,16px) 0;overflow:hidden}
+.destination-image:after{content:"";position:absolute;inset:0;border:1px solid rgba(248,244,234,.45);pointer-events:none}
+.destination-image img{transition:transform .9s cubic-bezier(.2,.65,.25,1)}
+.destination-card:hover .destination-image img{transform:scale(1.025)}
+
+/* 私人旅程：宋版书页的纵向秩序与书脊线 */
+.services-section:before{content:"";position:absolute;z-index:0;top:clamp(70px,8vw,112px);bottom:clamp(70px,8vw,112px);left:50%;width:1px;background:linear-gradient(transparent,rgba(36,77,62,.12) 15%,rgba(36,77,62,.12) 85%,transparent)}
+.services-section:after{content:"";position:absolute;z-index:0;inset:0;opacity:.4;background:repeating-linear-gradient(0deg,transparent 0 15px,rgba(90,72,45,.018) 16px);pointer-events:none}
+.service-list article{transition:padding .3s ease,background .3s ease}
+.service-list article:hover{padding-left:clamp(14px,1.5vw,24px);background:rgba(255,255,255,.22)}
+
+/* 在地网络：从屏风比例提取网格 */
+.partner-network:before{content:"";position:absolute;z-index:0;right:-5%;top:10%;width:clamp(260px,34vw,520px);height:80%;opacity:.32;background:linear-gradient(90deg,rgba(36,77,62,.11) 1px,transparent 1px) 0 0/25% 100%,linear-gradient(rgba(36,77,62,.08) 1px,transparent 1px) 0 0/100% 33.333%;border:1px solid rgba(36,77,62,.11);pointer-events:none}
+.partner-network:after{display:none}
+.network-panel{backdrop-filter:blur(3px)}
+
+/* 来华指南：古籍开页只保留中缝与页边 */
+.guide-only .guide-gateway{box-shadow:inset 18px 0 rgba(36,77,62,.025),inset -18px 0 rgba(36,77,62,.025)}
+.guide-only .guide-gateway:after{content:""!important;display:block!important;position:absolute;z-index:0;inset:22px;border:1px solid rgba(36,77,62,.1);background:linear-gradient(90deg,transparent 49.9%,rgba(36,77,62,.07) 50%,transparent 50.1%);pointer-events:none}
+.guide-topics a{transition:color .25s ease,background .25s ease}
+.guide-topics a:hover{background:rgba(36,77,62,.055)}
+
+/* 创始人：真实人物就是信任中心 */
+.founder-section:before,.founder-section:after{display:none}
+.founder-photo{outline:1px solid rgba(36,77,62,.16);outline-offset:8px;box-shadow:0 18px 45px rgba(31,50,41,.1)}
+
+/* 联系区：建筑格栅形成极淡的空间阴影 */
+.contact-section:before{content:"";position:absolute;z-index:0;right:-8%;top:8%;width:min(42vw,580px);height:84%;opacity:.42;transform:skewY(-4deg);background:linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px) 0 0/20% 100%,linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px) 0 0/100% 25%;border:1px solid rgba(255,255,255,.055);pointer-events:none}
+.contact-section:after{display:none}
+
+@media(max-width:640px){
+  .hero-image{background-position:58% center!important}.hero-copy{padding-top:185px}
+  .worlds-section:before{width:88px;right:24px}.worlds-section:after{right:24px;height:58px}
+  .services-section:before{left:24px;opacity:.45}.service-list article:hover{padding-left:0}
+  .partner-network:before{right:-48%;width:88vw;opacity:.22}.guide-only .guide-gateway:after{inset:12px}
+  .founder-photo{outline-offset:6px}.contact-section:before{right:-62%;width:120vw;opacity:.25}
+}
+
+/* 第三层：真实透明素材取代所有模拟线框 */
+.worlds-section{background:linear-gradient(115deg,#ece5d8 0 78%,#e4dacb 78%)}
+.worlds-section:before{top:34px;right:-58px;width:420px;height:430px;border:0;background:url('/assets/song-lattice-window-v1.png') right top/contain no-repeat;opacity:.28;filter:saturate(.72) sepia(.1);pointer-events:none}
+.worlds-section:after{display:none}
+
+.destinations-section:after{display:block!important;right:-95px;top:92px;width:410px;height:430px;border:0;border-radius:0;background:url('/assets/song-lattice-window-v1.png') right top/contain no-repeat;box-shadow:none;opacity:.34;filter:saturate(.72);pointer-events:none}
+
+.services-section:before{right:-4%;left:auto;top:auto;bottom:2%;width:72%;height:48%;border:0;background:url('/assets/song-handscroll-v1.png') right bottom/contain no-repeat;opacity:.2;filter:saturate(.55) sepia(.08);pointer-events:none}
+.services-section:after{opacity:.55;background:repeating-linear-gradient(0deg,transparent 0 15px,rgba(90,72,45,.02) 16px)}
+.services-heading,.service-list{max-width:88%}
+
+.partner-network:before{right:-7%;top:5%;width:min(46vw,620px);height:92%;border:0;background:url('/assets/song-folding-screen-v1.png') right center/contain no-repeat;box-shadow:none;opacity:.35;filter:saturate(.68) sepia(.08);pointer-events:none}
+.partner-network:after{display:none}
+
+.guide-only .guide-gateway:before{right:4%;top:auto;bottom:-12%;width:46%;height:62%;background:url('/assets/song-handscroll-v1.png') right bottom/contain no-repeat;box-shadow:none;opacity:.16;filter:saturate(.45);pointer-events:none}
+.guide-only .guide-gateway:after{inset:18px;border:1px solid rgba(36,77,62,.2);box-shadow:inset 0 0 0 7px rgba(36,77,62,.025);background:radial-gradient(circle at 10px 12%,rgba(165,44,36,.38) 0 3px,transparent 4px),radial-gradient(circle at 10px 28%,rgba(165,44,36,.38) 0 3px,transparent 4px),radial-gradient(circle at 10px 44%,rgba(165,44,36,.38) 0 3px,transparent 4px),radial-gradient(circle at 10px 60%,rgba(165,44,36,.38) 0 3px,transparent 4px),radial-gradient(circle at 10px 76%,rgba(165,44,36,.38) 0 3px,transparent 4px),radial-gradient(circle at 10px 92%,rgba(165,44,36,.38) 0 3px,transparent 4px),linear-gradient(90deg,transparent 49.8%,rgba(36,77,62,.11) 50%,transparent 50.2%)}
+
+.founder-section:after{display:block;right:-5%;bottom:-8%;width:46%;height:60%;border:0;border-radius:0;transform:none;background:url('/assets/song-handscroll-v1.png') right bottom/contain no-repeat;box-shadow:none;opacity:.13;filter:grayscale(.35);pointer-events:none}
+
+.contact-section:before{right:-12%;top:3%;width:min(48vw,620px);height:94%;border:0;transform:none;background:url('/assets/song-folding-screen-v1.png') right center/contain no-repeat;opacity:.18;filter:saturate(.5) brightness(.78);pointer-events:none}
+
+@media(max-width:640px){
+  .worlds-section:before{top:28px;right:-92px;width:270px;height:290px;opacity:.25}
+  .destinations-section:after{right:-145px;top:130px;width:290px;height:320px;opacity:.3}
+  .services-heading,.service-list{max-width:100%}.services-section:before{right:-16%;bottom:7%;width:92%;height:31%;opacity:.15}
+  .partner-network:before{right:-44%;top:8%;width:96vw;height:84%;opacity:.3}
+  .guide-only .guide-gateway:before{right:-20%;bottom:-4%;width:88%;height:38%;opacity:.12}
+  .founder-section:after{right:-36%;bottom:0;width:96%;height:34%;opacity:.11}
+  .contact-section:before{right:-56%;width:115vw;height:95%;opacity:.14}
+}
+
+/* 第二层：让结构性中国元素清晰可见，但不进入首屏 */
+.worlds-section{background:linear-gradient(108deg,#ebe4d7 0 72%,#e4dbcc 72% 100%)}
+.worlds-section:before{top:72px;right:5.5%;width:210px;height:126px;border-top:2px solid rgba(77,57,35,.42);border-right:2px solid rgba(77,57,35,.42);background:linear-gradient(90deg,transparent 32%,rgba(77,57,35,.18) 32% 33%,transparent 33% 66%,rgba(77,57,35,.18) 66% 67%,transparent 67%),linear-gradient(transparent 49%,rgba(77,57,35,.18) 49% 51%,transparent 51%)}
+.worlds-section:after{top:72px;right:calc(5.5% + 210px);width:16px;height:126px;background:#72573d;box-shadow:226px 0 0 #72573d;opacity:.5}
+
+.destinations-section{background:linear-gradient(180deg,#faf7ef,#f1eadf)}
+.destinations-section:after{content:"";display:block!important;position:absolute;z-index:0;right:-145px;top:120px;width:330px;height:520px;border:14px solid rgba(79,58,36,.18);border-radius:165px 165px 0 0;background:linear-gradient(90deg,transparent 49.5%,rgba(79,58,36,.13) 50%,transparent 50.5%),linear-gradient(transparent 32.8%,rgba(79,58,36,.12) 33%,transparent 33.2% 65.8%,rgba(79,58,36,.12) 66%,transparent 66.2%);box-shadow:0 0 0 1px rgba(79,58,36,.12),inset 0 0 0 5px rgba(255,255,255,.24);pointer-events:none}
+.destination-card{box-shadow:0 16px 34px rgba(43,57,47,.06)}
+
+.services-section:before{left:auto;right:7%;top:58px;bottom:58px;width:112px;border-left:1px solid rgba(36,77,62,.2);border-right:1px solid rgba(36,77,62,.2);background:repeating-linear-gradient(0deg,transparent 0 27px,rgba(36,77,62,.12) 28px 29px);opacity:.72}
+.services-section:after{opacity:.85;background:repeating-linear-gradient(0deg,transparent 0 15px,rgba(90,72,45,.025) 16px)}
+.services-heading,.service-list{max-width:82%}
+
+.partner-network:before{right:2.5%;top:7%;width:min(38vw,500px);height:86%;opacity:.62;border:7px solid rgba(90,64,38,.24);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22),18px 20px 45px rgba(49,39,27,.07);background:linear-gradient(90deg,rgba(78,57,35,.18) 2px,transparent 2px) 0 0/25% 100%,linear-gradient(rgba(78,57,35,.15) 2px,transparent 2px) 0 0/100% 33.333%,linear-gradient(135deg,rgba(255,255,255,.16),transparent)}
+.network-panel{border-color:rgba(75,55,34,.28);box-shadow:0 24px 55px rgba(31,50,41,.12)}
+
+.guide-only .guide-gateway:after{inset:18px;border:1px solid rgba(36,77,62,.2);box-shadow:inset 0 0 0 7px rgba(36,77,62,.025);background:radial-gradient(circle at 10px 12%,rgba(165,44,36,.38) 0 3px,transparent 4px),radial-gradient(circle at 10px 28%,rgba(165,44,36,.38) 0 3px,transparent 4px),radial-gradient(circle at 10px 44%,rgba(165,44,36,.38) 0 3px,transparent 4px),radial-gradient(circle at 10px 60%,rgba(165,44,36,.38) 0 3px,transparent 4px),radial-gradient(circle at 10px 76%,rgba(165,44,36,.38) 0 3px,transparent 4px),radial-gradient(circle at 10px 92%,rgba(165,44,36,.38) 0 3px,transparent 4px),linear-gradient(90deg,transparent 49.8%,rgba(36,77,62,.11) 50%,transparent 50.2%)}
+.guide-only .guide-gateway:before{content:"";position:absolute;z-index:1;right:8%;top:0;width:3px;height:92px;background:#9d3b31;box-shadow:0 86px 0 -1px #9d3b31;opacity:.72}
+
+.founder-section{background:linear-gradient(135deg,#e7dfd2 0 68%,#ddd2c1 68% 100%)}
+.founder-section:after{content:"";display:block;position:absolute;z-index:0;right:-7%;bottom:-30%;width:44%;height:88%;border:2px solid rgba(36,77,62,.16);border-radius:50% 50% 0 0;transform:rotate(-12deg);box-shadow:-28px -22px 0 -27px rgba(36,77,62,.22),-62px -42px 0 -61px rgba(36,77,62,.19)}
+
+.contact-section:before{right:-2%;top:5%;width:min(48vw,640px);height:90%;opacity:.82;border:8px solid rgba(255,255,255,.08);background:linear-gradient(90deg,rgba(255,255,255,.095) 2px,transparent 2px) 0 0/20% 100%,linear-gradient(rgba(255,255,255,.075) 2px,transparent 2px) 0 0/100% 25%}
+
+@media(max-width:640px){
+  .worlds-section{background:linear-gradient(108deg,#ebe4d7 0 82%,#e4dbcc 82%)}
+  .worlds-section:before{top:38px;right:-42px;width:150px;height:92px}.worlds-section:after{top:38px;right:108px;height:92px;box-shadow:166px 0 0 #72573d}
+  .destinations-section:after{right:-220px;top:160px;width:310px;height:430px;opacity:.75}
+  .services-heading,.service-list{max-width:100%}.services-section:before{right:-58px;width:88px;opacity:.44}
+  .partner-network:before{right:-53%;top:10%;width:94vw;height:80%;opacity:.45}
+  .guide-only .guide-gateway:before{right:32px;height:70px}
+  .founder-section:after{right:-35%;width:86%;height:50%;bottom:-14%;opacity:.7}
+  .contact-section:before{right:-55%;width:120vw;opacity:.45}
+}

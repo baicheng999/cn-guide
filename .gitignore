@@ -1,1 +1,4 @@
-tmp_i18n.json
+node_modules/
+dist/
+.vercel/
+*.log
