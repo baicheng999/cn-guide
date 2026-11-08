@@ -18,8 +18,118 @@
   ],
   "redirects": [
     {
+      "source": "/private-tours.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-guangzhou-culture-food-3d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-beijing-imperial-hutongs-2d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-beijing-palace-great-wall-3d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-beijing-royal-gardens-4d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-beijing-family-classics-4d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-beijing-capital-highlights-5d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-shanghai-bund-yuyuan-1d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-shanghai-city-water-town-2d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-shanghai-museum-waterfront-3d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-shanghai-gardens-water-town-3d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-shanghai-classic-slow-4d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-yunnan-kunming-dali-lijiang-6d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-yunnan-dali-shaxi-lijiang-5d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-yunnan-dali-lake-mountains-4d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-yunnan-lijiang-shangrila-5d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-yunnan-dali-lijiang-shangrila-7d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-guangzhou-xiguan-architecture-1d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-guangzhou-old-city-2d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-guangzhou-architecture-citylife-3d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-guangzhou-history-waterfront-4d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
+      "source": "/private-guangzhou-slow-culture-5d.html",
+      "destination": "/#journeys",
+      "permanent": false
+    },
+    {
       "source": "/private-guangzhou-culture-food-3d-en.html",
-      "destination": "/private-guangzhou-culture-food-3d.html",
+      "destination": "/#journeys",
       "permanent": false
     }
   ]
