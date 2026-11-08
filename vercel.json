@@ -15,5 +15,12 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/private-guangzhou-culture-food-3d-en.html",
+      "destination": "/private-guangzhou-culture-food-3d.html",
+      "permanent": false
+    }
   ]
 }
