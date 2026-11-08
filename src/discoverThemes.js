@@ -375,7 +375,9 @@ export const discoverThemes = [
           "author": "星岛环球网文章配图，摄影署名待确认",
           "license": "来源页面配图，商业授权尚未确认",
           "previewMode": "reference"
-        }
+        },
+        "href": "/discover/food-life/guangzhou-morning-tea/",
+        "action": "深入广府早茶体验"
       },
       {
         "title": "成都 · 辣味之外",
@@ -389,7 +391,9 @@ export const discoverThemes = [
           "author": "甘霖\n(ID:1372921)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/food-life/chengdu-flavours/",
+        "action": "深入川味与茶馆体验"
       },
       {
         "title": "先逛市场，再认识食材",
@@ -403,7 +407,9 @@ export const discoverThemes = [
           "author": "摄图网用户（ID: 17367207）\n(ID:17367207)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/food-life/market-to-table/",
+        "action": "深入市场与食材体验"
       },
       {
         "title": "一座城的家常味",
@@ -417,7 +423,9 @@ export const discoverThemes = [
           "author": "武轩\n(ID:18223556)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/food-life/local-family-table/",
+        "action": "深入家常与分享体验"
       }
     ],
     "sources": [
@@ -452,8 +460,8 @@ export const discoverThemes = [
         "title": "手艺人的一天",
         "place": "工坊与工作",
         "text": "关注一双手怎样工作、一项经验怎样传下去。可从已整理的非遗专题了解昆曲、苏绣、制瓷与宣纸，再讨论适合的接待方式。",
-        "href": "/discover/eastern-aesthetics/heritage/",
-        "action": "先认识四项非遗",
+        "href": "/discover/people-culture/jingdezhen-artisans/",
+        "action": "深入工坊与手艺人体验",
         "photo": {
           "src": "/assets/discover-body/501051405.webp",
           "caption": "景德镇古窑民俗博览区 · 手工制瓷场景",
@@ -476,7 +484,9 @@ export const discoverThemes = [
           "author": "啤(粤) = 扒(潮)\n(ID:23841771)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "stock-preview"
-        }
+        },
+        "href": "/discover/people-culture/zhaoxing-village/",
+        "action": "深入村落与社区体验"
       },
       {
         "title": "沿着街巷认识城市",
@@ -490,7 +500,9 @@ export const discoverThemes = [
           "author": "吞大象的小强\n(ID:429671)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/people-culture/shanghai-wukang-walk/",
+        "action": "深入街巷与日常体验"
       },
       {
         "title": "听见地方的声音",
@@ -504,7 +516,9 @@ export const discoverThemes = [
           "author": "lnc周周\n(ID:38116342)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/people-culture/chengdu-opera/",
+        "action": "深入川剧与聆听体验"
       }
     ],
     "sources": [

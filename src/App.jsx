@@ -1,3 +1,5 @@
+import { FoodCultureDetailPage } from "./FoodCultureDetailPage";
+import { foodCultureDetails } from "./foodCultureDetails";
 import { LandscapeDetailPage } from "./LandscapeDetailPage";
 import { landscapeDetails } from "./landscapeDetails";
 import { InfrastructureDetailPage } from "./InfrastructureDetailPage";
@@ -165,6 +167,8 @@ export function App() {
   const futureDetail = futureCityDetails.find(d => window.location.pathname.replace(/\/$/, "") === "/discover/future-cities/"+d.slug);
   const infrastructureDetail = infrastructureDetails.find(d => window.location.pathname.replace(/\/$/, "") === "/discover/infrastructure/"+d.slug);
   const landscapeDetail = landscapeDetails.find(d => window.location.pathname.replace(/\/$/, "") === "/discover/landscapes/"+d.slug);
+  const foodCultureDetail = foodCultureDetails.find(d => window.location.pathname.replace(/\/$/, "") === "/discover/"+d.theme+"/"+d.slug);
+  if (foodCultureDetail) return <FoodCultureDetailPage detail={foodCultureDetail} />;
   if (landscapeDetail) return <LandscapeDetailPage detail={landscapeDetail} />;
   if (infrastructureDetail) return <InfrastructureDetailPage detail={infrastructureDetail} />;
   if (futureDetail) return <FutureCityDetailPage detail={futureDetail} />;
