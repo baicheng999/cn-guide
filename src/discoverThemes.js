@@ -278,7 +278,9 @@ export const discoverThemes = [
           "author": "摄图44711365\n(ID:44711365)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/landscapes/guilin-li-river/",
+        "action": "深入漓江峰林体验"
       },
       {
         "title": "张家界 · 走近砂岩峰林",
@@ -292,7 +294,9 @@ export const discoverThemes = [
           "author": "兄弟路子野啊！\n(ID:1124293)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/landscapes/zhangjiajie-wulingyuan/",
+        "action": "深入砂岩峰林体验"
       },
       {
         "title": "云南 · 沿河谷看群山",
@@ -306,7 +310,9 @@ export const discoverThemes = [
           "author": "大风起兮云飞扬\n(ID:22882744)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/landscapes/yunnan-shigu-bend/",
+        "action": "深入金沙江河湾体验"
       },
       {
         "title": "以自己的速度走",
@@ -320,7 +326,9 @@ export const discoverThemes = [
           "author": "凝固之眼\n(ID:1124316)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/landscapes/yangshuo-slow-walk/",
+        "action": "深入乡间慢行体验"
       }
     ],
     "sources": [
