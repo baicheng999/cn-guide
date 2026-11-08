@@ -1,3 +1,5 @@
+import { InfrastructureDetailPage } from "./InfrastructureDetailPage";
+import { infrastructureDetails } from "./infrastructureDetails";
 import { FutureCityDetailPage } from "./FutureCityDetailPage";
 import { futureCityDetails } from "./futureCityDetails";
 import { DiscoverThemePage } from "./DiscoverThemePage";
@@ -159,6 +161,8 @@ export function App() {
   const guidePage = guidePages[window.location.pathname];
   const overviewTheme = discoverThemes.find(t=>t.path.replace(/\/$/, "")===window.location.pathname.replace(/\/$/, ""));
   const futureDetail = futureCityDetails.find(d => window.location.pathname.replace(/\/$/, "") === "/discover/future-cities/"+d.slug);
+  const infrastructureDetail = infrastructureDetails.find(d => window.location.pathname.replace(/\/$/, "") === "/discover/infrastructure/"+d.slug);
+  if (infrastructureDetail) return <InfrastructureDetailPage detail={infrastructureDetail} />;
   if (futureDetail) return <FutureCityDetailPage detail={futureDetail} />;
   if (overviewTheme) return <DiscoverThemePage theme={overviewTheme} />;
   if (window.location.pathname.replace(/\/$/, "") === "/discover/eastern-aesthetics/gardens") return <GardenPage />;

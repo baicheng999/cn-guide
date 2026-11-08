@@ -181,7 +181,9 @@ export const discoverThemes = [
           "author": "Dic\n(ID:28913795)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/infrastructure/hzmb-bridge/",
+        "action": "深入跨海桥梁体验"
       },
       {
         "title": "高铁出行",
@@ -195,7 +197,9 @@ export const discoverThemes = [
           "author": "摄图44711365\n(ID:44711365)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/infrastructure/high-speed-rail/",
+        "action": "深入高铁出行体验"
       },
       {
         "title": "机场建筑",
@@ -209,7 +213,9 @@ export const discoverThemes = [
           "author": "威震天大哥\n(ID:21937904)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/infrastructure/daxing-airport/",
+        "action": "深入机场建筑体验"
       },
       {
         "title": "江河工程",
@@ -223,7 +229,9 @@ export const discoverThemes = [
           "author": "湖北日报\n(ID:44172967)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/infrastructure/three-gorges/",
+        "action": "深入江河工程体验"
       }
     ],
     "sources": [
