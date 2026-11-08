@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Globe } from "lucide-react";
 import { guidePages } from "./guideContent";
+import { GardenPage } from "./GardenPage";
 import { PublishedJourneys } from "./PublishedJourneys";
 import "./song-decor.css";
 import "./material-decor.css";
@@ -90,6 +91,7 @@ export function App() {
   const [formStep, setFormStep] = useState(1);
   const [contactError, setContactError] = useState("");
   const [formData, setFormData] = useState({ service: "", timing: "", group: "", city: "", interests: "", name: "", region: "", email: "", chat: "", reply: "电子邮箱" });
+  useEffect(() => { if (new URLSearchParams(window.location.search).get("garden") === "1") { setFormData(current => ({ ...current, service: "私人旅行定制", interests: "希望了解中国园林：拙政园、留园、颐和园、余荫山房。" })); setModalOpen(true); } }, []);
   const [pointer, setPointer] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -111,6 +113,7 @@ export function App() {
   const submit = async (event) => { event.preventDefault(); if (!formData.email.trim() && !formData.chat.trim()) { setContactError("请至少留下电子邮箱、WhatsApp 或微信中的一种联系方式。"); return; } setContactError(""); try { const response = await fetch("/api/inquiries", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(formData) }); const data = await response.json(); if (!response.ok) throw new Error(data.error || "提交失败"); setSent(true); } catch (error) { setContactError(error.message || "暂时无法提交，请通过 WhatsApp 或微信联系我们。"); } };
   const openConsultation = (service = "", city = "") => { setFormData((current) => ({ ...current, service: service || current.service, city: city || current.city })); setContactError(""); setFormStep(1); setSent(false); setModalOpen(true); };
   const guidePage = guidePages[window.location.pathname];
+  if (window.location.pathname.replace(/\/$/, "") === "/discover/eastern-aesthetics/gardens") return <GardenPage />;
   if (guidePage) return <GuidePage page={guidePage} />;
 
   return <main>
@@ -136,7 +139,8 @@ export function App() {
 
     <section id="worlds" className="worlds-section">
       <div className="section-heading"><div><p className="eyebrow">发现中国</p><h2>什么样的中国最打动你？</h2></div><p>从心之所向，看见中国的不同面貌。</p></div>
-      <div className="world-stage">{worlds.map((world, index) => <button key={world.name} className={index === active ? "world-card active" : "world-card"} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} onClick={() => setActive(index)} style={{ "--i": index }}><img src={world.image} alt="" /><span className="card-shade" /><span className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><em>{world.note}</em></span></button>)}</div>
+      <div className="world-stage">{worlds.map((world, index) => <button key={world.name} className={index === active ? "world-card active" : "world-card"} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} onClick={() => index === 0 ? window.location.assign("/discover/eastern-aesthetics/gardens/") : setActive(index)} style={{ "--i": index }}><img src={world.image} alt="" /><span className="card-shade" /><span className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><em>{world.note}</em></span></button>)}</div>
+      <a className="garden-home-entry" href="/discover/eastern-aesthetics/gardens/">东方美学 · 走进中国园林 <span>拙政园 / 留园 / 颐和园 / 余荫山房 ↗</span></a>
     </section>
 
     <section id="destinations" className="destinations-section song-cloud-divider">
