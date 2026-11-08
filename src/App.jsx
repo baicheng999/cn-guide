@@ -1,3 +1,5 @@
+import { HomePhotoCredits } from "./HomePhotoCredits";
+import "./home-photos.css";
 import { useEffect, useState } from "react";
 import { Globe } from "lucide-react";
 import { guidePages } from "./guideContent";
@@ -10,18 +12,18 @@ import "./song-decor.css";
 import "./material-decor.css";
 
 const worlds = [
-  { name: "东方美学", image: "/assets/aesthetic.png", note: "园林、古建、茶与非遗" },
-  { name: "未来城市", image: "/assets/future.png", note: "科技、设计与城市生活" },
-  { name: "超级基建", image: "/assets/infrastructure.png", note: "高铁、桥梁与中国速度" },
-  { name: "山河自然", image: "/assets/nature.png", note: "从高原群峰到江南水乡" },
-  { name: "饮食日常", image: "/assets/food.png", note: "市场、早餐与地方风味" },
-  { name: "人与文化", image: "/assets/people.png", note: "日常相遇与手艺传承" },
+  { name: "东方美学", image: "/assets/gardens/1.webp", alt: "苏州古典园林的亭廊与水景", note: "园林、古建、茶与非遗" },
+  { name: "未来城市", image: "/assets/home-photos/shanghai.webp", alt: "上海陆家嘴城市天际线", position: "61% center", note: "科技、设计与城市生活" },
+  { name: "超级基建", image: "/assets/home-photos/infrastructure.webp", alt: "厦门跨海铁路桥上的列车", note: "高铁、桥梁与中国速度" },
+  { name: "山河自然", image: "/assets/home-photos/hero.webp", alt: "桂林阳朔漓江山水", position: "72% center", note: "从高原群峰到江南水乡" },
+  { name: "饮食日常", image: "/assets/home-photos/food.webp", alt: "竹蒸笼中的粤式烧卖", note: "市场、早餐与地方风味" },
+  { name: "人与文化", image: "/assets/heritage/2.webp", alt: "景德镇工匠绘饰瓷坯", position: "55% center", note: "日常相遇与手艺传承" },
 ];
 const destinations = [
-  { city: "北京", image: "/assets/infrastructure.png", line: "宫城、胡同、长城，一座古都的秩序与气象。", stay: "4天起 · 延展长城及周边", tags: ["故宫", "长城", "胡同"] },
-  { city: "上海", image: "/assets/future.png", line: "百年街区与未来天际线，在此相遇。", stay: "3天起 · 联游江南水乡", tags: ["建筑", "夜景", "都市生活"] },
-  { city: "云南", image: "/assets/nature.png", line: "雪山、古城与多民族村落，在高原相遇。", stay: "6天起 · 延展滇西与香格里拉", tags: ["大理", "丽江", "香格里拉"] },
-  { city: "广州", image: "/assets/food.png", line: "早茶、骑楼与珠江，写下岭南日常。", stay: "3天起 · 联游大湾区", tags: ["粤菜", "岭南文化", "商务门户"] },
+  { city: "北京", image: "/assets/home-photos/beijing.webp", alt: "从景山方向眺望北京故宫建筑群", line: "宫城、胡同、长城，一座古都的秩序与气象。", stay: "4天起 · 延展长城及周边", tags: ["故宫", "长城", "胡同"] },
+  { city: "上海", image: "/assets/home-photos/shanghai.webp", alt: "黄浦江与上海陆家嘴地标建筑", line: "百年街区与未来天际线，在此相遇。", stay: "3天起 · 联游江南水乡", tags: ["建筑", "夜景", "都市生活"] },
+  { city: "云南", image: "/assets/home-photos/yunnan.webp", alt: "大理洱海双廊与远处苍山", line: "雪山、古城与多民族村落，在高原相遇。", stay: "6天起 · 延展滇西与香格里拉", tags: ["大理", "丽江", "香格里拉"] },
+  { city: "广州", image: "/assets/home-photos/guangzhou.webp", alt: "广州陈家祠岭南建筑与庭前花木", line: "早茶、骑楼与珠江，写下岭南日常。", stay: "3天起 · 联游大湾区", tags: ["粤菜", "岭南文化", "商务门户"] },
 ];
 const assurances = [
   { title: "因你而定", note: "依兴趣，也依节奏" },
@@ -125,7 +127,7 @@ export function App() {
   if (window.location.pathname.replace(/\/$/, "") === "/discover/eastern-aesthetics/heritage") return <HeritagePage />;
   if (guidePage) return <GuidePage page={guidePage} />;
 
-  return <main>
+  return <main className="home-photography">
     <header className="site-header">
       <a className="brand" href="#top" aria-label="CHINA GUIDE 首页"><span><img className="brand-logo" src="/assets/china-guide-logo.png" alt="CHINA GUIDE" /><small>走进中国，不止于所见</small></span></a>
       <nav className={menuOpen ? "nav open" : "nav"} aria-label="主导航"><a onClick={() => setMenuOpen(false)} href="#worlds">发现中国</a><a onClick={() => setMenuOpen(false)} href="#destinations">目的地</a><a onClick={() => setMenuOpen(false)} href="#journeys">私人旅程</a><a onClick={() => setMenuOpen(false)} href="#business">商务访问</a><a onClick={() => setMenuOpen(false)} href="#guide">来华指南</a></nav>
@@ -148,7 +150,7 @@ export function App() {
 
     <section id="worlds" className="worlds-section">
       <div className="section-heading"><div><p className="eyebrow">发现中国</p><h2>什么样的中国最打动你？</h2></div><p>从心之所向，看见中国的不同面貌。</p></div>
-      <div className="world-stage">{worlds.map((world, index) => <button key={world.name} className={index === active ? "world-card active" : "world-card"} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} onClick={() => index === 0 ? window.location.assign("/discover/eastern-aesthetics/gardens/") : setActive(index)} style={{ "--i": index }}><img src={world.image} alt="" /><span className="card-shade" /><span className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><em>{world.note}</em></span></button>)}</div>
+      <div className="world-stage">{worlds.map((world, index) => <button key={world.name} className={index === active ? "world-card active" : "world-card"} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} onClick={() => index === 0 ? window.location.assign("/discover/eastern-aesthetics/gardens/") : setActive(index)} style={{ "--i": index }}><img src={world.image} alt={world.alt} loading="lazy" style={{objectPosition:world.position||"center"}} /><span className="card-shade" /><span className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><em>{world.note}</em></span></button>)}</div>
       <a className="garden-home-entry" href="/discover/eastern-aesthetics/gardens/">东方美学 · 走进中国园林 <span>拙政园 / 留园 / 颐和园 / 余荫山房 ↗</span></a>
     </section>
 
@@ -159,7 +161,7 @@ export function App() {
       </div>
       <div className="destination-grid">
         {destinations.map((destination, index) => <article className="destination-card" key={destination.city}>
-          <div className="destination-image"><img src={destination.image} alt={`${destination.city}目的地印象`} /><span className="destination-number">0{index + 1}</span></div>
+          <div className="destination-image"><img src={destination.image} alt={destination.alt} loading="lazy" /><span className="destination-number">0{index + 1}</span></div>
           <div className="destination-copy"><p>目的地 0{index + 1}</p><div className="destination-title"><h3>{destination.city}</h3><span>{destination.stay}</span></div><p className="destination-line">{destination.line}</p><div className="destination-tags">{destination.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><button onClick={() => openConsultation("私人旅行定制", destination.city)} aria-label={`规划${destination.city}旅程`}>探索这座城市 <span>↗</span></button></div>
         </article>)}
       </div>
@@ -192,6 +194,7 @@ export function App() {
       <div className="contact-channels"><div className="channel-card"><div className="qr-crop qr-whatsapp"><img src="/assets/contact-whatsapp-qr.jpg" alt="刘怡勇的 WhatsApp 联系二维码" /></div><p className="qr-kicker">WhatsApp</p><h3>扫码开始对话</h3><p>+86 131 1311 9919</p></div><div className="channel-card"><div className="qr-crop qr-wechat"><img src="/assets/contact-wechat-qr.jpg" alt="刘怡勇的微信联系二维码" /></div><p className="qr-kicker">微信</p><h3>扫码添加微信</h3><p>Coconut_Yong</p></div><button className="primary" onClick={openConsultation}>告诉我们你的想法</button></div>
     </section>
 
+    <HomePhotoCredits />
     <footer><a className="footer-brand" href="#top"><strong>CHINA GUIDE</strong><span>走进中国，不止于所见</span></a><div><a href="#worlds">发现中国</a><a href="#destinations">目的地</a><a href="#business">商务访问</a><a href="#guide">来华指南</a><a href="#contact">联系我们</a><a href="https://china-guide-song.liuyiyong9999.chatgpt.site/?admin=1">管理登录</a></div><p>旅游服务由上海凯旋观光旅行社有限公司依法提供。康养医疗服务仅提供机构对接、预约、翻译与出行协调，不提供诊断、治疗或医疗结果保证。<br />© 2026 CHINA GUIDE · 让世界更自然地走进中国</p></footer>
 
     {modalOpen && <div className="modal-backdrop" role="presentation" onMouseDown={(e) => e.target === e.currentTarget && setModalOpen(false)}><section className="modal" role="dialog" aria-modal="true" aria-labelledby="plan-title"><button className="close" onClick={() => setModalOpen(false)} aria-label="关闭">×</button>{!sent ? <><p className="eyebrow">旅程咨询 · 第 {formStep} 步 / 2</p><h2 id="plan-title">{formStep === 1 ? "先说说你的旅程" : "我们该如何联系你"}</h2><p>{formStep === 1 ? "只需大概信息，不必现在决定完整路线。" : "请至少留下电子邮箱、WhatsApp 或微信中的一种联系方式。"}</p><form onSubmit={submit}>{formStep === 1 ? <><label>需要的服务 *<select required value={formData.service} onChange={updateForm("service")}><option value="" disabled>请选择</option><option>私人旅行定制</option><option>康养医疗服务</option><option>商务访问支持</option></select></label><label>预计时间 *<input required value={formData.timing} onChange={updateForm("timing")} placeholder="例如：2027年4月" /></label><label>同行人数<select value={formData.group} onChange={updateForm("group")}><option value="">暂未确定</option><option>1–2人</option><option>3–5人</option><option>6人以上</option></select></label><label>意向城市<input value={formData.city} onChange={updateForm("city")} placeholder="例如：北京、上海、广州" /></label><label className="full-field">你最希望体验什么？<textarea value={formData.interests} onChange={updateForm("interests")} placeholder="简单说说你的兴趣、节奏或特别需要。康养医疗咨询请勿在此填写病历等敏感信息。" /></label><button className="primary" type="button" onClick={nextFormStep}>下一步：留下联系方式</button></> : <><label>怎么称呼你 *<input required value={formData.name} onChange={updateForm("name")} placeholder="姓名或称呼" /></label><label>国家 / 地区<input value={formData.region} onChange={updateForm("region")} placeholder="例如：新加坡" /></label><label>电子邮箱<input type="email" value={formData.email} onChange={updateForm("email")} placeholder="name@example.com" /></label><label>WhatsApp / 微信<input value={formData.chat} onChange={updateForm("chat")} placeholder="至少填写一种联系方式" /></label><label>希望我们如何回复<select value={formData.reply} onChange={updateForm("reply")}><option>电子邮箱</option><option>WhatsApp</option><option>微信</option></select></label>{contactError && <p className="form-error full-field" role="alert">{contactError}</p>}<label className="privacy full-field"><input required type="checkbox" /> <span>我同意 CHINA GUIDE 使用以上信息回复咨询并协调相关服务。我们不会通过本表单索取不必要的医疗或敏感资料。</span></label><button className="back-button" type="button" onClick={() => setFormStep(1)}>← 返回上一步</button><button className="primary" type="submit">提交咨询</button></>}</form></> : <div className="success"><span>✓</span><h2>想法已记录</h2><p>这是中文预览版的演示状态，暂不会发送资料。正式上线后将连接真实咨询渠道。</p><a className="primary whatsapp-after" href="https://wa.me/8613113119919" target="_blank" rel="noreferrer">也可以直接 WhatsApp 联系</a><button className="secondary" onClick={() => setModalOpen(false)}>返回浏览</button></div>}</section></div>}
