@@ -75,22 +75,58 @@ export const discoverThemes = [
       {
         "title": "上海 · 旧空间的新生活",
         "place": "城市更新",
-        "text": "以杨浦滨江的工业遗存与公共空间为线索，观察旧建筑、步道和人的活动怎样相互连接。"
+        "text": "以杨浦滨江的工业遗存与公共空间为线索，观察旧建筑、步道和人的活动怎样相互连接。",
+        "photo": {
+          "src": "/assets/discover-body/500708746.webp",
+          "caption": "上海杨浦滨江 · 工业遗存",
+          "alt": "上海杨浦滨江 · 工业遗存",
+          "source": "https://699pic.com/tupian-500708746.html",
+          "author": "折腾的小肉团\n(ID:1124288)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       },
       {
         "title": "深圳 · 从设计看创造",
         "place": "设计文化",
-        "text": "以海上世界文化艺术中心等公众文化空间为方向，结合当期展览，讨论一件产品与一座城市的关系。"
+        "text": "以海上世界文化艺术中心等公众文化空间为方向，结合当期展览，讨论一件产品与一座城市的关系。",
+        "photo": {
+          "src": "/assets/discover-body/500770782.webp",
+          "caption": "深圳蛇口 · 海上世界文化艺术中心与滨海片区",
+          "alt": "深圳蛇口 · 海上世界文化艺术中心与滨海片区",
+          "source": "https://699pic.com/tupian-500770782.html",
+          "author": "湘山红叶\n(ID:1124280)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       },
       {
         "title": "杭州 · 从日常理解低碳",
         "place": "低碳科普",
-        "text": "围绕中国杭州低碳科技馆的展示，从能源、建筑与生活的选择开启一场适合不同年龄的讨论。"
+        "text": "围绕中国杭州低碳科技馆的展示，从能源、建筑与生活的选择开启一场适合不同年龄的讨论。",
+        "photo": {
+          "src": "/assets/discover-body/701022777.webp",
+          "caption": "中国杭州低碳科技馆 · 建筑与绿色屋顶",
+          "alt": "中国杭州低碳科技馆 · 建筑与绿色屋顶",
+          "source": "https://699pic.com/tupian-701022777.html",
+          "author": "阿照摄影\n(ID:42368211)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       },
       {
         "title": "把科技放回生活",
         "place": "城市观察",
-        "text": "从交通衔接、公共空间和数字服务中，选择你真正好奇的问题。体验项目按实际运营情况筛选，不把展示等同于内部参访。"
+        "text": "从交通衔接、公共空间和数字服务中，选择你真正好奇的问题。体验项目按实际运营情况筛选，不把展示等同于内部参访。",
+        "photo": {
+          "src": "/assets/discover-body/506951840.webp",
+          "caption": "深圳岗厦北站 · 城市交通公共空间",
+          "alt": "深圳岗厦北站 · 城市交通公共空间",
+          "source": "https://699pic.com/tupian-506951840.html",
+          "author": "我就是我\n(ID:33841184)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "stock-preview"
+        }
       }
     ],
     "sources": [
@@ -128,22 +164,58 @@ export const discoverThemes = [
       {
         "title": "跨海桥梁",
         "place": "粤港澳大湾区",
-        "text": "以港珠澳大桥及其正常客运服务为认识桥梁的一个方向，讨论海湾、口岸与城市之间的连接；乘车与观景安排分别确认。"
+        "text": "以港珠澳大桥及其正常客运服务为认识桥梁的一个方向，讨论海湾、口岸与城市之间的连接；乘车与观景安排分别确认。",
+        "photo": {
+          "src": "/assets/discover-body/501657705.webp",
+          "caption": "港珠澳大桥 · 跨海连接",
+          "alt": "港珠澳大桥 · 跨海连接",
+          "source": "https://699pic.com/tupian-501657705.html",
+          "author": "Dic\n(ID:28913795)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       },
       {
         "title": "高铁出行",
         "place": "城市之间",
-        "text": "把一段有实际行程需要的高铁旅程，变成观察车站、换乘与沿途地形的机会。线路、座席与时间在定制时核对。"
+        "text": "把一段有实际行程需要的高铁旅程，变成观察车站、换乘与沿途地形的机会。线路、座席与时间在定制时核对。",
+        "photo": {
+          "src": "/assets/discover-body/701205959.webp",
+          "caption": "桂林山水间行驶的复兴号列车",
+          "alt": "桂林山水间行驶的复兴号列车",
+          "source": "https://699pic.com/tupian-701205959.html",
+          "author": "摄图44711365\n(ID:44711365)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       },
       {
         "title": "机场建筑",
         "place": "北京 · 大兴",
-        "text": "大兴机场的航站楼与综合换乘空间，为观察大型交通建筑提供了线索。参观以允许进入的公共区域和现场管理要求为准。"
+        "text": "大兴机场的航站楼与综合换乘空间，为观察大型交通建筑提供了线索。参观以允许进入的公共区域和现场管理要求为准。",
+        "photo": {
+          "src": "/assets/discover-body/501414614.webp",
+          "caption": "北京大兴国际机场 · 航站楼内部",
+          "alt": "北京大兴国际机场 · 航站楼内部",
+          "source": "https://699pic.com/tupian-501414614.html",
+          "author": "威震天大哥\n(ID:21937904)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       },
       {
         "title": "江河工程",
         "place": "湖北 · 宜昌",
-        "text": "以三峡工程博物馆等公众参观内容为方向，把工程模型、历史与江河环境放在一起理解。具体路线与接待条件另行确认。"
+        "text": "以三峡工程博物馆等公众参观内容为方向，把工程模型、历史与江河环境放在一起理解。具体路线与接待条件另行确认。",
+        "photo": {
+          "src": "/assets/discover-body/700312973.webp",
+          "caption": "三峡大坝 · 泄洪航拍全景",
+          "alt": "三峡大坝 · 泄洪航拍全景",
+          "source": "https://699pic.com/tupianplus-700312973.html",
+          "author": "湖北日报\n(ID:44172967)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       }
     ],
     "sources": [
@@ -181,22 +253,58 @@ export const discoverThemes = [
       {
         "title": "桂林 · 水边看峰林",
         "place": "河湾与喀斯特",
-        "text": "从漓江与阳朔的山水开始，选择适合的岸线、观景点与乡间慢行方向，把河流与峰林的层次看得更清楚。"
+        "text": "从漓江与阳朔的山水开始，选择适合的岸线、观景点与乡间慢行方向，把河流与峰林的层次看得更清楚。",
+        "photo": {
+          "src": "/assets/discover-body/701225605.webp",
+          "caption": "桂林阳朔 · 漓江晨雾与峰林",
+          "alt": "桂林阳朔 · 漓江晨雾与峰林",
+          "source": "https://699pic.com/tupian-701225605.html",
+          "author": "摄图44711365\n(ID:44711365)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       },
       {
         "title": "张家界 · 走近砂岩峰林",
         "place": "武陵源",
-        "text": "武陵源以砂岩柱峰与山谷景观见长。可按体力组合观景与步行，把停留时间留给你最想看的风景。"
+        "text": "武陵源以砂岩柱峰与山谷景观见长。可按体力组合观景与步行，把停留时间留给你最想看的风景。",
+        "photo": {
+          "src": "/assets/discover-body/501103022.webp",
+          "caption": "张家界 · 砂岩峰林与云雾",
+          "alt": "张家界 · 砂岩峰林与云雾",
+          "source": "https://699pic.com/tupian-501103022.html",
+          "author": "兄弟路子野啊！\n(ID:1124293)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       },
       {
         "title": "云南 · 沿河谷看群山",
         "place": "滇西北",
-        "text": "以滇西北的河谷与群山为旅行方向，先确认季节、海拔和道路条件，再选择适合的停留地与自然观察方式。"
+        "text": "以滇西北的河谷与群山为旅行方向，先确认季节、海拔和道路条件，再选择适合的停留地与自然观察方式。",
+        "photo": {
+          "src": "/assets/discover-body/501590881.webp",
+          "caption": "云南丽江 · 石鼓长江第一湾",
+          "alt": "云南丽江 · 石鼓长江第一湾",
+          "source": "https://699pic.com/tupian-501590881.html",
+          "author": "大风起兮云飞扬\n(ID:22882744)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       },
       {
         "title": "以自己的速度走",
         "place": "轻步 · 摄影 · 自然观察",
-        "text": "清晨、傍晚或一段安静的乡间道路，都可以成为旅程的重点。摄影与户外活动按天气、体力和当地规则安排。"
+        "text": "清晨、傍晚或一段安静的乡间道路，都可以成为旅程的重点。摄影与户外活动按天气、体力和当地规则安排。",
+        "photo": {
+          "src": "/assets/discover-body/500753959.webp",
+          "caption": "桂林阳朔 · 遇龙河乡间风光",
+          "alt": "桂林阳朔 · 遇龙河乡间风光",
+          "source": "https://699pic.com/tupian-500753959.html",
+          "author": "凝固之眼\n(ID:1124316)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       }
     ],
     "sources": [
@@ -234,22 +342,58 @@ export const discoverThemes = [
       {
         "title": "广州 · 坐下来叹早茶",
         "place": "茶楼与点心",
-        "text": "饮茶配点心，也是广府人与人相聚的方式。从点单、分享与一桌茶点开始，让节奏慢下来。"
+        "text": "饮茶配点心，也是广府人与人相聚的方式。从点单、分享与一桌茶点开始，让节奏慢下来。",
+        "photo": {
+          "src": "/assets/discover-body/guangzhou-dim-sum-reference.webp",
+          "caption": "广式早茶 · 同桌分享点心与茶",
+          "alt": "茶楼餐桌上的广式点心、蒸笼与茶具",
+          "source": "https://stnn.cc/c/2024-03-30/3885533.shtml",
+          "author": "星岛环球网文章配图，摄影署名待确认",
+          "license": "来源页面配图，商业授权尚未确认",
+          "previewMode": "reference"
+        }
       },
       {
         "title": "成都 · 辣味之外",
         "place": "地方菜与茶馆",
-        "text": "以川菜与城市日常为方向，按你对辣味的接受程度挑选餐桌，也为茶馆与街巷留出时间。"
+        "text": "以川菜与城市日常为方向，按你对辣味的接受程度挑选餐桌，也为茶馆与街巷留出时间。",
+        "photo": {
+          "src": "/assets/discover-body/500591377.webp",
+          "caption": "成都人民公园 · 茶馆日常",
+          "alt": "成都人民公园 · 茶馆日常",
+          "source": "https://699pic.com/tupian-500591377.html",
+          "author": "甘霖\n(ID:1372921)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       },
       {
         "title": "先逛市场，再认识食材",
         "place": "当季食物",
-        "text": "从蔬菜、香料和熟食摊开始，听向导介绍当地人的选择。市场与停留点按营业情况和实际卫生条件筛选。"
+        "text": "从蔬菜、香料和熟食摊开始，听向导介绍当地人的选择。市场与停留点按营业情况和实际卫生条件筛选。",
+        "photo": {
+          "src": "/assets/discover-body/501238285.webp",
+          "caption": "市场里的当季食材与摊位",
+          "alt": "市场里的当季食材与摊位",
+          "source": "https://699pic.com/tupian-501238285.html",
+          "author": "摄图网用户（ID: 17367207）\n(ID:17367207)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       },
       {
         "title": "一座城的家常味",
         "place": "早餐 · 小店 · 地方菜",
-        "text": "不急着把所有名菜吃齐。可以选一顿早餐、一家有代表性的小店，或一桌适合同行者分享的地方菜。"
+        "text": "不急着把所有名菜吃齐。可以选一顿早餐、一家有代表性的小店，或一桌适合同行者分享的地方菜。",
+        "photo": {
+          "src": "/assets/discover-body/501102004.webp",
+          "caption": "围桌分享 · 火锅与地方风味",
+          "alt": "围桌分享 · 火锅与地方风味",
+          "source": "https://699pic.com/tupian-501102004.html",
+          "author": "武轩\n(ID:18223556)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       }
     ],
     "sources": [
@@ -285,22 +429,58 @@ export const discoverThemes = [
         "place": "工坊与工作",
         "text": "关注一双手怎样工作、一项经验怎样传下去。可从已整理的非遗专题了解昆曲、苏绣、制瓷与宣纸，再讨论适合的接待方式。",
         "href": "/discover/eastern-aesthetics/heritage/",
-        "action": "先认识四项非遗"
+        "action": "先认识四项非遗",
+        "photo": {
+          "src": "/assets/discover-body/501051405.webp",
+          "caption": "景德镇古窑民俗博览区 · 手工制瓷场景",
+          "alt": "景德镇古窑民俗博览区中手艺人与陶瓷坯体的工作场景",
+          "source": "https://699pic.com/tupian-501051405.html",
+          "author": "行者孔（ID:17456878）",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       },
       {
         "title": "村落里的日常",
         "place": "社区与地方生活",
-        "text": "把目光留给公共空间与生活细节。社区交流按当地意愿与接待条件安排，具体地点在定制时确认。"
+        "text": "把目光留给公共空间与生活细节。社区交流按当地意愿与接待条件安排，具体地点在定制时确认。",
+        "photo": {
+          "src": "/assets/discover-body/501688504.webp",
+          "caption": "贵州肇兴侗寨 · 山谷里的村落",
+          "alt": "贵州肇兴侗寨 · 山谷里的村落",
+          "source": "https://699pic.com/tupian-501688504.html",
+          "author": "啤(粤) = 扒(潮)\n(ID:23841771)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "stock-preview"
+        }
       },
       {
         "title": "沿着街巷认识城市",
         "place": "城市里的相遇",
-        "text": "在一段步行中，听地方故事，认识建筑、店铺与居民生活之间的关系。避免打扰，让观察与交流都有分寸。"
+        "text": "在一段步行中，听地方故事，认识建筑、店铺与居民生活之间的关系。避免打扰，让观察与交流都有分寸。",
+        "photo": {
+          "src": "/assets/discover-body/500171306.webp",
+          "caption": "上海武康路 · 街区与日常",
+          "alt": "上海武康路 · 街区与日常",
+          "source": "https://699pic.com/tupian-500171306.html",
+          "author": "吞大象的小强\n(ID:429671)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       },
       {
         "title": "听见地方的声音",
         "place": "音乐 · 戏曲 · 节庆",
-        "text": "从一次公开演出或一段有导赏的聆听开始。先了解背景，再选择剧目与场次；不将某次影像里的活动当作全年固定体验。"
+        "text": "从一次公开演出或一段有导赏的聆听开始。先了解背景，再选择剧目与场次；不将某次影像里的活动当作全年固定体验。",
+        "photo": {
+          "src": "/assets/discover-body/507727737.webp",
+          "caption": "川剧变脸 · 演出现场",
+          "alt": "川剧变脸 · 演出现场",
+          "source": "https://699pic.com/tupian-507727737.html",
+          "author": "lnc周周\n(ID:38116342)",
+          "license": "VRF；企业商用授权未确认",
+          "previewMode": "downloaded-photo"
+        }
       }
     ],
     "sources": [
