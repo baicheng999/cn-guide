@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-reference-date]').forEach(el=>{if(new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date())!==el.dataset.referenceDate){el.textContent='历史参考：2026年11月8日查询，适用入住11月8日、退房11月9日；已不代表当前可订价，请按实际日期重新核价。';}});
