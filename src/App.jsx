@@ -1,3 +1,5 @@
+import { FutureCityDetailPage } from "./FutureCityDetailPage";
+import { futureCityDetails } from "./futureCityDetails";
 import { DiscoverThemePage } from "./DiscoverThemePage";
 import { discoverThemes } from "./discoverThemes";
 import { HomePhotoCredits } from "./HomePhotoCredits";
@@ -156,6 +158,8 @@ export function App() {
   useEffect(() => { const chosenTheme = discoverThemes.find(t=>t.slug===new URLSearchParams(window.location.search).get("theme")); if (!chosenTheme) return; setFormData(current => ({...current, service:"私人旅行定制", interests:"希望规划"+chosenTheme.name+"主题的私人旅程。"})); setFormStep(1); setSent(false); setModalOpen(true); }, []);
   const guidePage = guidePages[window.location.pathname];
   const overviewTheme = discoverThemes.find(t=>t.path.replace(/\/$/, "")===window.location.pathname.replace(/\/$/, ""));
+  const futureDetail = futureCityDetails.find(d => window.location.pathname.replace(/\/$/, "") === "/discover/future-cities/"+d.slug);
+  if (futureDetail) return <FutureCityDetailPage detail={futureDetail} />;
   if (overviewTheme) return <DiscoverThemePage theme={overviewTheme} />;
   if (window.location.pathname.replace(/\/$/, "") === "/discover/eastern-aesthetics/gardens") return <GardenPage />;
   if (window.location.pathname.replace(/\/$/, "") === "/discover/eastern-aesthetics/architecture") return <ArchitecturePage />;

@@ -84,7 +84,9 @@ export const discoverThemes = [
           "author": "折腾的小肉团\n(ID:1124288)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/future-cities/shanghai-waterfront/",
+        "action": "深入滨江更新体验"
       },
       {
         "title": "深圳 · 从设计看创造",
@@ -98,7 +100,9 @@ export const discoverThemes = [
           "author": "湘山红叶\n(ID:1124280)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/future-cities/shenzhen-design/",
+        "action": "深入设计文化体验"
       },
       {
         "title": "杭州 · 从日常理解低碳",
@@ -112,7 +116,9 @@ export const discoverThemes = [
           "author": "阿照摄影\n(ID:42368211)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "downloaded-photo"
-        }
+        },
+        "href": "/discover/future-cities/hangzhou-low-carbon/",
+        "action": "深入低碳科普体验"
       },
       {
         "title": "把科技放回生活",
@@ -126,7 +132,9 @@ export const discoverThemes = [
           "author": "我就是我\n(ID:33841184)",
           "license": "VRF；企业商用授权未确认",
           "previewMode": "stock-preview"
-        }
+        },
+        "href": "/discover/future-cities/shenzhen-everyday-tech/",
+        "action": "深入城市观察体验"
       }
     ],
     "sources": [
