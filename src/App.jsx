@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Globe } from "lucide-react";
 import { guidePages } from "./guideContent";
+import { TeaPage } from "./TeaPage";
 import { ArchitecturePage } from "./ArchitecturePage";
 import { GardenPage } from "./GardenPage";
 import { PublishedJourneys } from "./PublishedJourneys";
@@ -94,6 +95,7 @@ export function App() {
   const [formData, setFormData] = useState({ service: "", timing: "", group: "", city: "", interests: "", name: "", region: "", email: "", chat: "", reply: "电子邮箱" });
   useEffect(() => { if (new URLSearchParams(window.location.search).get("garden") === "1") { setFormData(current => ({ ...current, service: "私人旅行定制", interests: "希望了解中国园林：拙政园、留园、颐和园、余荫山房。" })); setModalOpen(true); } }, []);
   useEffect(() => { if (new URLSearchParams(window.location.search).get("architecture") === "1") { setFormData(current => ({ ...current, service: "私人旅行定制", interests: "希望了解中国古建：故宫、佛光寺、悬空寺、福建土楼与开平碉楼。" })); setModalOpen(true); } }, []);
+  useEffect(() => { if (new URLSearchParams(window.location.search).get("tea") === "1") { setFormData(current => ({ ...current, service: "私人旅行定制", interests: "希望了解茶文化：杭州龙井、武夷岩茶、安溪铁观音或景迈山古茶林。" })); setModalOpen(true); } }, []);
   const [pointer, setPointer] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -117,6 +119,7 @@ export function App() {
   const guidePage = guidePages[window.location.pathname];
   if (window.location.pathname.replace(/\/$/, "") === "/discover/eastern-aesthetics/gardens") return <GardenPage />;
   if (window.location.pathname.replace(/\/$/, "") === "/discover/eastern-aesthetics/architecture") return <ArchitecturePage />;
+  if (window.location.pathname.replace(/\/$/, "") === "/discover/eastern-aesthetics/tea") return <TeaPage />;
   if (guidePage) return <GuidePage page={guidePage} />;
 
   return <main>
