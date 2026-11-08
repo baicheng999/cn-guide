@@ -13,12 +13,48 @@ import "./song-decor.css";
 import "./material-decor.css";
 
 const worlds = [
-  { name: "东方美学", image: "/assets/gardens/1.webp", alt: "苏州古典园林的亭廊与水景", note: "园林、古建、茶与非遗" },
-  { name: "未来城市", image: "/assets/home-photos/shanghai.webp", alt: "上海陆家嘴城市天际线", position: "61% center", note: "科技、设计与城市生活" },
-  { name: "超级基建", image: "/assets/home-photos/infrastructure.webp", alt: "厦门跨海铁路桥上的列车", note: "高铁、桥梁与中国速度" },
-  { name: "山河自然", image: "/assets/home-photos/hero.webp", alt: "桂林阳朔漓江山水", position: "72% center", note: "从高原群峰到江南水乡" },
-  { name: "饮食日常", image: "/assets/home-photos/food.webp", alt: "竹蒸笼中的粤式烧卖", note: "市场、早餐与地方风味" },
-  { name: "人与文化", image: "/assets/heritage/2.webp", alt: "景德镇工匠绘饰瓷坯", position: "55% center", note: "日常相遇与手艺传承" },
+  {
+    "name": "东方美学",
+    "image": "/assets/discover-photos/aesthetics.webp",
+    "alt": "苏州园林圆门与白墙庭院",
+    "position": "50% center",
+    "note": "园林、古建、茶与非遗"
+  },
+  {
+    "name": "未来城市",
+    "image": "/assets/discover-photos/future.webp",
+    "alt": "珠江新城现代楼群、广州塔与夜间车流光轨",
+    "position": "57% center",
+    "note": "科技、设计与城市生活"
+  },
+  {
+    "name": "超级基建",
+    "image": "/assets/discover-photos/infrastructure.webp",
+    "alt": "港珠澳大桥延伸至开阔海面",
+    "position": "67% center",
+    "note": "高铁、桥梁与中国速度"
+  },
+  {
+    "name": "山河自然",
+    "image": "/assets/discover-photos/nature.webp",
+    "alt": "张家界烟雨中的砂岩峰林与松树",
+    "position": "48% center",
+    "note": "从高原群峰到江南水乡"
+  },
+  {
+    "name": "饮食日常",
+    "image": "/assets/discover-photos/food.webp",
+    "alt": "粤式早茶中的茶壶与蒸笼点心",
+    "position": "54% center",
+    "note": "市场、早餐与地方风味"
+  },
+  {
+    "name": "人与文化",
+    "image": "/assets/discover-photos/culture.webp",
+    "alt": "手艺人用双手在陶轮上拉坯",
+    "position": "51% center",
+    "note": "日常相遇与手艺传承"
+  }
 ];
 const destinations = [
   { city: "北京", image: "/assets/home-photos/beijing.webp", alt: "从景山方向眺望北京故宫建筑群", line: "宫城、胡同、长城，一座古都的秩序与气象。", stay: "4天起 · 延展长城及周边", tags: ["故宫", "长城", "胡同"] },
