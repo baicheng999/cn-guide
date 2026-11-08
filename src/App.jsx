@@ -1,3 +1,5 @@
+import { DiscoverThemePage } from "./DiscoverThemePage";
+import { discoverThemes } from "./discoverThemes";
 import { HomePhotoCredits } from "./HomePhotoCredits";
 import "./home-photos.css";
 import "./hero-worlds.css";
@@ -151,7 +153,9 @@ export function App() {
   const nextFormStep = (event) => { if (event.currentTarget.form.reportValidity()) { setContactError(""); setFormStep(2); } };
   const submit = async (event) => { event.preventDefault(); if (!formData.email.trim() && !formData.chat.trim()) { setContactError("请至少留下电子邮箱、WhatsApp 或微信中的一种联系方式。"); return; } setContactError(""); try { const response = await fetch("/api/inquiries", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(formData) }); const data = await response.json(); if (!response.ok) throw new Error(data.error || "提交失败"); setSent(true); } catch (error) { setContactError(error.message || "暂时无法提交，请通过 WhatsApp 或微信联系我们。"); } };
   const openConsultation = (service = "", city = "") => { setFormData((current) => ({ ...current, service: service || current.service, city: city || current.city })); setContactError(""); setFormStep(1); setSent(false); setModalOpen(true); };
+  useEffect(() => { if (new URLSearchParams(window.location.search).get("theme") !== "eastern-aesthetics") return; setFormData(current => ({...current, service:"私人旅行定制", interests:"希望规划东方美学主题的私人旅程。"})); setFormStep(1); setSent(false); setModalOpen(true); }, []);
   const guidePage = guidePages[window.location.pathname];
+  if (window.location.pathname.replace(/\/$/, "") === "/discover/eastern-aesthetics") return <DiscoverThemePage theme={discoverThemes[0]} />;
   if (window.location.pathname.replace(/\/$/, "") === "/discover/eastern-aesthetics/gardens") return <GardenPage />;
   if (window.location.pathname.replace(/\/$/, "") === "/discover/eastern-aesthetics/architecture") return <ArchitecturePage />;
   if (window.location.pathname.replace(/\/$/, "") === "/discover/eastern-aesthetics/tea") return <TeaPage />;
@@ -181,8 +185,8 @@ export function App() {
 
     <section id="worlds" className="worlds-section">
       <div className="section-heading"><div><p className="eyebrow">发现中国</p><h2>什么样的中国最打动你？</h2></div><p>从心之所向，看见中国的不同面貌。</p></div>
-      <div className="world-stage">{worlds.map((world, index) => <button key={world.name} className={index === active ? "world-card active" : "world-card"} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} onClick={() => index === 0 ? window.location.assign("/discover/eastern-aesthetics/gardens/") : setActive(index)} style={{ "--i": index }}><img src={world.image} alt={world.alt} loading="lazy" style={{objectPosition:world.position||"center"}} /><span className="card-shade" /><span className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><em>{world.note}</em></span></button>)}</div>
-      <a className="garden-home-entry" href="/discover/eastern-aesthetics/gardens/">东方美学 · 走进中国园林 <span>拙政园 / 留园 / 颐和园 / 余荫山房 ↗</span></a>
+      <div className="world-stage">{worlds.map((world, index) => <button key={world.name} className={index === active ? "world-card active" : "world-card"} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} onClick={() => index === 0 ? window.location.assign("/discover/eastern-aesthetics/") : setActive(index)} style={{ "--i": index }}><img src={world.image} alt={world.alt} loading="lazy" style={{objectPosition:world.position||"center"}} /><span className="card-shade" /><span className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><em>{world.note}</em></span></button>)}</div>
+      <a className="garden-home-entry" href="/discover/eastern-aesthetics/">东方美学 · 走近这一重中国 <span>园林 / 古建 / 茶文化 / 非遗 ↗</span></a>
     </section>
 
     <section id="destinations" className="destinations-section song-cloud-divider">
