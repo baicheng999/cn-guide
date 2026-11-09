@@ -30,43 +30,43 @@ import "./material-decor.css";
 const worlds = [
   {
     "name": "东方美学",
-    "image": "/assets/discover-photos/tiantan-a.webp",
-    "alt": "暖光下仰望北京天坛祈年殿三重檐",
+    "image": "/assets/discover-showcase/eastern-aesthetics.jpg",
+    "alt": "园林深处的中式屋檐、古树与现代城市远景",
     "note": "园林、古建、茶与非遗",
     "position": "48% 48%"
   },
   {
     "name": "未来城市",
-    "image": "/assets/discover-photos/city-approved.webp",
-    "alt": "深圳湾人才公园水面与华润大厦春笋天际线",
+    "image": "/assets/discover-showcase/future-china.jpg",
+    "alt": "夜幕下流光交织的上海城市天际线",
     "note": "科技、设计与城市生活",
     "position": "51% 48%"
   },
   {
     "name": "超级基建",
-    "image": "/assets/discover-photos/airport-approved.webp",
-    "alt": "日落时北京大兴机场航站楼放射形全景",
+    "image": "/assets/discover-showcase/great-projects.jpg",
+    "alt": "现代高铁列车驶入宽阔的车站站台",
     "note": "高铁、机场与超级工程",
     "position": "51% 54%"
   },
   {
     "name": "山河自然",
-    "image": "/assets/home-photos/hero.webp",
-    "alt": "桂林阳朔漓江河湾与青绿峰林全景",
+    "image": "/assets/discover-showcase/landscapes.jpg",
+    "alt": "云雾层叠的中国山脉与森林景观",
     "note": "漓江峰林、峡谷与乡间慢行",
     "position": "66% 50%"
   },
   {
     "name": "饮食日常",
-    "image": "/assets/discover-photos/food-approved.webp",
-    "alt": "炭火上的羊肉串与现场翻烤撒料动作",
+    "image": "/assets/discover-showcase/flavours.jpg",
+    "alt": "热闹街巷里的地方小吃摊与日常烟火",
     "note": "市场、早餐与地方风味",
     "position": "58% 48%"
   },
   {
     "name": "人与文化",
-    "image": "/assets/discover-photos/culture.webp",
-    "alt": "手艺人用双手在陶轮上拉坯",
+    "image": "/assets/discover-showcase/living-culture.jpg",
+    "alt": "手艺人在工坊中专注地制作陶器",
     "note": "日常相遇与手艺传承",
     "position": "56% 48%"
   }
@@ -163,29 +163,6 @@ export function App() {
   }, []);
 
   useEffect(() => {
-    const section = document.querySelector("#worlds");
-    const stage = section?.querySelector(".world-stage");
-    if (!section || !stage) return;
-    let frame = 0;
-    const update = () => {
-      frame = 0;
-      const rect = section.getBoundingClientRect();
-      const range = Math.max(1, section.offsetHeight - innerHeight);
-      const progress = Math.min(1, Math.max(0, -rect.top / range));
-      const shift = Math.max(0, stage.scrollWidth - innerWidth + Math.min(120, innerWidth * .08));
-      section.style.setProperty("--world-progress", progress.toFixed(4));
-      section.style.setProperty("--world-shift", `${-progress * shift}px`);
-      const next = Math.min(worlds.length - 1, Math.round(progress * (worlds.length - 1)));
-      setActive((current) => current === next ? current : next);
-    };
-    const requestUpdate = () => { if (!frame) frame = requestAnimationFrame(update); };
-    update();
-    addEventListener("scroll", requestUpdate, { passive: true });
-    addEventListener("resize", requestUpdate);
-    return () => { cancelAnimationFrame(frame); removeEventListener("scroll", requestUpdate); removeEventListener("resize", requestUpdate); };
-  }, []);
-
-  useEffect(() => {
     const onKeyDown = (event) => { if (event.key === "Escape") { setModalOpen(false); setMenuOpen(false); } };
     document.body.style.overflow = modalOpen ? "hidden" : "";
     addEventListener("keydown", onKeyDown);
@@ -241,13 +218,13 @@ export function App() {
 
     <section className="trust" aria-label="服务承诺">{assurances.map((item) => <div className="trust-item" key={item.title}><span className="trust-seal" aria-hidden="true" /><span className="trust-copy"><strong>{item.title}</strong><em>{item.note}</em></span></div>)}</section>
 
-    <section id="worlds" className="worlds-section worlds-immersive">
+    <section id="worlds" className="worlds-section worlds-immersive worlds-showcase">
       <div className="section-heading"><div><p className="eyebrow">发现中国</p><h2>什么样的中国最打动你？</h2></div><p>从心之所向，看见中国的不同面貌。</p></div>
       <div className="world-stage">{worlds.map((world, index) => {
         const distance = Math.abs(index - active);
-        return <article key={world.name} className={index === active ? "world-card active" : "world-card"} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} style={{ "--i": index, "--tilt": `${-5 + distance * 1.2}deg`, "--depth": `${-distance * 55}px`, "--card-scale": Math.max(.82, 1 - distance * .035), "--card-opacity": Math.max(.5, 1 - distance * .1), "--card-saturation": Math.max(.55, 1 - distance * .09), "--card-brightness": Math.max(.6, 1 - distance * .08) }}><img src={world.image} alt={world.alt} loading={index < 2 ? "eager" : "lazy"} style={{objectPosition:world.position||"center"}} /><span className="card-shade" /><div className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><nav className="world-links" aria-label={`${world.name}内容入口`}>{discoverThemes[index].sections.map((section, topicIndex) => <a key={section.href} href={section.href}>{worldTopicLabels[index][topicIndex]}<span aria-hidden="true">↗</span></a>)}</nav></div></article>;
+        return <article key={world.name} className={index === active ? "world-card active" : "world-card"} tabIndex="0" aria-label={`${world.name}主题`} aria-current={index === active ? "true" : undefined} onClick={() => setActive(index)} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") setActive(index); }} style={{ "--i": index, "--tilt": `${-5 + distance * 1.2}deg`, "--depth": `${-distance * 55}px`, "--card-scale": Math.max(.82, 1 - distance * .035), "--card-opacity": Math.max(.5, 1 - distance * .1), "--card-saturation": Math.max(.55, 1 - distance * .09), "--card-brightness": Math.max(.6, 1 - distance * .08) }}><img src={world.image} alt={world.alt} loading={index < 2 ? "eager" : "lazy"} style={{objectPosition:world.position||"center"}} /><span className="card-shade" /><div className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><nav className="world-links" aria-label={`${world.name}内容入口`}>{discoverThemes[index].sections.map((section, topicIndex) => <a key={section.href} href={section.href} onClick={(event) => event.stopPropagation()}>{worldTopicLabels[index][topicIndex]}<span aria-hidden="true">↗</span></a>)}</nav></div></article>;
       })}</div>
-      <div className="world-scroll-hud" aria-hidden="true"><span>0{active + 1} / 06</span><i><b /></i><em>向下滚动 · 穿行中国</em></div>
+      <div className="world-scroll-hud" aria-hidden="true"><span>0{active + 1} / 06</span><i><b style={{ transform: `scaleX(${(active + 1) / 6})` }} /></i><em>六个主题同屏 · 点击卡片探索</em></div>
     </section>
 
     <DestinationItinerarySection onConsult={openConsultation} />
