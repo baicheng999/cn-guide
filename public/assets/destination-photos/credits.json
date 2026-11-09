@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "xian",
+    "caption": "西安城墙 · 古今城市实景",
+    "image": "/assets/destination-photos/xian.webp",
+    "author": "Kevinsmithnyc",
+    "url": "https://commons.wikimedia.org/wiki/File:Xian_City_Wall.jpg",
+    "provider": "Wikimedia Commons",
+    "id": "Xian_City_Wall.jpg",
+    "accountLicense": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "缩放、WebP转换及页面裁切；本图片衍生版本沿用上述许可。",
+    "checkedAt": "2026-11-09"
+  },
+  {
+    "slug": "xinjiang",
+    "caption": "新疆喀纳斯湖 · 地区实景参考",
+    "image": "/assets/destination-photos/xinjiang.webp",
+    "author": "Wang Xiaozhe and Meng Jie",
+    "url": "https://commons.wikimedia.org/wiki/File:Lake_Kanas.jpg",
+    "provider": "Wikimedia Commons",
+    "id": "Lake_Kanas.jpg",
+    "accountLicense": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "缩放、WebP转换及页面裁切；本图片衍生版本沿用上述许可。",
+    "checkedAt": "2026-11-09"
+  },
+  {
+    "slug": "harbin",
+    "caption": "哈尔滨索菲亚教堂 · 建筑实景",
+    "image": "/assets/destination-photos/harbin.webp",
+    "author": "N509FZ",
+    "url": "https://commons.wikimedia.org/wiki/File:East_facade_of_St._Sophia_Cathedral,_Harbin_(20230721093312).jpg",
+    "provider": "Wikimedia Commons",
+    "id": "East_facade_of_St._Sophia_Cathedral,_Harbin_(20230721093312).jpg",
+    "accountLicense": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "缩放、WebP转换及页面裁切；本图片衍生版本沿用上述许可。",
+    "checkedAt": "2026-11-09"
+  },
+  {
+    "slug": "sanya",
+    "caption": "三亚亚龙湾 · 滨海实景",
+    "image": "/assets/destination-photos/sanya.webp",
+    "author": "Tanya Dedyukhina",
+    "url": "https://commons.wikimedia.org/wiki/File:Yalong_bay_-_panoramio_(18).jpg",
+    "provider": "Wikimedia Commons",
+    "id": "Yalong_bay_-_panoramio_(18).jpg",
+    "accountLicense": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "changes": "缩放、WebP转换及页面裁切；本图片衍生版本沿用上述许可。",
+    "checkedAt": "2026-11-09"
+  }
+]

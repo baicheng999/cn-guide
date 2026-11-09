@@ -1,3 +1,7 @@
+import { DestinationCityPage } from "./DestinationCityPage";
+import { DestinationItinerarySection } from "./DestinationItinerarySection";
+import { DestinationItineraryPage } from "./DestinationItineraryPage";
+import { destinationItineraries, destinationCities } from "./destinationItineraries";
 import { FoodCultureDetailPage } from "./FoodCultureDetailPage";
 import { foodCultureDetails } from "./foodCultureDetails";
 import { LandscapeDetailPage } from "./LandscapeDetailPage";
@@ -67,12 +71,6 @@ const worlds = [
     "position": "56% 48%"
   }
 ];
-const destinations = [
-  { city: "北京", image: "/assets/home-photos/beijing-approved.webp", alt: "景山俯瞰北京故宫中轴线", line: "宫城、胡同、长城，一座古都的秩序与气象。", stay: "4天起 · 延展长城及周边", tags: ["故宫", "长城", "胡同"] },
-  { city: "上海", image: "/assets/home-photos/shanghai-approved.webp", alt: "上海黄浦江两岸外滩与陆家嘴夜景", line: "百年街区与未来天际线，在此相遇。", stay: "3天起 · 联游江南水乡", tags: ["建筑", "夜景", "都市生活"] },
-  { city: "云南", image: "/assets/home-photos/yunnan-approved.webp", alt: "丽江黑龙潭与远处玉龙雪山", line: "雪山、古城与多民族村落，在高原相遇。", stay: "6天起 · 延展滇西与香格里拉", tags: ["大理", "丽江", "香格里拉"] },
-  { city: "广州", image: "/assets/home-photos/guangzhou-approved.webp", alt: "广州塔珠江与珠江新城夜景", line: "早茶、骑楼与珠江，写下岭南日常。", stay: "3天起 · 联游大湾区", tags: ["粤菜", "岭南文化", "商务门户"] },
-];
 const assurances = [
   { title: "因你而定", note: "依兴趣，也依节奏" },
   { title: "熟门知路", note: "在地向导，从容相伴" },
@@ -137,6 +135,7 @@ function GuidePage({ page }) {
 }
 
 export function App() {
+  useEffect(() => { const hash=window.location.hash; if(hash !== "#destinations" && hash !== "#more-destinations" && !hash.startsWith("#destination-")) return; const timer=window.setTimeout(()=>document.getElementById(hash.slice(1))?.scrollIntoView({behavior:"instant",block:"start"}),150);return()=>window.clearTimeout(timer); }, []);
   const [active, setActive] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -169,12 +168,17 @@ export function App() {
   const submit = async (event) => { event.preventDefault(); if (!formData.email.trim() && !formData.chat.trim()) { setContactError("请至少留下电子邮箱、WhatsApp 或微信中的一种联系方式。"); return; } setContactError(""); try { const response = await fetch("/api/inquiries", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(formData) }); const data = await response.json(); if (!response.ok) throw new Error(data.error || "提交失败"); setSent(true); } catch (error) { setContactError(error.message || "暂时无法提交，请通过 WhatsApp 或微信联系我们。"); } };
   const openConsultation = (service = "", city = "") => { setFormData((current) => ({ ...current, service: service || current.service, city: city || current.city })); setContactError(""); setFormStep(1); setSent(false); setModalOpen(true); };
   useEffect(() => { const chosenTheme = discoverThemes.find(t=>t.slug===new URLSearchParams(window.location.search).get("theme")); if (!chosenTheme) return; setFormData(current => ({...current, service:"私人旅行定制", interests:"希望规划"+chosenTheme.name+"主题的私人旅程。"})); setFormStep(1); setSent(false); setModalOpen(true); }, []);
+  useEffect(() => { const chosen = destinationItineraries.find(t=>t.slug===new URLSearchParams(window.location.search).get("itinerary")); if(!chosen)return;const city=destinationCities.find(c=>c.slug===chosen.city);setFormData(current=>({...current,service:"私人旅行定制",city:city.name,interests:"希望了解"+chosen.title+"，请按日期、人数和酒店偏好安排私家团。"}));setFormStep(1);setSent(false);setModalOpen(true); }, []);
+  const destinationCity = destinationCities.find(c=>window.location.pathname.replace(/\/$/, "") === "/destinations/"+c.slug);
+  const itinerary = destinationItineraries.find(t=>window.location.pathname.replace(/\/$/, "") === "/itineraries/"+t.slug);
   const guidePage = guidePages[window.location.pathname];
   const overviewTheme = discoverThemes.find(t=>t.path.replace(/\/$/, "")===window.location.pathname.replace(/\/$/, ""));
   const futureDetail = futureCityDetails.find(d => window.location.pathname.replace(/\/$/, "") === "/discover/future-cities/"+d.slug);
   const infrastructureDetail = infrastructureDetails.find(d => window.location.pathname.replace(/\/$/, "") === "/discover/infrastructure/"+d.slug);
   const landscapeDetail = landscapeDetails.find(d => window.location.pathname.replace(/\/$/, "") === "/discover/landscapes/"+d.slug);
   const foodCultureDetail = foodCultureDetails.find(d => window.location.pathname.replace(/\/$/, "") === "/discover/"+d.theme+"/"+d.slug);
+  if (destinationCity) return <DestinationCityPage city={destinationCity} />;
+  if (itinerary) return <DestinationItineraryPage tour={itinerary} />;
   if (foodCultureDetail) return <FoodCultureDetailPage detail={foodCultureDetail} />;
   if (landscapeDetail) return <LandscapeDetailPage detail={landscapeDetail} />;
   if (infrastructureDetail) return <InfrastructureDetailPage detail={infrastructureDetail} />;
@@ -213,19 +217,7 @@ export function App() {
       <a className="garden-home-entry" href={discoverThemes[active].path}>{worlds[active].name} · 走近这一重中国 <span>{discoverThemes[active].short} ↗</span></a>
     </section>
 
-    <section id="destinations" className="destinations-section song-cloud-divider">
-      <div className="destinations-intro">
-      <div><p className="eyebrow">精选目的地</p><h2>从一座城市<br />走进更辽阔的中国</h2></div>
-        <div className="destination-note"><p>以城市为起点，向街巷与山水深处去。</p><span>四座城市 · 四种出发方式</span></div>
-      </div>
-      <div className="destination-grid">
-        {destinations.map((destination, index) => <article className="destination-card" key={destination.city}>
-          <div className="destination-image"><img src={destination.image} alt={destination.alt} loading="lazy" /><span className="destination-number">0{index + 1}</span></div>
-          <div className="destination-copy"><p>目的地 0{index + 1}</p><div className="destination-title"><h3>{destination.city}</h3><span>{destination.stay}</span></div><p className="destination-line">{destination.line}</p><div className="destination-tags">{destination.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><button onClick={() => openConsultation("私人旅行定制", destination.city)} aria-label={`规划${destination.city}旅程`}>探索这座城市 <span>↗</span></button></div>
-        </article>)}
-      </div>
-      <div className="destination-footer destination-more"><div><p className="eyebrow">更多目的地</p><h3>山河辽阔<br />远不止于此</h3></div><div className="destination-options">{["杭州", "西安", "成都", "重庆", "深圳", "桂林", "张家界", "新疆", "哈尔滨", "三亚"].map((place) => <button key={place} onClick={() => openConsultation("私人旅行定制", place)}>{place}<span>↗</span></button>)}</div><button className="secondary" onClick={() => openConsultation("私人旅行定制")}>咨询其他目的地</button></div>
-    </section>
+    <DestinationItinerarySection onConsult={openConsultation} />
 
     <PublishedJourneys onConsult={(destination) => openConsultation("私人旅行定制", destination)} />
 
