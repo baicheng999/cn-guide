@@ -71,6 +71,14 @@ const worlds = [
     "position": "56% 48%"
   }
 ];
+const worldTopicLabels = [
+  ["园林", "古建", "茶文化", "非遗"],
+  ["城市更新", "设计文化", "低碳生活", "科技观察"],
+  ["跨海桥梁", "高铁", "机场建筑", "江河工程"],
+  ["桂林峰林", "张家界", "云南河谷", "乡间慢行"],
+  ["广府早茶", "川味茶馆", "市场食材", "地方餐桌"],
+  ["工坊手艺", "村落社区", "街巷日常", "川剧聆听"],
+];
 const assurances = [
   { title: "因你而定", note: "依兴趣，也依节奏" },
   { title: "熟门知路", note: "在地向导，从容相伴" },
@@ -78,9 +86,8 @@ const assurances = [
   { title: "全程照应", note: "从抵达到归程" },
 ];
 const serviceWays = [
-  { no: "01", title: "私人旅行定制", text: "没有预设路线，只有属于你的这一程。", action: "规划私人旅程" },
-  { no: "02", title: "康养医疗服务", text: "来华就医、体检与康养的联络、翻译及行程协助。", action: "了解康养医疗" },
-  { no: "03", title: "商务访问支持", text: "企业访问、产业考察与跨文化沟通支持。", action: "了解商务服务" },
+  { no: "01", id: "wellness", title: "康养医疗服务", text: "来华就医、体检与康养的联络、翻译及行程协助。", action: "了解康养医疗" },
+  { no: "02", id: "business", title: "商务访问支持", text: "企业访问、产业考察与跨文化沟通支持。", action: "了解商务服务" },
 ];
 const languageRoutes = [
   { code: "zh-CN", label: "简体中文", path: "/", ready: true },
@@ -193,7 +200,7 @@ export function App() {
   return <main className="home-photography">
     <header className="site-header">
       <a className="brand" href="#top" aria-label="CHINA GUIDE 首页"><span><img className="brand-logo" src="/assets/china-guide-logo.png" alt="CHINA GUIDE" /><small>走进中国，不止于所见</small></span></a>
-      <nav className={menuOpen ? "nav open" : "nav"} aria-label="主导航"><a onClick={() => setMenuOpen(false)} href="#worlds">发现中国</a><a onClick={() => setMenuOpen(false)} href="#destinations">目的地</a><a onClick={() => setMenuOpen(false)} href="#journeys">私人旅程</a><a onClick={() => setMenuOpen(false)} href="#business">商务访问</a><a onClick={() => setMenuOpen(false)} href="#guide">来华指南</a></nav>
+      <nav className={menuOpen ? "nav open" : "nav"} aria-label="主导航"><a onClick={() => setMenuOpen(false)} href="#worlds">发现中国</a><a onClick={() => setMenuOpen(false)} href="#destinations">目的地</a><a onClick={() => setMenuOpen(false)} href="#routes">私人旅程</a><a onClick={() => setMenuOpen(false)} href="#business">商务访问</a><a onClick={() => setMenuOpen(false)} href="#guide">来华指南</a></nav>
       <details className="language-menu"><summary aria-label="选择语言"><Globe aria-hidden="true" size={18} strokeWidth={1.8} /><span>中文</span></summary><div>{languageRoutes.map((language) => language.ready ? <a key={language.code} href={language.path} lang={language.code} aria-current="page">{language.label}</a> : <span key={language.code} lang={language.code} data-future-route={language.path}>{language.label}<small>筹备中</small></span>)}</div></details>
       <button className="primary header-cta" onClick={openConsultation}>开始规划旅程</button>
       <button className="menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="打开导航" aria-expanded={menuOpen}>☰</button>
@@ -215,15 +222,15 @@ export function App() {
       <div className="section-heading"><div><p className="eyebrow">发现中国</p><h2>什么样的中国最打动你？</h2></div><p>从心之所向，看见中国的不同面貌。</p></div>
       <div className="world-stage">{worlds.map((world, index) => <a key={world.name} href={discoverThemes[index].path} aria-label={world.name+"："+world.note+"，查看专题"} className={index === active ? "world-card active" : "world-card"} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} style={{ "--i": index }}><img src={world.image} alt={world.alt} loading="lazy" style={{objectPosition:world.position||"center"}} /><span className="card-shade" /><span className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><em>{world.note}</em></span></a>)}</div>
       <a className="garden-home-entry" href={discoverThemes[active].path}>{worlds[active].name} · 走近这一重中国 <span>{discoverThemes[active].short} ↗</span></a>
+      <div className="world-direct-grid" aria-label="发现中国细分主题">{worlds.map((world, index) => <nav className="world-direct-group" key={world.name} aria-label={`${world.name}内容入口`}>{discoverThemes[index].sections.map((section, topicIndex) => <a key={section.href} href={section.href}>{worldTopicLabels[index][topicIndex]}<span aria-hidden="true">↗</span></a>)}</nav>)}</div>
     </section>
 
     <DestinationItinerarySection onConsult={openConsultation} />
 
     <PublishedJourneys onConsult={(destination) => openConsultation("私人旅行定制", destination)} />
 
-    <section id="journeys" className="services-section">
-      <div className="services-heading"><p className="eyebrow">私人旅程</p><h2>中国很大<br />这一程只为你展开</h2></div>
-      <div className="service-list">{serviceWays.map((service) => <article id={service.no === "03" ? "business" : undefined} key={service.no}><span>{service.no}</span><div><h3>{service.title}</h3><p>{service.text}</p></div><button onClick={() => openConsultation(service.title === "私人旅行定制" ? "私人旅行定制" : service.title)}>{service.action} ↗</button></article>)}</div>
+    <section className="services-section services-compact" aria-label="专项服务">
+      <div className="service-list">{serviceWays.map((service) => <article id={service.id} key={service.no}><span>{service.no}</span><div><h3>{service.title}</h3><p>{service.text}</p></div><button onClick={() => openConsultation(service.title)}>{service.action} ↗</button></article>)}</div>
     </section>
 
     <section className="partner-network">
