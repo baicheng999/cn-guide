@@ -163,6 +163,29 @@ export function App() {
   }, []);
 
   useEffect(() => {
+    const section = document.querySelector("#worlds");
+    const stage = section?.querySelector(".world-stage");
+    if (!section || !stage) return;
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const rect = section.getBoundingClientRect();
+      const range = Math.max(1, section.offsetHeight - innerHeight);
+      const progress = Math.min(1, Math.max(0, -rect.top / range));
+      const shift = Math.max(0, stage.scrollWidth - innerWidth + Math.min(120, innerWidth * .08));
+      section.style.setProperty("--world-progress", progress.toFixed(4));
+      section.style.setProperty("--world-shift", `${-progress * shift}px`);
+      const next = Math.min(worlds.length - 1, Math.round(progress * (worlds.length - 1)));
+      setActive((current) => current === next ? current : next);
+    };
+    const requestUpdate = () => { if (!frame) frame = requestAnimationFrame(update); };
+    update();
+    addEventListener("scroll", requestUpdate, { passive: true });
+    addEventListener("resize", requestUpdate);
+    return () => { cancelAnimationFrame(frame); removeEventListener("scroll", requestUpdate); removeEventListener("resize", requestUpdate); };
+  }, []);
+
+  useEffect(() => {
     const onKeyDown = (event) => { if (event.key === "Escape") { setModalOpen(false); setMenuOpen(false); } };
     document.body.style.overflow = modalOpen ? "hidden" : "";
     addEventListener("keydown", onKeyDown);
@@ -199,7 +222,7 @@ export function App() {
 
   return <main className="home-photography">
     <header className="site-header">
-      <a className="brand" href="#top" aria-label="CHINA GUIDE 首页"><span><img className="brand-logo" src="/assets/china-guide-logo.png" alt="CHINA GUIDE" /><small>走进中国，不止于所见</small></span></a>
+      <a className="brand" href="#worlds" aria-label="CHINA GUIDE 首页"><span><img className="brand-logo" src="/assets/china-guide-logo.png" alt="CHINA GUIDE" /><small>走进中国，不止于所见</small></span></a>
       <nav className={menuOpen ? "nav open" : "nav"} aria-label="主导航"><a onClick={() => setMenuOpen(false)} href="#worlds">发现中国</a><a onClick={() => setMenuOpen(false)} href="#destinations">目的地</a><a onClick={() => setMenuOpen(false)} href="#routes">私人旅程</a><a onClick={() => setMenuOpen(false)} href="#business">商务访问</a><a onClick={() => setMenuOpen(false)} href="#guide">来华指南</a></nav>
       <details className="language-menu"><summary aria-label="选择语言"><Globe aria-hidden="true" size={18} strokeWidth={1.8} /><span>中文</span></summary><div>{languageRoutes.map((language) => language.ready ? <a key={language.code} href={language.path} lang={language.code} aria-current="page">{language.label}</a> : <span key={language.code} lang={language.code} data-future-route={language.path}>{language.label}<small>筹备中</small></span>)}</div></details>
       <button className="primary header-cta" onClick={openConsultation}>开始规划旅程</button>
@@ -218,9 +241,13 @@ export function App() {
 
     <section className="trust" aria-label="服务承诺">{assurances.map((item) => <div className="trust-item" key={item.title}><span className="trust-seal" aria-hidden="true" /><span className="trust-copy"><strong>{item.title}</strong><em>{item.note}</em></span></div>)}</section>
 
-    <section id="worlds" className="worlds-section">
+    <section id="worlds" className="worlds-section worlds-immersive">
       <div className="section-heading"><div><p className="eyebrow">发现中国</p><h2>什么样的中国最打动你？</h2></div><p>从心之所向，看见中国的不同面貌。</p></div>
-      <div className="world-stage">{worlds.map((world, index) => <article key={world.name} className={index === active ? "world-card active" : "world-card"} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} style={{ "--i": index }}><img src={world.image} alt={world.alt} loading="lazy" style={{objectPosition:world.position||"center"}} /><span className="card-shade" /><div className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><nav className="world-links" aria-label={`${world.name}内容入口`}>{discoverThemes[index].sections.map((section, topicIndex) => <a key={section.href} href={section.href}>{worldTopicLabels[index][topicIndex]}<span aria-hidden="true">↗</span></a>)}</nav></div></article>)}</div>
+      <div className="world-stage">{worlds.map((world, index) => {
+        const distance = Math.abs(index - active);
+        return <article key={world.name} className={index === active ? "world-card active" : "world-card"} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} style={{ "--i": index, "--tilt": `${-5 + distance * 1.2}deg`, "--depth": `${-distance * 55}px`, "--card-scale": Math.max(.82, 1 - distance * .035), "--card-opacity": Math.max(.5, 1 - distance * .1), "--card-saturation": Math.max(.55, 1 - distance * .09), "--card-brightness": Math.max(.6, 1 - distance * .08) }}><img src={world.image} alt={world.alt} loading={index < 2 ? "eager" : "lazy"} style={{objectPosition:world.position||"center"}} /><span className="card-shade" /><div className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><nav className="world-links" aria-label={`${world.name}内容入口`}>{discoverThemes[index].sections.map((section, topicIndex) => <a key={section.href} href={section.href}>{worldTopicLabels[index][topicIndex]}<span aria-hidden="true">↗</span></a>)}</nav></div></article>;
+      })}</div>
+      <div className="world-scroll-hud" aria-hidden="true"><span>0{active + 1} / 06</span><i><b /></i><em>向下滚动 · 穿行中国</em></div>
     </section>
 
     <DestinationItinerarySection onConsult={openConsultation} />
