@@ -220,9 +220,7 @@ export function App() {
 
     <section id="worlds" className="worlds-section">
       <div className="section-heading"><div><p className="eyebrow">发现中国</p><h2>什么样的中国最打动你？</h2></div><p>从心之所向，看见中国的不同面貌。</p></div>
-      <div className="world-stage">{worlds.map((world, index) => <a key={world.name} href={discoverThemes[index].path} aria-label={world.name+"："+world.note+"，查看专题"} className={index === active ? "world-card active" : "world-card"} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} style={{ "--i": index }}><img src={world.image} alt={world.alt} loading="lazy" style={{objectPosition:world.position||"center"}} /><span className="card-shade" /><span className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><em>{world.note}</em></span></a>)}</div>
-      <a className="garden-home-entry" href={discoverThemes[active].path}>{worlds[active].name} · 走近这一重中国 <span>{discoverThemes[active].short} ↗</span></a>
-      <div className="world-direct-grid" aria-label="发现中国细分主题">{worlds.map((world, index) => <nav className="world-direct-group" key={world.name} aria-label={`${world.name}内容入口`}>{discoverThemes[index].sections.map((section, topicIndex) => <a key={section.href} href={section.href}>{worldTopicLabels[index][topicIndex]}<span aria-hidden="true">↗</span></a>)}</nav>)}</div>
+      <div className="world-stage">{worlds.map((world, index) => <article key={world.name} className={index === active ? "world-card active" : "world-card"} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} style={{ "--i": index }}><img src={world.image} alt={world.alt} loading="lazy" style={{objectPosition:world.position||"center"}} /><span className="card-shade" /><div className="card-copy"><small>0{index + 1}</small><strong>{world.name}</strong><nav className="world-links" aria-label={`${world.name}内容入口`}>{discoverThemes[index].sections.map((section, topicIndex) => <a key={section.href} href={section.href}>{worldTopicLabels[index][topicIndex]}<span aria-hidden="true">↗</span></a>)}</nav></div></article>)}</div>
     </section>
 
     <DestinationItinerarySection onConsult={openConsultation} />
