@@ -1,0 +1,45 @@
+name: China Guide WorkBuddy smoke test
+on:
+  workflow_dispatch:
+permissions: {}
+concurrency: china-guide-workbuddy-smoke-test
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Check desktop status and dispatch a fixed audit
+        env:
+          WORKBUDDY_ACCESS_TOKEN: ${{ secrets.WORKBUDDY_ACCESS_TOKEN }}
+        run: |
+          node --input-type=module <<'JS'
+          const token = process.env.WORKBUDDY_ACCESS_TOKEN;
+          if (!token) throw new Error('Missing WorkBuddy access token.');
+          const api = 'https://www.workbuddy.cn/openapi/v2/localassistant';
+
+          async function request(path, body) {
+            const response = await fetch(api + path, {
+              method: body ? 'POST' : 'GET',
+              headers: {
+                Authorization: 'Bearer ' + token,
+                'Content-Type': 'application/json',
+              },
+              body: body && JSON.stringify(body),
+              redirect: 'error',
+              signal: AbortSignal.timeout(15000),
+            });
+            if (!response.ok) throw new Error('WorkBuddy HTTP ' + response.status);
+            const result = await response.json();
+            if (result.code !== 0) throw new Error('WorkBuddy rejected the request.');
+            return result.data;
+          }
+
+          if ((await request(''))?.online !== true) {
+            throw new Error('WorkBuddy desktop assistant is offline.');
+          }
+
+          const content = 'Read-only China Guide SEO audit. Check https://www.cn-guide.com/ and its public paths /robots.txt, /sitemap.xml, /zh-cn/, /en/destinations/beijing/, /en/destinations/shanghai-hangzhou/, /en/guide/entry/. Record HTTP status, final URL, canonical where applicable, public crawl rules and sitemap count. Save a local Word report and reply here with its location and summary. No website changes, submissions, publications or paid services.';
+          const receipt = await request('/message', {content, msg_type: 'text'});
+          if (!receipt?.message_id) throw new Error('Missing WorkBuddy message receipt.');
+          console.log('WorkBuddy accepted the request. Check the desktop conversation for completion.');
+          JS
